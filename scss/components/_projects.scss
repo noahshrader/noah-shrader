@@ -83,6 +83,17 @@
 			bottom: -100%;
 		}
 
+		// Project specific
+		&.pkradio {
+			background: $pkradio;
+		}
+		&.tagtician {
+			background: $tagtician;
+		}
+		&.pullr {
+			background: $pullr;
+		}
+
 		#nav {
 			@include clean-ul;
 			margin: 0 auto;
@@ -96,9 +107,9 @@
 
 				a {
 					display: inline-block;
-					color: $dgray;
+					color: rgba(white, .5);
 					font-family: $secfont;
-					font-size: .65em;
+					font-size: .68em;
 				}
 
 				&.current {
