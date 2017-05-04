@@ -1,0 +1,81 @@
+form {
+    position: relative;
+
+    label {
+        position: static;
+        color: white;
+        font-size: .9em;
+        line-height: 1;
+        margin: 0;
+    }
+    input,
+    textarea {
+        @include trans;
+        color: white;
+        font-size: 1em;
+        font-weight: 400;
+        outline: 0;
+        padding: .6em 0;
+        margin: 1em 0 .4em;
+        width: 100%;
+        background: transparent;
+        border: 0;
+        border-bottom: solid 1px white;
+
+        &:focus {
+            box-shadow: none;
+        }
+        &.error {
+            border-bottom: solid 1px white;
+        }
+        &.btn {
+            display: block;
+        }
+    }
+    textarea {
+        resize: none;
+    }
+}
+
+/* Form Errors */
+#success,
+#error {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 1em 2em;
+    max-width: 400px;
+    background: $accent-web;
+    z-index: 1000;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+
+    p {
+        display: block;
+        line-height: 1.2em;
+        margin: 0;
+    }
+
+    body.music & {
+        background: $accent-music
+    }
+}
+
+/* ------ Placeholders ------ */
+::-webkit-input-placeholder {
+   color: white;
+   font-weight: 300;
+}
+:-moz-placeholder {
+   color: white;
+   font-weight: 300;
+}
+::-moz-placeholder {
+   color: white;
+   font-weight: 300;
+}
+:-ms-input-placeholder {  
+   color: white;
+   font-weight: 300;
+}

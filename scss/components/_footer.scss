@@ -1,0 +1,61 @@
+footer {
+	position: relative;
+	text-align: center;
+	padding: $sectionpadding 5%;
+	width: 100%;
+	background: black;
+	z-index: 1;
+
+	// Contact information and social links
+	.contact {
+
+		h3 {
+			color: white;
+		}
+
+		a {
+			color: white;
+			border-color: white;
+
+			&:hover {
+				border-color: $accent-web;
+			}
+		}
+
+		// Social media
+		ul {
+			@include clean-ul;
+			@include trans;
+			text-align: center;
+			padding: $sectionpadding/2 0;
+			width: 100%;
+
+			li {
+				display: inline-block;
+				padding: 0 1em;
+
+				a {
+					display: inline-block;
+					color: $dgray;
+					font-size: 1.2em;
+
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+
+	// Site credit
+	.copy {
+		text-align: center;
+
+		h5 {
+			color: $dgray;
+			font-family: $secfont;
+			font-size: .4em;
+			margin: 0;
+		}
+	}
+}

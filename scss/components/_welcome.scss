@@ -1,0 +1,93 @@
+.welcome {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 0;
+	background: black;
+	z-index: 9999;
+
+	&.hide {
+		visibility: hidden;
+	}
+
+	&-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		text-align: center;
+		padding: 0 5%;
+		width: 100%;
+		transform: translateY(-55%);
+
+		// Icon/Logo
+		.logo {
+			display: inline-block;
+			color: white;
+			font-size: 4em;
+			margin-bottom: .4em;
+
+			@media only screen and (max-width: $mediumdevice) {
+				font-size: 3.4em;
+			}
+		}
+
+		h2 {
+			color: white;
+			margin: 0 auto;
+			max-width: $contentwidth;
+		}
+
+		ul {
+			@include clean-ul;
+			padding-top: $gutter/2;
+
+			li {
+				display: inline-block;
+				padding: 0 .8em;
+
+				a {
+					@include smallcaps;
+					color: $dgray;
+
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+
+	// Scroll down icon
+	.icon-scroll,
+	.icon-scroll:before{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.icon-scroll {
+		width: 19px;
+		height: 32px;
+		bottom: 2em;
+		box-shadow: inset 0 0 0 2px white;
+		border-radius: 25px;
+		opacity: .3;
+	  
+		&:before{
+			content: '';
+			width: 4px;
+			height: 4px;
+			background: white;
+			top: 8px;
+			border-radius: 4px;
+			animation: scroll infinite 1.5s;
+		}
+	}
+
+	@keyframes scroll{
+		0% {opacity: 1;}
+		100% {opacity: 0; transform: translateY(19px);}
+	}
+}

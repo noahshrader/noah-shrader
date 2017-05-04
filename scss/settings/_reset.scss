@@ -1,0 +1,131 @@
+*,
+*:after,
+*:before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+	@include fadein;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background: black;
+}
+body {
+	font-family: $mainfont;
+	font-size: $basefontsize;
+	font-weight: 300;
+	box-sizing: border-box;
+}
+
+// Links
+a {
+	@include trans;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+}
+a,
+a:active,
+a:visited {
+	outline: none;
+}
+
+// Images
+img {
+	max-width: 100%;
+}
+
+// Accents
+strong,
+strong a {
+	font-weight: 600;
+}
+
+// Forms
+input,
+textarea {
+	font-family: $mainfont;
+	font-weight: 300;
+}
+
+// Blockquotes
+blockquote,
+q {
+	position: relative;
+	color: $base;
+	font-size: 1.6em;
+	font-weight: 400;
+	line-height: 1.8em;
+    text-align: center;
+    padding: 1.6em $gutter/2;
+    margin: 2em 0;
+
+    &:before,
+    &:after {
+    	content: '';
+    	position: absolute;
+    	left: 50%;
+    	margin-left: -40px;
+    	height: 2px;
+    	width: 60px;
+    	background: $gray;
+    }
+    &:before {
+    	top: 0;
+    }
+    &:after {
+    	bottom: 0;
+    }
+
+   	@media screen and (max-width: $mediumdevice) {
+		font-size: 1.4em;
+	}
+
+	@media screen and (max-width: $smalldevice) {
+		font-size: 1.2em;
+		line-height: 1.6em;
+		padding: 1em $gutter/2;
+	}
+}
+
+// Code
+pre {
+	@include border-radius;
+	font-size: .8em;
+	line-height: 1.4em;
+	padding: 1.6em;
+	margin-bottom: 32px;
+	background: $lgray;
+	border-left: solid 5px #36b5b0;
+}
+
+// Clearfix
+.cf:before,
+.cf:after {
+    content: " "; 
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+.clear {
+	clear: both;
+}

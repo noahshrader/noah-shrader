@@ -1,0 +1,80 @@
+.notes {
+	text-align: center;
+	padding: $sectionpadding 5%;
+	background: $offwhite;
+
+	ul {
+		@include clean-ul;
+		margin: 0 auto;
+		height: 100%;
+		max-width: $mediummaxwidth;
+
+		li {
+			display: block;
+			padding: 0;
+			width: 100%;
+			border-bottom: solid 1px $lgray;
+
+			a {
+				display: block;
+				color: $base;
+				font-weight: 500;
+				padding: $gutter/2 0;
+				width: 100%;
+
+				&:hover {
+
+					h4,
+					span {
+						color: $accent-web;
+					}
+				}
+
+				@media only screen and (max-width: $mediumdevice) {
+					padding: 0;
+				}
+			}
+
+			&:last-child {
+				border: 0;
+			}
+
+			// Post title
+			h4 {
+				float: left;
+				line-height: 40px;
+				margin-bottom: 0;
+
+				@media only screen and (max-width: $mediumdevice) {
+					line-height: 1.2em;
+				}
+			}
+
+			// Date
+			span {
+				@include round-radius;
+				@include trans;
+				float: right;
+				display: block;
+				color: $gray;
+				font-size: .85em;
+				font-weight: 300;
+				line-height: 40px;
+
+				@media only screen and (max-width: $mediumdevice) {
+					float: none;
+					margin-bottom: .3em;
+				}
+			}
+
+			@media only screen and (max-width: $mediumdevice) {
+				padding: $gutter/2;
+			}
+		}
+	}
+
+	@media only screen and (max-width: $mediumdevice) {
+		padding-top: $sectionpadding/2;
+		padding-bottom: $sectionpadding/2;
+    }
+}

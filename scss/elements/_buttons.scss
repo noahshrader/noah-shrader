@@ -1,0 +1,38 @@
+// Buttons
+.btn {
+	@include trans;
+	@include border-radius;
+	display: inline-block;
+	color: $base;
+	font-family: $secfont;
+	font-size: .7em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 1.2em 2.6em;
+	width: auto;
+	background: transparent;
+	border-color: $base;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+
+	&:hover {
+		color: white;
+		background: lighten($accent-web, 5%);
+		border-color: lighten($accent-web, 5%);
+	}
+
+	// External link buttons
+	&.ext {
+		padding-right: 1.3em;
+
+		&:after {
+			position: relative;
+			top: 2px;
+			content: '\47';
+			font-family: $iconfont;
+			margin-left: .6em;
+		}
+	}
+}

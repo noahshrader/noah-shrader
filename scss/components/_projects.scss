@@ -1,0 +1,116 @@
+.projects {
+	padding: $sectionpadding/2 0 0;
+
+	.wrapper {
+
+		.project {
+			padding: $sectionpadding 5% $sectionpadding/2;
+
+			&-lead {
+				text-align: center;
+				margin: 0 auto $sectionpadding/2;
+				max-width: $smallmaxwidth;
+
+				h2 {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: $contentwidth;
+				}
+			}
+
+			&-feature {
+				@include bgcover;
+				padding: $sectionpadding/2;
+				margin-bottom: $gutter/2;
+				background-color: $offwhite;
+
+				// Branding
+				&.logo {
+					text-align: center;
+					padding: $sectionpadding+2em $sectionpadding/2;
+
+					// Smaller logos
+					&.small {
+						img {
+							max-height: 110px;
+						}
+					}
+
+					img {
+						display: inline-block;
+						max-height: 200px;
+						width: auto;
+					}
+
+					@media only screen and (max-width: $mediumdevice) {
+						padding-top: $sectionpadding/2;
+						padding-bottom: $sectionpadding/2;
+				    }
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				@media only screen and (max-width: $mediumdevice) {
+					padding-right: $sectionpadding/4;
+					padding-left: $sectionpadding/4;
+			    }
+			}
+
+			@media only screen and (max-width: $mediumdevice) {
+				padding-top: $sectionpadding/2;
+		    }
+		}
+	}
+
+	// Project navigation
+	.project-nav {
+		@include slowtrans;
+		position: fixed;
+		left: 0;
+		bottom: -100%;
+		text-align: center;
+		width: 100%;
+		background: black;
+		z-index: 1000;
+
+		&.active {
+			bottom: 0;
+		}
+
+		&.hide {
+			bottom: -100%;
+		}
+
+		#nav {
+			@include clean-ul;
+			margin: 0 auto;
+			max-width: 450px;
+
+			li {
+				float: left;
+				text-align: center;
+				padding: .6em 0;
+				width: calc(100%/3);
+
+				a {
+					display: inline-block;
+					color: $dgray;
+					font-family: $secfont;
+					font-size: .65em;
+				}
+
+				&.current {
+					a {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: $mediumdevice) {
+		padding-top: 0;
+    }
+}

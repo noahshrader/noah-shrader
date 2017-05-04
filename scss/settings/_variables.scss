@@ -1,0 +1,32 @@
+// Grays
+$base: #333;
+$dgray: lighten($base, 25%);
+$gray: lighten($base, 50%);
+$lgray: lighten($base, 70%);
+$offwhite: lighten($base, 78%);
+
+// Accents
+$accent-web: #0432ff; // Blue
+$accent-music: #F44336; // Red
+
+// Fonts
+$basefontsize: 20px;
+$mainfont: 'adobe-garamond-pro', Helvetica, Arial, sans-serif;
+$secfont: 'soleil', Helvetica, Arial, sans-serif;
+$iconfont: 'noah-shrader';
+
+// Structure
+$headercontract: 80px;
+$sectionpadding: 6em;
+$gutter: 4em;
+
+$largemaxwidth: 1400px;
+$mediummaxwidth: 960px;
+$smallmaxwidth: 800px;
+$contentwidth: 620px;
+
+// Breakpoints
+$largedesktop: 1200px;
+$desktop: 1024px;
+$mediumdevice: 800px;
+$smalldevice: 480px;

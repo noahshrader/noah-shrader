@@ -1,0 +1,95 @@
+// Border radius
+@mixin border-radius ($radius: 2px) {
+	border-radius: $radius;
+	background-clip: padding-box;
+}
+@mixin round-radius ($radius: 30px) {
+	border-radius: $radius;
+	background-clip: padding-box;
+}
+
+// Clean unordered list items
+@mixin clean-ul ($no-padding: 0, $no-margin: 0, $no-list: none) {
+	list-style: $no-list;
+	padding: $no-padding;
+	margin: $no-margin;
+}
+
+// Navigational buttons
+@mixin round-button {
+	@include trans;
+	color: $dgray;
+	font-size: 1.6em;
+	text-align: center;
+
+	&:before {
+		display: block;
+	}
+	&:hover {
+		color: white;
+	}
+}
+
+// Slow transitions
+@mixin trans ($trans: ease-in-out .3s) {
+	transition: $trans;
+}
+// Slower transitions
+@mixin slowtrans ($slowtrans: all ease-in-out .6s) {
+	transition: $slowtrans;
+}
+
+// Fade-in
+@mixin fadein ($fade-in: fadein 2s) {
+	-webkit-animation: $fade-in;
+	-moz-animation: $fade-in;
+	-ms-animation: $fade-in;
+	animation: $fade-in;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+// Hidden elements
+@mixin hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+// Visible elements
+@mixin visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+// Small caps
+@mixin smallcaps {
+	font-family: $secfont;
+	font-size: .65em;
+	line-height: 1.2em;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+
+	@media screen and (max-width: $mediumdevice) {
+		font-size: .6em;
+    }
+}
+
+// Background cover
+@mixin bgcover {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
