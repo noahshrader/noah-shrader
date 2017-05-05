@@ -202,7 +202,7 @@
 			var offset = $(target).offset().top;
 
 			$('html, body').animate({
-				scrollTop: offset
+				scrollTop: (offset + 20)
 			}, this.config.scrollSpeed, this.config.easing, callback);
 		},
 

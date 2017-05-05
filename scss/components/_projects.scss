@@ -1,10 +1,19 @@
 .projects {
-	padding: $sectionpadding/2 0 0;
+	padding: 0;
 
 	.wrapper {
 
 		.project {
 			padding: $sectionpadding 5% $sectionpadding/2;
+
+			// Extra padding to the first project in the list
+			&:first-of-type {
+				padding-top: $sectionpadding*2;
+
+				@media only screen and (max-width: $mediumdevice) {
+					padding-top: $sectionpadding/2;
+			    }
+			}
 
 			&-lead {
 				text-align: center;
