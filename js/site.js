@@ -1,11 +1,17 @@
 function fadeTop() {
-    var div = $('.welcome');
+    var welcomeMain = $('.welcome');
+    var welcomeBg = $('.welcome-bg');
     var st = $(this).scrollTop();
-    div.css({ 'opacity' : (1 - st/320) });
-    if((div).css('opacity') <= 0) {
-        div.addClass('hide');
+    welcomeMain.css({'opacity' : (1 - st/500)});
+    if ($(window).width() < 480) {
+       welcomeBg.css({'opacity' : (0.5 - st/320)});
     } else {
-        div.removeClass('hide');
+       welcomeBg.css({'opacity' : (0.7 - st/320)});
+    }
+    if((welcomeMain).css('opacity') <= 0) { 
+        welcomeMain.addClass('hide');
+    } else {
+        welcomeMain.removeClass('hide');
     }
 }
 
@@ -58,17 +64,22 @@ function scrollEvents() {
 $(function() {
 
     // Top navigation scroll
-    $('.welcome .work-link').click(function() {
+    $('.welcome .about-link a').click(function() {
+        $('html, body').animate({
+            scrollTop: $('.info').offset().top
+        }, 600);
+    });
+    $('.welcome .work-link a').click(function() {
         $('html, body').animate({
             scrollTop: $('.projects').offset().top
         }, 600);
     });
-    $('.welcome .notes-link').click(function() {
+    $('.welcome .notes-link a').click(function() {
         $('html, body').animate({
             scrollTop: $('.notes').offset().top
         }, 600);
     });
-    $('.welcome .contact-link').click(function() {
+    $('.welcome .contact-link a').click(function() {
         $('html, body').animate({
             scrollTop: $('.contact').offset().top
         }, 600);
@@ -80,6 +91,10 @@ $(function() {
     fadeTop();
     noahScroll();
     scrollEvents();
+});
+
+$(window).resize(function() {
+    fadeTop();
 });
 
 $(window).on('scroll', function() {
