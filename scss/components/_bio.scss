@@ -1,7 +1,7 @@
 .about {
 	@include clearfix;
 	margin: 0 auto;
-	padding: 80vh 0 0;
+	padding: 100vh 0 0;
 	max-width: 1600px;
 	background: black;
 
@@ -67,9 +67,8 @@
 		z-index: 0;
 
 		@media only screen and (max-width: $mediumdevice) {
-			position: static;
-			height: 400px;
 			width: 100%;
+			opacity: .35;
 	    }
 	}
 
