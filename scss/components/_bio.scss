@@ -8,7 +8,7 @@
 	.info {
 		position: relative;
 		float: left;
-		padding: $sectionpadding/2 2% $sectionpadding*2 10%;
+		padding: $sectionpadding/2 2% $sectionpadding*2 8%;
 		width: 55%;
 		z-index: 1;
 
@@ -19,10 +19,6 @@
 				float: left;
 				padding-right: 8%;
 				width: 50%;
-
-				p {
-					font-size: .85em;
-				}
 
 				@media only screen and (max-width: $smalldevice) {
 					float: none;
@@ -68,7 +64,7 @@
 
 		@media only screen and (max-width: $mediumdevice) {
 			width: 100%;
-			opacity: .35;
+			opacity: .6;
 	    }
 	}
 

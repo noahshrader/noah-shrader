@@ -17,6 +17,11 @@ footer {
 			color: white;
 			border-color: white;
 
+			// CTA
+			&.btn {
+				margin: 1em 0;
+			}
+
 			&:hover {
 				border-color: $accent-web;
 			}
