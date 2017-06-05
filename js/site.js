@@ -2,11 +2,12 @@ function fadeTop() {
     var welcomeMain = $('.welcome');
     var welcomeBg = $('.welcome-bg');
     var st = $(this).scrollTop();
-    welcomeMain.css({'opacity' : (1 - st/500)});
-    if ($(window).width() < 480) {
-       welcomeBg.css({'opacity' : (0.5 - st/320)});
+    if ($(window).width() >= 480) {
+       welcomeBg.css({'opacity' : (1 - st/500)});
+       welcomeMain.css({'opacity' : (1 - st/500)});
     } else {
-       welcomeBg.css({'opacity' : (0.7 - st/320)});
+       welcomeBg.css({'opacity' : (1 - st/320)});
+       welcomeMain.css({'opacity' : (1 - st/320)});
     }
     if((welcomeMain).css('opacity') <= 0) { 
         welcomeMain.addClass('hide');
