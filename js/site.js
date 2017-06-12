@@ -3,8 +3,8 @@ function fadeTop() {
     var welcomeBg = $('.welcome-bg');
     var st = $(this).scrollTop();
     if ($(window).width() >= 480) {
-       welcomeBg.css({'opacity' : (1 - st/500)});
-       welcomeMain.css({'opacity' : (1 - st/500)});
+       welcomeBg.css({'opacity' : (1 - st/460)});
+       welcomeMain.css({'opacity' : (1 - st/460)});
     } else {
        welcomeBg.css({'opacity' : (1 - st/320)});
        welcomeMain.css({'opacity' : (1 - st/320)});
