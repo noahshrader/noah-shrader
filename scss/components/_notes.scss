@@ -1,7 +1,6 @@
 .notes {
 	text-align: center;
-	padding: $sectionpadding 5%;
-	background: $offwhite;
+	padding: ($sectionpadding / 2) 5% ($sectionpadding * 1.5);
 
 	ul {
 		@include clean-ul;
@@ -13,25 +12,22 @@
 			display: block;
 			padding: 0;
 			width: 100%;
-			border-bottom: solid 1px $lgray;
 
 			a {
 				display: block;
 				color: $base;
 				font-weight: 500;
-				padding: $gutter/2 0;
+				padding: ($gutter / 2);
 				width: 100%;
 
 				&:hover {
+					background: $white;
+					box-shadow: -30px 30px 50px rgba($black, .1);
+					transform: scale(1.03);
 
-					h4,
-					span {
-						color: $accent-web;
+					h4 {
+						color: $primary;
 					}
-				}
-
-				@media only screen and (max-width: $mediumdevice) {
-					padding: 0;
 				}
 			}
 
@@ -52,7 +48,6 @@
 
 			// Date
 			span {
-				@include round-radius;
 				@include trans;
 				float: right;
 				display: block;
@@ -60,15 +55,12 @@
 				font-size: .85em;
 				font-weight: 300;
 				line-height: 40px;
+				border-radius: 30px;
 
 				@media only screen and (max-width: $mediumdevice) {
 					float: none;
 					margin-bottom: .3em;
 				}
-			}
-
-			@media only screen and (max-width: $mediumdevice) {
-				padding: $gutter/2;
 			}
 		}
 	}

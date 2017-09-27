@@ -1,38 +1,50 @@
-// Buttons
-.btn {
-	@include trans;
-	@include border-radius;
-	display: inline-block;
-	color: $base;
-	font-family: $secfont;
-	font-size: .7em;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	padding: 1.2em 2.6em;
-	width: auto;
-	background: transparent;
-	border-color: $base;
-	border-width: 1px;
-	border-style: solid;
-	cursor: pointer;
+@mixin btn (
+  $btn-type: 'box',
+  $btn-color: $primary,
+  $btn-font-family: $secfont,
+  $btn-font-size: .7em,
+  $btn-font-weight: 600,
+  $btn-padding: 0 2.3em,
+  $btn-height: 60px,
+  $btn-width: auto,
+  $btn-border-style: solid,
+  $btn-border-width: 1px,
+  $btn-border-color: $primary,
+  $btn-color-hover: $white,
+  $btn-bg-color: transparent,
+  $btn-bg-color-hover: lighten($btn-bg-color, 5%)
+) {
+  @include trans;
+  @include border-radius;
+  display: inline-block;
+  color: $btn-color;
+  font-family: $btn-font-family;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: $btn-padding;
+  line-height: $btn-height;
+  width: $btn-width;
+  background: $btn-bg-color;
+  border: $btn-border-style $btn-border-width $btn-border-color;
+  cursor: pointer;
+  user-select: none;
 
-	&:hover {
-		color: white;
-		background: lighten($accent-web, 5%);
-		border-color: lighten($accent-web, 5%);
-	}
+  &:hover {
+    color: $btn-color-hover;
+    background: $btn-color;
+  }
 
-	// External link buttons
-	&.ext {
-		padding-right: 1.3em;
+  &:focus {
+    outline: 0;
+  }
 
-		&:after {
-			position: relative;
-			top: 2px;
-			content: '\47';
-			font-family: $iconfont;
-			margin-left: .6em;
-		}
-	}
+  @if $btn-type == 'round' {
+    text-transform: none;
+    letter-spacing: 1px;
+    line-height: ($btn-height / 2);
+    border-radius: 30px;
+  }
 }

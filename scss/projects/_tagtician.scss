@@ -1,0 +1,33 @@
+.project {
+
+  &.tagtician {
+    text-align: center;
+    background: $white;
+    overflow: hidden;
+
+    .info {
+      margin: ($sectionpadding / 2) auto 0;
+      padding-bottom: $gutter;
+      max-width: 800px;
+
+      h3 {
+        color: $gray;
+      }
+    }
+
+    .app {
+      margin: 0 auto -160px;
+      width: 100%;
+      max-width: 1200px;
+
+      @media only screen and (max-width: $mediumdevice) {
+        position: static;
+        transform: none;
+      }
+    }
+
+    @media only screen and (max-width: $mediumdevice) {
+      padding-bottom: 0;
+    }
+  }
+}

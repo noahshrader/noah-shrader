@@ -1,0 +1,53 @@
+header {
+  @include trans;
+  @include clearfix;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: ($gutter / 2);
+  width: 100%;
+  z-index: 9999;
+
+  .avatar {
+    float: left;
+    height: $headerheight;
+    width: $headerheight;
+    border-radius: 50%;
+  }
+
+  .contact-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    float: right;
+    font-family: $secfont;
+    font-size: .7em;
+    line-height: 25px;
+
+    &::after {
+      @include trans;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      background: rgba($primary, .1);
+      width: 100%;
+      height: 8px;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: white;
+
+      &::after {
+        bottom: 0;
+        height: 100%;
+        background: $primary;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mediumdevice) {
+   padding: ($gutter / 4);
+  }
+}

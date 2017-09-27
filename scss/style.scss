@@ -8,18 +8,21 @@
 @import 'settings/reset';
 @import 'settings/base';
 
-// Plugins
-
 // Elements
 @import 'elements/buttons';
 @import 'elements/fonts';
-@import 'elements/icons';
 @import 'elements/forms';
+@import 'elements/icons';
 @import 'elements/type';
 
 // Components
-@import 'components/welcome';
-@import 'components/bio';
-@import 'components/projects';
-@import 'components/notes';
+@import 'components/about';
 @import 'components/footer';
+@import 'components/header';
+@import 'components/notes';
+@import 'components/projects';
+
+// Projects
+@import 'projects/layer-cake';
+@import 'projects/tagtician';
+@import 'projects/pullr';

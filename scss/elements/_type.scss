@@ -8,7 +8,6 @@ h5 {
 	font-weight: 400;
 	padding: 0;
 	margin: 0;
-	margin-bottom: 1em;
 
 	body.music & {
 		color: white;
@@ -17,7 +16,8 @@ h5 {
 
 h1 {
 	font-size: 3.2em;
-	line-height: 1.12em;
+	line-height: 1em;
+  margin-bottom: .8em;
 
 	@media screen and (max-width: $desktop) {
 		font-size: 2.4em;
@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2.2em;
+	font-size: 2.3em;
 	line-height: 1.3em;
 
 	@media screen and (max-width: $mediumdevice) {
@@ -44,10 +44,11 @@ h2 {
 h3 {
 	font-size: 1.6em;
 	line-height: 1.3em;
+  margin-bottom: 1.2em;
 
-   	@media screen and (max-width: $mediumdevice) {
-        font-size: 1.4em;
-    }
+ 	@media screen and (max-width: $mediumdevice) {
+    font-size: 1.3em;
+  }
 }
 
 h4 {
@@ -58,7 +59,7 @@ h4 {
 	&.section-title {
 	   	@media screen and (max-width: $mediumdevice) {
 	        text-align: center;
-	    }		
+	    }
 	}
 
    	@media screen and (max-width: $mediumdevice) {
@@ -70,25 +71,43 @@ h4 {
 h5 {
 	@include smallcaps;
 	color: $gray;
-	margin-bottom: 1.25em;
+	margin-bottom: 2em;
 }
 
 // Paragraph
 p {
-	color: $dgray;
+	color: $base;
 	font-size: 1.05em;
 	line-height: 1.7em;
-	margin: 0 0 2.6em;
+	margin: 0 0 2em;
 
-	a {
-		color: $base;
+  a {
+    position: relative;
 
-		&:hover {
-			color: $accent-web;
-		}
-	}
+    &::after {
+      @include trans;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      background: rgba($primary, .1);
+      width: 100%;
+      height: 8px;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: white;
+
+      &::after {
+        bottom: 0;
+        height: 100%;
+        background: $primary;
+      }
+    }
+  }
 
 	@media screen and (max-width: $mediumdevice) {
 		font-size: 1em;
-    }
+  }
 }

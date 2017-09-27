@@ -1,16 +1,19 @@
-// Grays
-$base: #333;
+$white: #fff;
+$black: #000;
+
+$base: #222325;
 $dgray: lighten($base, 25%);
 $gray: lighten($base, 50%);
-$lgray: lighten($base, 70%);
-$offwhite: lighten($base, 78%);
+$medgray: lighten($base, 68%);
+$lgray: lighten($base, 78%);
+$offwhite: lighten($base, 82%);
 
 // Accents
-$accent-web: #0432ff; // Blue
-$accent-music: #F44336; // Red
+$primary: #0432ff; // Blue
 
 // Fonts
 $basefontsize: 20px;
+
 $mainfont: 'adobe-garamond-pro', Helvetica, Arial, sans-serif;
 $secfont: 'soleil', Helvetica, Arial, sans-serif;
 $iconfont: 'noah-shrader';
@@ -18,10 +21,11 @@ $iconfont: 'noah-shrader';
 // Project colors
 $pkradio: #221c36;
 $tagtician: #f58f31;
+$tagtician-blue: #292e3a;
 $pullr: #2bbb9a;
 
 // Structure
-$headercontract: 80px;
+$headerheight: 40px;
 $sectionpadding: 6em;
 $gutter: 4em;
 

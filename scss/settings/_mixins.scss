@@ -1,11 +1,6 @@
 // Border radius
-@mixin border-radius ($radius: 2px) {
+@mixin border-radius ($radius: 3px) {
 	border-radius: $radius;
-	background-clip: padding-box;
-}
-@mixin round-radius ($radius: 30px) {
-	border-radius: $radius;
-	background-clip: padding-box;
 }
 
 // Clean unordered list items
@@ -31,7 +26,7 @@
 }
 
 // Slow transitions
-@mixin trans ($trans: ease-in-out .3s) {
+@mixin trans ($trans: ease-in-out .2s) {
 	transition: $trans;
 }
 // Slower transitions
@@ -83,13 +78,14 @@
 }
 
 // Clearfix
-@mixin clearfix() {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
 
-// Clear after (not all clearfix need this also)
-@mixin clearfix-after() {
-	clear: both;
+  &::after {
+    clear: both;
+  }
 }

@@ -1,0 +1,44 @@
+.project {
+
+  &.layer-cake {
+
+    .info {
+      float: left;
+
+      h1 {
+        transform: translateX(-40%);
+
+        @media only screen and (max-width: $mediumdevice) {
+          transform: none;
+        }
+      }
+
+      h3 {
+        color: $dgray;
+      }
+    }
+
+    .previews {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+
+      img {
+        float: left;
+        height: 50%;
+        background: $gray;
+        clear: both;
+
+        @media only screen and (max-width: $mediumdevice) {
+          height: 200px;
+          width: 100%;
+        }
+      }
+
+      @media only screen and (max-width: $mediumdevice) {
+        position: static;
+      }
+    }
+  }
+}

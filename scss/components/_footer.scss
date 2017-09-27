@@ -3,7 +3,7 @@ footer {
 	text-align: center;
 	padding: $sectionpadding 5%;
 	width: 100%;
-	background: black;
+	background: $primary;
 	z-index: 1;
 
 	// Contact information and social links
@@ -13,18 +13,12 @@ footer {
 			color: white;
 		}
 
-		a {
-			color: white;
-			border-color: white;
-
-			// CTA
-			&.btn {
-				margin: 1em 0;
-			}
-
-			&:hover {
-				border-color: $accent-web;
-			}
+		.btn {
+			@include btn(
+				$btn-color: $white,
+				$btn-color-hover: $primary,
+				$btn-border-color: $white
+			);
 		}
 
 		// Social media
@@ -41,11 +35,40 @@ footer {
 
 				a {
 					display: inline-block;
-					color: $dgray;
+					color: rgba(white, .5);
 					font-size: 1.2em;
 
+					svg {
+						path,
+						polyline,
+						polygon {
+							@include trans;
+							color: $white;
+							opacity: .5;
+						}
+					}
+
+					.icon-dribbble {
+						@include trans;
+						font-size: 1.3em;
+
+						&::before {
+							position: relative;
+							top: 3px;
+						}
+					}
+
 					&:hover {
-						color: white;
+						svg {
+							path,
+							polyline,
+							polygon {
+								opacity: 1;
+							}
+						}
+						i {
+							color: $white;
+						}
 					}
 				}
 			}
@@ -57,7 +80,7 @@ footer {
 		text-align: center;
 
 		h5 {
-			color: $dgray;
+			color: rgba(white, .5);
 			font-family: $secfont;
 			font-size: .4em;
 			margin: 0;
