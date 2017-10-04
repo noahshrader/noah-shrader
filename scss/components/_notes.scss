@@ -1,6 +1,6 @@
 .notes {
 	text-align: center;
-	padding: ($sectionpadding / 2) 5% ($sectionpadding * 1.5);
+	padding: $sectionpadding 5% ($sectionpadding * 1.5);
 
 	ul {
 		@include clean-ul;
@@ -14,10 +14,11 @@
 			width: 100%;
 
 			a {
+				@include clearfix;
 				display: block;
 				color: $base;
 				font-weight: 500;
-				padding: ($gutter / 2);
+				padding: ($gutter / 3) ($gutter / 2);
 				width: 100%;
 
 				&:hover {
@@ -68,5 +69,5 @@
 	@media only screen and (max-width: $mediumdevice) {
 		padding-top: $sectionpadding/2;
 		padding-bottom: $sectionpadding/2;
-    }
+	}
 }

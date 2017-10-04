@@ -40,17 +40,19 @@
 			max-width: $contentwidth;
 		}
 
+		// Page navigation
 		ul {
 			@include clean-ul;
 			padding-top: ($gutter / 1.5);
 
 			li {
 				display: inline-block;
-				padding: 0 1em;
+				padding: 0 1.2em;
 
 				a {
 					@include smallcaps;
 					color: $gray;
+					font-weight: 600;
 
 					&:hover {
 						color: $primary;
@@ -69,11 +71,13 @@
 	}
 }
 
+// Bio block
 .about {
 	@include clearfix;
 	@include border-radius;
 	position: relative;
-	margin: 93vh auto $sectionpadding;
+	margin: 94vh auto $sectionpadding;
+	width: 90%;
 	max-width: 900px;
 	background: lighten($offwhite, 5%);
 	box-shadow: -30px 30px 50px rgba($black, .1);
@@ -81,7 +85,6 @@
 
 	.info {
 		position: relative;
-		width: 100%;
 		z-index: 1;
 
 		p {

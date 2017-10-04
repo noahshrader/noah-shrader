@@ -3,19 +3,20 @@ $black: #000;
 
 $base: #222325;
 $dgray: lighten($base, 25%);
-$gray: lighten($base, 50%);
-$medgray: lighten($base, 68%);
-$lgray: lighten($base, 78%);
+$gray: lighten($base, 45%);
+$medgray: lighten($base, 68%); // #cfd0d3
+$lgray: lighten($base, 79%);
 $offwhite: lighten($base, 82%);
 
 // Accents
 $primary: #0432ff; // Blue
+$layer-cake-blue: #212124;
 
 // Fonts
 $basefontsize: 20px;
 
 $mainfont: 'adobe-garamond-pro', Helvetica, Arial, sans-serif;
-$secfont: 'soleil', Helvetica, Arial, sans-serif;
+$secfont: 'europa', Helvetica, Arial, sans-serif;
 $iconfont: 'noah-shrader';
 
 // Project colors
@@ -25,12 +26,14 @@ $tagtician-blue: #292e3a;
 $pullr: #2bbb9a;
 
 // Structure
-$headerheight: 40px;
+$radius: 3px;
+
+$headerheight: 45px;
 $sectionpadding: 6em;
 $gutter: 4em;
 
 $largemaxwidth: 1400px;
-$mediummaxwidth: 960px;
+$mediummaxwidth: 980px;
 $smallmaxwidth: 800px;
 $contentwidth: 620px;
 

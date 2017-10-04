@@ -2,6 +2,7 @@
 section {
 	position: relative;
 	padding: $sectionpadding;
+	z-index: 2;
 
 	.wrapper {
 		margin: 0 auto;

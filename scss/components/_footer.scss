@@ -1,9 +1,9 @@
 footer {
 	position: relative;
 	text-align: center;
-	padding: $sectionpadding 5%;
+	padding: $sectionpadding 10%;
 	width: 100%;
-	background: $primary;
+	background-color: $primary;
 	z-index: 1;
 
 	// Contact information and social links
@@ -11,6 +11,7 @@ footer {
 
 		h3 {
 			color: white;
+			margin-bottom: 2em;
 		}
 
 		.btn {
@@ -66,6 +67,7 @@ footer {
 								opacity: 1;
 							}
 						}
+
 						i {
 							color: $white;
 						}

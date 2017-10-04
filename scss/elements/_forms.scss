@@ -1,61 +1,44 @@
 form {
-    position: relative;
+  position: relative;
 
-    label {
-        position: static;
-        color: white;
-        font-size: .9em;
-        line-height: 1;
-        margin: 0;
-    }
-    input,
-    textarea {
-        @include trans;
-        color: white;
-        font-size: 1em;
-        font-weight: 400;
-        outline: 0;
-        padding: .6em 0;
-        margin: 1em 0 .4em;
-        width: 100%;
-        background: transparent;
-        border: 0;
-        border-bottom: solid 1px white;
+  label {
+    position: static;
+    color: white;
+    font-size: .9em;
+    line-height: 1;
+    margin: 0;
+  }
 
-        &:focus {
-            box-shadow: none;
-        }
-        &.error {
-            border-bottom: solid 1px white;
-        }
-        &.btn {
-            display: block;
-        }
-    }
-    textarea {
-        resize: none;
-    }
-}
+  input,
+  textarea {
+    @include trans;
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    outline: 0;
+    padding: .6em 0;
+    margin: 1em 0 .4em;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: solid 1px white;
 
-/* Form Errors */
-#success,
-#error {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 1em 2em;
-    max-width: 400px;
-    background: $primary;
-    z-index: 1000;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
-
-    p {
-        display: block;
-        line-height: 1.2em;
-        margin: 0;
+    &:focus {
+      box-shadow: none;
     }
+
+    &.error {
+      border-bottom: solid 1px white;
+    }
+
+    &.btn {
+      display: block;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
 }
 
 // Placeholders

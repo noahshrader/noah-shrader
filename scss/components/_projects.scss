@@ -1,16 +1,14 @@
 .projects {
 	display: flex;
 	flex-direction: column;
-	padding: 0;
 
 	.project {
-		@include border-radius;
+		align-self: center;
 		position: relative;
 		margin-top: ($sectionpadding * 1.5);
 		margin-bottom: ($sectionpadding * 1.5);
-		min-height: 800px;
-		width: 80%;
-		background: $medgray;
+		width: 100%;
+		max-width: 1800px;
 
 		&.right {
 			align-self: flex-end;
@@ -19,11 +17,6 @@
 				align-self: center;
 				width: 90%;
 			}
-		}
-
-		&.center {
-			align-self: center;
-			max-width: 1600px;
 		}
 
 		&.left {
@@ -36,9 +29,10 @@
 		}
 
 		.info {
-			padding: $sectionpadding ($sectionpadding / 2);
-			max-width: 600px;
+			position: relative;
+			padding: 0 5% ($gutter / 2);
 			min-width: 250px;
+			z-index: 10;
 
 			h1 {
 				color: $primary;
@@ -54,8 +48,11 @@
 				}
 			}
 
-			h3 {
-				color: $lgray;
+			p {
+				em {
+					color: $base;
+					background: #f3f315;
+				}
 			}
 
 			.button {
@@ -66,13 +63,22 @@
 
 			@media only screen and (max-width: $mediumdevice) {
 				text-align: center;
-				overflow: hidden;
+				padding-left: 0;
+				padding-right: 0;
+				width: 100%;
 			}
 		}
 
 		@media only screen and (max-width: $mediumdevice) {
-			margin-top: ($sectionpadding / 3);
-			margin-bottom: ($sectionpadding / 3);
+			margin-top: ($sectionpadding / 2);
+			margin-bottom: ($sectionpadding / 2);
+			min-height: 0;
+			width: 90%;
 		}
+	}
+
+	@media only screen and (max-width: $mediumdevice) {
+		padding-right: 0;
+		padding-left: 0;
 	}
 }
