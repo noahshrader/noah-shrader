@@ -1,29 +1,25 @@
-.project {
+.project.tagtician {
+  text-align: center;
 
-  &.tagtician {
-    text-align: center;
-    background: $white;
-    overflow: hidden;
+  .info {
+    margin: 0 auto;
+    max-width: 860px;
 
-    .info {
-      margin: ($sectionpadding / 2) auto 0;
-      padding-bottom: $gutter;
-      max-width: 800px;
-
-      h3 {
-        color: $gray;
-      }
+    p {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 600px;
     }
+  }
+
+  .project-wrap {
 
     .app {
-      margin: 0 auto -160px;
+      position: relative;
+      left: 50%;
       width: 100%;
-      max-width: 1200px;
-
-      @media only screen and (max-width: $mediumdevice) {
-        position: static;
-        transform: none;
-      }
+      max-width: 1400px;
+      transform: translateX(-50%);
     }
 
     @media only screen and (max-width: $mediumdevice) {

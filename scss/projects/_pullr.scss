@@ -1,45 +1,35 @@
-.project {
+.project.pullr {
+  padding-right: 50%;
 
-  &.pullr {
-    background: $medgray;
+  .info {
+    margin-top: -12%;
+    width: 60%;
 
-    .info {
-      float: right;
-      padding: 0;
-      padding-right: ($sectionpadding / 2);
-      transform: translateY(-20%);
+    @media only screen and (max-width: $mediumdevice) {
+      margin-top: 0;
+      width: 100%;
+    }
+  }
 
-      h3 {
-        color: $dgray;
-      }
+  .project-wrap {
 
+    .app {
+      position: absolute;
+      bottom: 50%;
+      right: 0;
+      width: 60%;
+      z-index: 10;
+      transform: translateY(55%);
       @media only screen and (max-width: $mediumdevice) {
-        float: none;
-        padding: ($sectionpadding / 2);
+        position: relative;
+        margin-bottom: -80px;
+        width: 100%;
         transform: none;
       }
     }
+  }
 
-    .previews {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 60%;
-      overflow: hidden;
-
-      .app {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        z-index: 2;
-        transform: translateX(-10%);
-      }
-
-      @media only screen and (max-width: $mediumdevice) {
-        position: static;
-        width: 100%;
-      }
-    }
+  @media only screen and (max-width: $mediumdevice) {
+    padding-right: 0;
   }
 }
