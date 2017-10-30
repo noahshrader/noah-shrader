@@ -29,6 +29,7 @@ footer {
 
 					path,
 					polyline,
+					line,
 					polygon {
 						@include trans;
 						color: $gray;
@@ -58,6 +59,7 @@ footer {
 					svg {
 						path,
 						polyline,
+						line,
 						polygon {
 							color: $white;
 						}
