@@ -41,9 +41,20 @@ footer {
 					}
 				}
 
-				.icon-dribbble {
+				i {
 					@include trans;
-					font-size: 20px;
+
+					&.icon-dribbble {
+						font-size: 20px;
+					}
+
+					&.icon-linkedin {
+						font-size: 15px;
+
+						&::before {
+							top: 0;
+						}
+					}
 
 					&::before {
 						position: relative;

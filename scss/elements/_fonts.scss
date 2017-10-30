@@ -34,10 +34,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-noahlogo::before {
+.icon-noahlogo:before {
   content: "\69";
 }
 
-.icon-dribbble::before {
+.icon-dribbble:before {
   content: "\43";
+}
+
+.icon-menu:before {
+  content: "\62";
+}
+
+.icon-behance:before {
+  content: "\64";
+}
+
+.icon-linkedin:before {
+  content: "\65";
 }
