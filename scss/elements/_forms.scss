@@ -3,7 +3,7 @@ form {
 
   label {
     position: static;
-    color: white;
+    color: $white;
     font-size: .9em;
     line-height: 1;
     margin: 0;
@@ -12,26 +12,26 @@ form {
   input,
   textarea {
     @include trans;
-    color: white;
+    color: $white;
+    font-family: $mainfont;
     font-size: 1em;
-    font-weight: 400;
     outline: 0;
     padding: .6em 0;
     margin: 1em 0 .4em;
     width: 100%;
     background: transparent;
     border: 0;
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px $white;
 
     &:focus {
       box-shadow: none;
     }
 
     &.error {
-      border-bottom: solid 1px white;
+      border-bottom: solid 1px $white;
     }
 
-    &.btn {
+    &.button {
       display: block;
     }
   }
@@ -43,18 +43,18 @@ form {
 
 // Placeholders
 ::-webkit-input-placeholder {
-   color: white;
+   color: $white;
    font-weight: 300;
 }
 :-moz-placeholder {
-   color: white;
+   color: $white;
    font-weight: 300;
 }
 ::-moz-placeholder {
-   color: white;
+   color: $white;
    font-weight: 300;
 }
 :-ms-input-placeholder {
-   color: white;
+   color: $white;
    font-weight: 300;
 }

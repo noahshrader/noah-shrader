@@ -1,16 +1,51 @@
-// Structure
-section {
-	position: relative;
-	padding: $sectionpadding;
-	z-index: 2;
+main {
+	display: flex;
+	align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 2;
+	padding: 0 7%;
+	height: calc(100% - (#{$headerheight} + #{$footerheight}));
+	min-height: min-content;
+	width: 100%;
 
-	.wrapper {
-		margin: 0 auto;
+	h2 {
+		color: $white;
+		padding-right: 18%;
+		margin-top: ($gutter / 2);
 		width: 100%;
-		max-width: $largemaxwidth;
+
+		@media screen and (max-width: $smalldevice) {
+	    padding-right: 10%;
+	  }
 	}
 
-	@media only screen and (max-width: $mediumdevice) {
-		padding: ($sectionpadding / 2);
-  }
+	.utility {
+		@include clean-ul;
+		margin: $gutter 0;
+		width: 100%;
+
+		li {
+			display: inline-block;
+			color: $gray;
+			font-family: $secfont;
+			font-size: 14px;
+			margin-right: 15px;
+
+			&:first-child {
+				color: $white;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-right: 0;
+
+				&::after {
+					content: '–';
+					display: inline-block;
+					margin: 0 ($gutter / 2);
+				}
+			}
+		}
+	}
 }

@@ -1,50 +1,59 @@
-@mixin btn (
-  $btn-type: 'box',
-  $btn-color: $primary,
-  $btn-font-family: $secfont,
-  $btn-font-size: .7em,
-  $btn-font-weight: 600,
-  $btn-padding: 0 2.2em,
-  $btn-height: 55px,
-  $btn-width: auto,
-  $btn-border-style: solid,
-  $btn-border-width: 1px,
-  $btn-border-color: $primary,
-  $btn-color-hover: $white,
-  $btn-bg-color: transparent,
-  $btn-bg-color-hover: lighten($btn-bg-color, 5%)
+@mixin button (
+  $button-type: 'box',
+  $button-color: $white,
+  $button-font-family: $secfont,
+  $button-font-size: .7em,
+  $button-font-weight: 600,
+  $button-padding: 0 2em,
+  $button-height: 55px,
+  $button-width: auto,
+  $button-border-style: solid,
+  $button-border-width: 1px,
+  $button-border-color: $primary,
+  $button-bg-color: $primary
 ) {
   @include trans;
   @include border-radius;
   display: inline-block;
-  color: $btn-color;
-  font-family: $btn-font-family;
-  font-size: $btn-font-size;
-  font-weight: $btn-font-weight;
+  color: $button-color;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: $btn-padding;
-  line-height: $btn-height;
-  width: $btn-width;
-  background: $btn-bg-color;
-  border: $btn-border-style $btn-border-width $btn-border-color;
+  padding: $button-padding;
+  line-height: $button-height;
+  width: $button-width;
+  background: $button-bg-color;
+  border: $button-border-style $button-border-width $button-border-color;
   cursor: pointer;
   user-select: none;
 
   &:hover {
-    color: $btn-color-hover;
-    background: $btn-color;
+    background: lighten($button-bg-color, 10%);
   }
 
   &:focus {
     outline: 0;
   }
 
-  @if $btn-type == 'round' {
+  @if $button-type == 'round' {
+    color: $button-bg-color;
     text-transform: none;
     letter-spacing: 1px;
-    line-height: ($btn-height / 2);
+    line-height: ($button-height / 2);
+    background: transparent;
     border-radius: 30px;
+
+    &:hover {
+      color: $button-color;
+      background: $button-bg-color;
+    }
   }
+}
+
+button,
+.button {
+  @include button;
 }

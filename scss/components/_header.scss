@@ -1,47 +1,14 @@
 header {
-  @include trans;
-  @include clearfix;
   display: flex;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: ($gutter / 2);
+  padding: 0 7%;
   width: 100%;
-  z-index: 9999;
+  height: $headerheight;
+  min-height: min-content;
 
-  .avatar {
-    flex: 2;
-
-    img {
-      height: $headerheight;
-      width: $headerheight;
-      border-radius: 50%;
-    }
-  }
-
-  .contact-link {
-    position: relative;
-    display: flex;
-    align-items: center;
-    color: $gray;
-    font-family: $secfont;
-    font-size: .7em;
-    font-weight: 600;
-    height: 1.7em;
-
-    svg {
-      margin-right: 5px;
-      height: 18px;
-    }
-
-    &:hover {
-      color: $primary;
-    }
-  }
-
-  @media only screen and (max-width: $mediumdevice) {
-    padding: ($gutter / 5) ($gutter / 4);
-    background: $lgray;
+  .logo {
+    color: $white;
+    font-size: 50px;
+    height: 50px;
   }
 }

@@ -1,91 +1,99 @@
 footer {
-	position: relative;
-	text-align: center;
-	padding: $sectionpadding 10%;
+	display: flex;
+	flex: 0;
+	padding: ($gutter / 2) 7%;
 	width: 100%;
-	background-color: $primary;
-	z-index: 1;
+	height: $footerheight;
+	min-height: min-content;
 
-	// Contact information and social links
-	.contact {
+	// Social media
+	ul {
+		@include clean-ul;
+		margin-right: ($gutter / 2);
 
-		h3 {
-			color: white;
-			margin-bottom: 2em;
-		}
+		li {
+			display: inline-block;
+			margin-right: ($gutter / 2);
 
-		.btn {
-			@include btn(
-				$btn-color: $white,
-				$btn-color-hover: $primary,
-				$btn-border-color: $white
-			);
-		}
+			a {
+				display: block;
+				color: $gray;
 
-		// Social media
-		ul {
-			@include clean-ul;
-			@include trans;
-			text-align: center;
-			padding: $sectionpadding/2 0;
-			width: 100%;
+				&::after {
+					display: none;
+				}
 
-			li {
-				display: inline-block;
-				padding: 0 1em;
+				svg {
+					height: 15px;
+					width: 15px;
 
-				a {
-					display: inline-block;
-					color: rgba(white, .5);
-					font-size: 1.2em;
+					path,
+					polyline,
+					polygon {
+						@include trans;
+						color: $gray;
+					}
 
+					@media screen and (max-width: $smalldevice) {
+						height: 20px;
+						width: 20px;
+					}
+				}
+
+				.icon-dribbble {
+					@include trans;
+					font-size: 20px;
+
+					&::before {
+						position: relative;
+						top: 3px;
+					}
+
+					@media screen and (max-width: $smalldevice) {
+						font-size: 25px;
+					}
+				}
+
+				&:hover {
 					svg {
 						path,
 						polyline,
 						polygon {
-							@include trans;
 							color: $white;
-							opacity: .5;
 						}
 					}
 
-					.icon-dribbble {
-						@include trans;
-						font-size: 1.3em;
-
-						&::before {
-							position: relative;
-							top: 3px;
-						}
-					}
-
-					&:hover {
-						svg {
-							path,
-							polyline,
-							polygon {
-								opacity: 1;
-							}
-						}
-
-						i {
-							color: $white;
-						}
+					i {
+						color: $white;
 					}
 				}
 			}
+
+			@media screen and (max-width: $smalldevice) {
+				margin: 0 ($gutter / 2);
+			}
+		}
+
+		@media screen and (max-width: $smalldevice) {
+			margin-right: 0;
+			margin-bottom: ($gutter / 2);
+			width: 100%;
 		}
 	}
 
-	// Site credit
+	// Copyright notice
 	.copy {
-		text-align: center;
+		display: inline-block;
+		color: $dgray;
+		font-family: $secfont;
+		font-size: .55em;
+		line-height: 25px;
+		margin: 0;
+	}
 
-		h5 {
-			color: rgba(white, .5);
-			font-family: $secfont;
-			font-size: .4em;
-			margin: 0;
-		}
+	@media screen and (max-width: $smalldevice) {
+		flex-direction: column;
+		text-align: center;
+		padding-top: ($gutter * 2);
 	}
 }

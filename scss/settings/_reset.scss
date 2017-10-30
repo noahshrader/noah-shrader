@@ -10,37 +10,54 @@
 
 html,
 body {
+  @include hidden;
 	@include fadein;
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	width: 100%;
-	background: $lgray;
+	background: $base;
 }
 
 body {
-  @include clearfix;
 	font-family: $mainfont;
 	font-size: $basefontsize;
 	font-weight: 300;
-	box-sizing: border-box;
 }
 
 // Links
 a {
-	@include trans;
-	margin: 0;
-	padding: 0;
-  color: $primary;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-	text-decoration: none;
-	cursor: pointer;
+  @include trans;
+  position: relative;
+  color: $gray;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  z-index: 10;
+  cursor: pointer;
 
-	&:focus {
-		outline: none;
-	}
+  &::after {
+    @include trans;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background: rgba($white, .08);
+    width: 100%;
+    height: 5px;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $base;
+
+    &::after {
+      bottom: 0;
+      height: 100%;
+      background: $white;
+    }
+  }
 }
 
 a,
@@ -60,13 +77,6 @@ strong a {
 	font-weight: 600;
 }
 
-// Forms
-input,
-textarea {
-	font-family: $mainfont;
-	font-weight: 300;
-}
-
 // Blockquotes
 blockquote,
 q {
@@ -76,7 +86,7 @@ q {
 	font-weight: 400;
 	line-height: 1.8em;
   text-align: center;
-  padding: 1.6em $gutter/2;
+  padding: 1.6em ($gutter / 2);
   margin: 2em 0;
 
   &::before,
@@ -105,8 +115,14 @@ q {
 	@media screen and (max-width: $smalldevice) {
 		font-size: 1.2em;
 		line-height: 1.6em;
-		padding: 1em $gutter/2;
+		padding: $gutter ($gutter / 2);
 	}
+}
+
+// Selection
+::selection {
+  color: $white;
+  background: $primary;
 }
 
 // Code
@@ -117,5 +133,5 @@ pre {
 	padding: 1.6em;
 	margin-bottom: 32px;
 	background: $lgray;
-	border-left: solid 5px #36b5b0;
+	border-left: solid 5px $primary;
 }
