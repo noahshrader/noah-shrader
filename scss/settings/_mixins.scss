@@ -67,6 +67,7 @@
 @mixin smallcaps {
 	font-family: $secfont;
 	font-size: .65em;
+  font-weight: 600;
 	line-height: 1.2em;
 	letter-spacing: 3px;
 	text-transform: uppercase;
