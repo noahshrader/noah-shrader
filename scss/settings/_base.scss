@@ -2,7 +2,7 @@ main {
 	display: flex;
 	align-items: flex-end;
   flex-wrap: wrap;
-	padding: 0 ($gutter + $footerwidth) 0 7%;
+	padding: 0 ($gutter + $footerwidth) 0 $bodypadding;
 	height: calc(100% - (#{$headerheight}));
 	min-height: min-content;
 	width: 100%;
@@ -79,7 +79,7 @@ main {
 
 	@media screen and (max-width: $mediumdevice) {
 		align-items: flex-start;
-		padding: $gutter 7% 0;
+		padding: $gutter $bodypadding 0;
 		height: auto;
 	}
 }

@@ -1,7 +1,7 @@
 header {
   display: flex;
   align-items: center;
-  padding: 0 7%;
+  padding: 0 $bodypadding;
   width: 100%;
   height: $headerheight;
   min-height: min-content;

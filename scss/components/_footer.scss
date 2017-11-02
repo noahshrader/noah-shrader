@@ -1,7 +1,7 @@
 footer {
 	position: fixed;
 	bottom: $gutter;
-	right: 7%;
+	right: $bodypadding;
 	text-align: right;
 
 	// Social media
@@ -32,7 +32,7 @@ footer {
 
 			@media screen and (max-width: $mediumdevice) {
 				margin-top: ($gutter / 2);
-				padding: 0 7%;
+				padding: 0 $bodypadding;
 			}
 		}
 	}
