@@ -20,12 +20,15 @@ main {
 
 			a {
 				font-weight: 300;
+				text-transform: none;
 			}
 		}
 
 		// Projects
 		.projects {
 			@include clean-ul;
+			display: flex;
+			align-items: center;
 			margin-top: $gutter;
 			width: 100%;
 
