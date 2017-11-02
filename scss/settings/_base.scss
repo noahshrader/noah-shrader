@@ -1,51 +1,78 @@
 main {
 	display: flex;
-	align-items: center;
-  flex-direction: column;
-  justify-content: center;
+	align-items: flex-end;
   flex-wrap: wrap;
-  flex: 2;
-	padding: 0 7%;
-	height: calc(100% - (#{$headerheight} + #{$footerheight}));
+	padding: 0 ($gutter + $footerwidth) 0 7%;
+	height: calc(100% - (#{$headerheight}));
 	min-height: min-content;
 	width: 100%;
 
-	h2 {
-		color: $white;
-		padding-right: 18%;
-		margin-top: ($gutter / 2);
-		width: 100%;
+	.welcome {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: $gutter;
+		max-width: 850px;
 
-		@media screen and (max-width: $smalldevice) {
-	    padding-right: 10%;
-	  }
-	}
+		h3 {
+			color: $white;
+			margin-top: ($gutter / 2);
+			width: 100%;
 
-	.utility {
-		@include clean-ul;
-		margin: $gutter 0;
-		width: 100%;
+			a {
+				font-weight: 300;
+			}
+		}
 
-		li {
-			display: inline-block;
-			color: $gray;
-			font-family: $secfont;
-			font-size: 14px;
-			margin-right: 15px;
+		// Projects
+		.projects {
+			@include clean-ul;
+			margin-top: $gutter;
+			width: 100%;
 
-			&:first-child {
-				color: $white;
-				font-weight: 600;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				margin-right: 0;
+			li {
+				display: inline-block;
+				color: $gray;
+				font-family: $secfont;
+				font-size: 15px;
+				margin-right: 15px;
 
-				&::after {
-					content: '–';
-					display: inline-block;
-					margin: 0 ($gutter / 2);
+				&:first-child {
+					position: relative;
+					color: $dgray;
+					font-weight: 600;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					padding-right: ($gutter / 2);
+					margin-right: ($gutter / 2);
+
+					&::after {
+						content: '';
+						position: absolute;
+						top: 50%;
+						right: 0;
+						height: 40px;
+						width: 1px;
+						background: $dgray;
+						transform: translateY(-50%) rotate(35deg);
+
+						@media screen and (max-width: $mediumdevice) {
+							display: none;
+						}
+					}
+				}
+
+				@media screen and (max-width: $mediumdevice) {
+					display: block;
+					margin-top: ($gutter / 2);
+					margin-right: 0;
 				}
 			}
 		}
+	}
+
+	@media screen and (max-width: $mediumdevice) {
+		align-items: flex-start;
+		padding: $gutter 7% 0;
+		height: auto;
 	}
 }

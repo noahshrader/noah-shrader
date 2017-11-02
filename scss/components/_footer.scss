@@ -1,112 +1,46 @@
 footer {
-	display: flex;
-	flex: 0;
-	padding: ($gutter / 2) 7%;
-	width: 100%;
-	height: $footerheight;
-	min-height: min-content;
+	position: fixed;
+	bottom: $gutter;
+	right: 7%;
+	text-align: right;
 
 	// Social media
 	ul {
 		@include clean-ul;
-		margin-right: ($gutter / 2);
 
 		li {
-			display: inline-block;
-			margin-right: ($gutter / 2);
+			margin-top: 10px;
+
+			&:first-child {
+				display: none;
+				color: $gray;
+				font-family: $secfont;
+				font-size: 15px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+
+				@media screen and (max-width: $mediumdevice) {
+					display: block;
+				}
+			}
 
 			a {
-				display: block;
-				color: $gray;
-
-				&::after {
-					display: none;
-				}
-
-				svg {
-					height: 15px;
-					width: 15px;
-
-					path,
-					polyline,
-					line,
-					polygon {
-						@include trans;
-						color: $gray;
-					}
-
-					@media screen and (max-width: $smalldevice) {
-						height: 20px;
-						width: 20px;
-					}
-				}
-
-				i {
-					@include trans;
-
-					&.icon-dribbble {
-						font-size: 20px;
-					}
-
-					&.icon-linkedin {
-						font-size: 15px;
-
-						&::before {
-							top: 0;
-						}
-					}
-
-					&::before {
-						position: relative;
-						top: 3px;
-					}
-
-					@media screen and (max-width: $smalldevice) {
-						font-size: 25px;
-					}
-				}
-
-				&:hover {
-					svg {
-						path,
-						polyline,
-						line,
-						polygon {
-							color: $white;
-						}
-					}
-
-					i {
-						color: $white;
-					}
-				}
+				font-family: $secfont;
+				font-size: 15px;
+				text-transform: lowercase;
 			}
 
-			@media screen and (max-width: $smalldevice) {
-				margin: 0 ($gutter / 2);
+			@media screen and (max-width: $mediumdevice) {
+				margin-top: ($gutter / 2);
+				padding: 0 7%;
 			}
-		}
-
-		@media screen and (max-width: $smalldevice) {
-			margin-right: 0;
-			margin-bottom: ($gutter / 2);
-			width: 100%;
 		}
 	}
 
-	// Copyright notice
-	.copy {
-		display: inline-block;
-		color: $dgray;
-		font-family: $secfont;
-		font-size: .55em;
-		line-height: 25px;
-		margin: 0;
-	}
-
-	@media screen and (max-width: $smalldevice) {
-		flex-direction: column;
-		text-align: center;
-		padding-top: ($gutter * 2);
+	@media screen and (max-width: $mediumdevice) {
+		position: static;
+		text-align: left;
+		padding-bottom: $gutter;
 	}
 }

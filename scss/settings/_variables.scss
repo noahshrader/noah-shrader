@@ -14,7 +14,7 @@ $primary: #0432ff; // Blue
 // Fonts
 $basefontsize: 20px;
 $mainfont: 'calluna', Helvetica, Arial, sans-serif;
-$secfont: 'europa', Helvetica, Arial, sans-serif;
+$secfont: 'nimbus-sans', Helvetica, Arial, sans-serif;
 $iconfont: 'noah-shrader';
 
 // Project colors
@@ -25,9 +25,9 @@ $pullr: #2bbb9a;
 
 // Structure
 $radius: 3px;
-$gutter: 30px;
-$headerheight: 150px;
-$footerheight: 65px;
+$gutter: 50px;
+$headerheight: 135px;
+$footerwidth: 200px;
 
 $largemaxwidth: 1400px;
 $mediummaxwidth: 980px;
@@ -36,5 +36,5 @@ $smallmaxwidth: 800px;
 // Breakpoints
 $largedesktop: 1200px;
 $desktop: 1024px;
-$mediumdevice: 800px;
+$mediumdevice: 650px;
 $smalldevice: 480px;
