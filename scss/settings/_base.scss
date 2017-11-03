@@ -42,10 +42,11 @@ main {
 				&:first-child {
 					position: relative;
 					color: $dgray;
+					font-size: 11px;
 					font-weight: 600;
 					text-transform: uppercase;
 					letter-spacing: 1px;
-					padding-right: ($gutter / 2);
+					padding-right: ($gutter / 3);
 					margin-right: ($gutter / 2);
 
 					&::after {
@@ -53,10 +54,10 @@ main {
 						position: absolute;
 						top: 50%;
 						right: 0;
-						height: 40px;
+						height: 23px;
 						width: 1px;
 						background: $dgray;
-						transform: translateY(-45%) rotate(-35deg);
+						transform: translateY(-50%) rotate(-30deg);
 
 						@media screen and (max-width: $mediumdevice) {
 							display: none;
