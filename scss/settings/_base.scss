@@ -79,7 +79,7 @@ main {
 
 	@media screen and (max-width: $mediumdevice) {
 		align-items: flex-start;
-		padding: $gutter $bodypadding 0;
+		padding: ($gutter * 3) $bodypadding 0;
 		height: auto;
 	}
 }
