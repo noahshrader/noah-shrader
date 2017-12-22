@@ -47,7 +47,7 @@ main {
 					text-transform: uppercase;
 					letter-spacing: 1px;
 					padding-right: ($gutter / 3);
-					margin-right: ($gutter / 2);
+					margin-right: ($gutter / 3);
 
 					&::after {
 						content: '';
@@ -63,6 +63,11 @@ main {
 							display: none;
 						}
 					}
+				}
+
+				a {
+					display: inline-block;
+					top: -1px;
 				}
 
 				@media screen and (max-width: $mediumdevice) {
