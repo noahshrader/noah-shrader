@@ -1,45 +1,38 @@
 footer {
-	position: fixed;
-	bottom: $gutter;
-	right: $bodypadding;
-	text-align: right;
+	display: flex;
+	align-items: center;
+	flex: 1;
+	max-height: $footerheight;
+	padding: $gutter $bodypadding;
 
 	// Social media
 	ul {
 		@include clean-ul;
 
 		li {
-			margin-top: 8px;
-
-			&:first-child {
-				display: none;
-				color: $dgray;
-				font-family: $secfont;
-				font-size: 11px;
-				font-weight: 600;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-
-				@media screen and (max-width: $mediumdevice) {
-					display: block;
-				}
-			}
+			display: inline-block;
+			margin-right: ($gutter / 2);
 
 			a {
 				font-family: $secfont;
 				font-size: 15px;
+				font-weight: 300;
 			}
 
-			@media screen and (max-width: $mediumdevice) {
+			@media screen and (max-width: $largedevice) {
+				text-align: center;
+				padding-right: ($gutter / 2);
 				margin-top: ($gutter / 2);
-				padding: 0 $bodypadding;
+				margin-right: 0;
 			}
 		}
 	}
 
-	@media screen and (max-width: $mediumdevice) {
-		position: static;
-		text-align: left;
+	@media screen and (max-width: $largedevice) {
+		align-items: flex-start;
+		flex-direction: column;
+		padding-top: 0;
 		padding-bottom: $gutter;
+		max-height: 100%;
 	}
 }

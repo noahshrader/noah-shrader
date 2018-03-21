@@ -5,7 +5,7 @@ h3,
 h4,
 h5,
 p {
-	color: $base;
+	color: $white;
   font-weight: 300;
 	padding: 0;
 	margin: 0;
@@ -24,22 +24,21 @@ h1 {
 }
 
 h2 {
-	font-size: 1.6em;
+	font-size: 2em;
 	line-height: 1.8em;
 
-  @media screen and (max-width: $mediumdevice) {
-    font-size: 1.4em;
-    line-height: 1.6em;
+  @media screen and (max-width: $largedevice) {
+    font-size: 1.6em;
+    line-height: 1.8em;
   }
 
 	@media screen and (max-width: $smalldevice) {
     font-size: 1.2em;
-    line-height: 1.5em;
   }
 }
 
 h3 {
-	font-size: 1.4em;
+	font-size: 1.6em;
 	line-height: 1.6em;
 
  	@media screen and (max-width: $smalldevice) {

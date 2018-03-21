@@ -1,6 +1,7 @@
 header {
   display: flex;
   align-items: center;
+  flex: 1;
   padding: 0 $bodypadding;
   width: 100%;
   height: $headerheight;
@@ -9,15 +10,6 @@ header {
   .logo {
     color: $white;
     font-size: 35px;
-    height: 35px;
-  }
-
-  .name {
-    display: inline-block;
-    color: $white;
-    font-family: $secfont;
-    font-size: 17px;
-    font-weight: 700;
-    margin-left: 15px;
+    width: 35px;
   }
 }
