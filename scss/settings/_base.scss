@@ -11,7 +11,7 @@ main {
 	.welcome {
 		display: flex;
 		flex-direction: column;
-		padding: ($headerheight / 2) 0 ($footerheight / 2);
+		padding: ($headerheight / 1.5) 0 ($footerheight / 2);
 		width: 75%;
 
 		h2 {
