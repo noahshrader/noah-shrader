@@ -1,8 +1,4 @@
 
 \.DS_Store
 
-_config\.codekit3
-
-*.codekit3
-
 sftp-config\.json
