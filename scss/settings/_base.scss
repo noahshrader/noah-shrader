@@ -173,7 +173,7 @@ main {
 	min-height: min-content;
   width: 100%;
 
-  @media screen and (max-width: $smalldevice) {
+  @media screen and (max-width: $mediumdevice) {
     padding-right: ($horizontal-padding / 2);
     padding-left: ($horizontal-padding / 2);
   }
