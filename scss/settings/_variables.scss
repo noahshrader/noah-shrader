@@ -7,7 +7,7 @@ $dgray: lighten($base, 25%);
 $gray: lighten($base, 45%);
 $medgray: lighten($base, 65%);
 $lgray: lighten($base, 76%);
-$offwhite: lighten($base, 82%);
+$offwhite: lighten($base, 86%);
 
 $primary: #0432ff; // Blue
 
@@ -25,15 +25,23 @@ $pullr: #2bbb9a;
 
 // Structure
 $radius: 3px;
-$gutter: 50px;
-$bodypadding: 8%;
 
+// Padding & Spacing
+$gutter: 60px;
+$vertical-padding: 160px;
+$horizontal-padding: 16%;
+
+// Header
 $headerheight: 140px;
+
+// Footer
 $footerheight: 140px;
 
-$largemaxwidth: 1400px;
-$mediummaxwidth: 980px;
-$smallmaxwidth: 800px;
+// Book List
+$book-list-width: 460px;
+
+// Miscellaneous
+$intro-image-size: 400px;
 
 // Breakpoints
 $largedesktop: 1200px;

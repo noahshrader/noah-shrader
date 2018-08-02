@@ -1,0 +1,117 @@
+// Main book list container
+.book-list {
+  @include trans;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  bottom: 10%;
+  width: 100%;
+  max-width: $book-list-width;
+  background: $primary;
+  z-index: 9998;
+  transform: translateX(-50%) scale(0);
+  overflow: auto;
+  outline: 1000px solid rgba($white, 0.3);
+
+  // When visible
+  &.open {
+    transform: translateX(-50%) scale(1);
+  }
+
+  // Inner list wrapper
+  .list {
+    padding: $gutter;
+  }
+
+  h4,
+  li {
+    color: $white;
+  }
+
+  // Main title
+  h4 {
+    margin-bottom: $gutter;
+  }
+
+  // List of books
+  ul {
+    @include clean-ul;
+
+    li {
+      position: relative;
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      // Separator lines between books
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 40px;
+        background: rgba($white, 0.5);
+      }
+    }
+  }
+
+  @media screen and (max-width: $smalldevice) {
+    width: 85%;
+    bottom: calc(10% + 64px);
+  }
+}
+
+// Close button
+.book-list-close {
+  --size: 50px;
+  @include hidden;
+  position: fixed;
+  top: 10%;
+  right: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  margin-right: -($book-list-width / 2);
+  height: var(--size);
+  width: var(--size);
+  background: $black;
+  border-radius: var(--size);
+  transform: translate(50%, -50%) scale(0.5);
+  transition: none;
+  z-index: 9999;
+
+  // When visible
+  &.open {
+    @include visible;
+    @include trans;
+    transition-delay: 0.15s;
+    transform: translate(50%, -50%) scale(1);
+
+    &:hover {
+      font-size: 15px;
+      transition-delay: 0s;
+    }
+  }
+
+  i {
+    position: relative;
+    top: 2px;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: $smalldevice) {
+    --size: 45px;
+    right: ($horizontal-padding / 2);
+    margin-right: 0;
+  }
+}

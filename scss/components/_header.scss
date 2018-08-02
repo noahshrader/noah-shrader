@@ -1,14 +1,56 @@
 header {
+  @include trans(
+    $trans-speed: 0.6s
+  );
+  position: fixed;
+  top: 0;
+  left: -($horizontal-padding);
+  bottom: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex: 1;
-  padding: 0 $bodypadding;
-  width: 100%;
-  height: $headerheight;
-  min-height: min-content;
+  justify-content: space-between;
+  padding: ($gutter / 2) 0;
+  width: $horizontal-padding;
+  max-width: 100px;
+  z-index: 9990;
+  pointer-events: none;
 
+  // When the page is loaded
+  .active & {
+    left: 0;
+  }
+
+  // Noah Shrader icon
   .logo {
-    color: $white;
-    width: 40px;
+    width: 35px;
+  }
+
+  // Rotated name
+  .name {
+    @include smallcaps;
+    @include trans;
+    margin-bottom: ($gutter + 10px);
+    width: 150px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    transform-origin: center;
+
+    @media screen and (max-width: $mediumdevice) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $mediumdevice) {
+    top: -($horizontal-padding);
+    bottom: auto;
+    left: 0;
+    padding: ($gutter / 4) 0;
+    width: 100%;
+    max-width: 100%;
+
+    .active & {
+      top: 0;
+    }
   }
 }

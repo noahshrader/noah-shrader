@@ -1,37 +1,34 @@
+// Social media
 footer {
-	display: flex;
-	align-items: center;
-	flex: 1;
-	max-height: $footerheight;
-	padding: $gutter $bodypadding;
+  margin-top: ($vertical-padding / 2);
+  background: $offwhite;
 
-	// Social media
-	ul {
-		@include clean-ul;
+  .wrap {
+    display: flex;
+    justify-content: space-between;
 
-		li {
-			display: inline-block;
-			margin-right: ($gutter / 2);
+    .contact-link {
+      flex: 1;
+      text-align: center;
+      padding: ($vertical-padding - 40px) $horizontal-padding;
 
-			a {
-				font-family: $secfont;
-				font-size: 15px;
-			}
+      &:hover {
+        background: $primary;
 
-			@media screen and (max-width: $largedevice) {
-				text-align: center;
-				padding-right: ($gutter / 2);
-				margin-top: ($gutter / 2);
-				margin-right: 0;
-			}
-		}
-	}
+        h4 {
+          color: $white;
+        }
+      }
 
-	@media screen and (max-width: $largedevice) {
-		align-items: flex-start;
-		flex-direction: column;
-		padding-top: 0;
-		padding-bottom: $gutter;
-		max-height: 100%;
-	}
+      @media screen and (max-width: $smalldevice) {
+        padding-top: ($vertical-padding / 2);
+        padding-bottom: ($vertical-padding / 2);
+      }
+    }
+  }
+
+  @media screen and (max-width: $smalldevice) {
+    margin-top: 0;
+    margin-bottom: 64px;
+  }
 }

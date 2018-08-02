@@ -1,0 +1,74 @@
+.social {
+  @include clean-ul;
+  @include trans(
+    $trans-speed: 0.6s
+  );
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  right: -($horizontal-padding);
+  bottom: 0;
+  padding-bottom: ($gutter / 2);
+  width: $horizontal-padding;
+  max-width: 100px;
+  z-index: 9990;
+
+  // When the page loads
+  .active & {
+    right: 0;
+  }
+
+  li {
+    margin-bottom: ($gutter / 3);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $primary;
+      }
+
+      i {
+        font-size: 1em !important;
+      }
+
+      // Reduce size of LinkedIn
+      &.linkedin {
+        i {
+          font-size: 0.8em !important;
+        }
+      }
+    }
+
+    @media screen and (max-width: $mediumdevice) {
+      margin-bottom: 0;
+      margin-right: ($gutter / 3);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mediumdevice) {
+    bottom: -100%;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 5%;
+    height: 64px;
+    background: $white;
+
+    .active & {
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.read {
+
+  .wrap {
+    align-items: center;
+    justify-content: space-between;
+
+    // Container with current book selection
+    .current {
+      padding-right: $gutter;
+
+      .book-title {
+        margin-bottom: ($gutter / 6);
+      }
+
+      .book-author {
+        margin-left: 2px;
+      }
+
+      @media screen and (max-width: $smalldevice) {
+        padding-right: 0;
+        margin-bottom: ($gutter / 2);
+      }
+    }
+
+    // Link to launch book library
+    .book-library {
+      display: flex;
+      flex: 0 0 auto;
+    }
+
+    @media screen and (max-width: $smalldevice) {
+      align-items: flex-start;
+    }
+  }
+}
