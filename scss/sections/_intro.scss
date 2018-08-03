@@ -37,11 +37,13 @@
     &:hover {
 
       &::after {
+        @include trans;
         margin-top: 0;
         margin-left: 0;
       }
 
       img {
+        @include trans;
         filter: grayscale(0);
       }
     }
