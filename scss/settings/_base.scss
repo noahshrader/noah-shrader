@@ -173,6 +173,11 @@ main {
 	min-height: min-content;
   width: 100%;
 
+  // When modal is open
+  &.open {
+    opacity: 0.6;
+  }
+
   @media screen and (max-width: $mediumdevice) {
     padding-right: ($horizontal-padding / 2);
     padding-left: ($horizontal-padding / 2);
