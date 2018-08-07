@@ -42,6 +42,7 @@ header {
   }
 
   @media screen and (max-width: $mediumdevice) {
+    position: absolute;
     top: -($horizontal-padding);
     bottom: auto;
     left: 0;
