@@ -46,24 +46,32 @@
 
         i {
           @include trans;
-          font-size: 50px;
+          font-size: 55px;
         }
 
         &::before {
+          --size: 50px;
           @include hidden;
           @include trans;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           position: absolute;
           top: 50%;
           left: 50%;
           color: $white;
+          font-size: 15px;
+          height: var(--size);
+          width: var(--size);
+          border: solid 1px $white;
+          border-radius: var(--size);
           transform: translate(-50%, 50%) scale(0);
-          transform-origin: 0 0;
         }
       }
 
       img {
         @include trans;
-        height: 50px;
+        height: 55px;
         width: auto;
       }
     }
