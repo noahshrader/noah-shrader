@@ -65,6 +65,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/images\/layer-cake-brand.jpg": {
+		"ft": 16384,
+		"iS": 61436,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/images\/layer-cake-brand.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/images\/layer-cake-icon.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -106,6 +117,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/images\/pion-brand.jpg": {
+		"ft": 16384,
+		"iS": 45846,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/images\/pion-brand.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/images\/pion-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -125,6 +147,17 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"\/images\/tagtician-brand.jpg": {
+		"ft": 16384,
+		"iS": 49644,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/images\/tagtician-brand.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/index.html": {
