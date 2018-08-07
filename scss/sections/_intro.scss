@@ -52,6 +52,10 @@
       position: relative;
       z-index: 1;
     }
+
+    @media screen and (max-width: $smalldevice) {
+      transform: translateY(10%);
+    }
   }
 
   img {
@@ -64,12 +68,12 @@
     filter: grayscale(100%);
 
     @media screen and (max-width: $mediumdevice) {
-      width: ($intro-image-size - 140px);
+      width: ($intro-image-size - 160px);
     }
   }
 
 	@media screen and (max-width: $smalldevice) {
     height: auto;
-    min-height: 85vh;
+    min-height: 70vh;
   }
 }
