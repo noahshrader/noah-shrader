@@ -78,6 +78,10 @@ p {
     font-size: 0.7em;
   }
 
+  @media screen and (max-width: $largedevice) {
+		font-size: 1em;
+  }
+
 	@media screen and (max-width: $smalldevice) {
 		font-size: 0.9em;
   }
