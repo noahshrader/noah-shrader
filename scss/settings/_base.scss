@@ -175,7 +175,7 @@ main {
 
   // When modal is open
   &.open {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
   @media screen and (max-width: $mediumdevice) {
