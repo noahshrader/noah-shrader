@@ -6,11 +6,10 @@
 
   .date {
     display: block;
-    font-family: $mainfont;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1;
-    margin-top: ($gutter / 4);
+    margin-top: ($gutter / 3);
   }
 
   // Most recent article
@@ -39,7 +38,6 @@
     // Individual article container
     .article {
       position: relative;
-      font-family: $secfont;
       padding-bottom: $gutter;
       margin-bottom: ($gutter / 4);
 

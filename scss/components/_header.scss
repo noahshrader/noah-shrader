@@ -30,6 +30,7 @@ header {
   .name {
     @include smallcaps;
     @include trans;
+    font-family: $font-bold;
     margin-bottom: ($gutter + 10px);
     width: 150px;
     text-transform: uppercase;

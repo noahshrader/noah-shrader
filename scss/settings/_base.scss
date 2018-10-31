@@ -20,7 +20,7 @@ body {
 
 body {
   @include trans;
-	font-family: $mainfont;
+	font-family: $font-regular;
 	font-size: $basefontsize;
   font-weight: 400;
 
@@ -47,29 +47,35 @@ a {
     }
   }
 
+  // Large links with circular arrows
   &.main {
     display: flex;
     flex: 0 0 auto;
     align-items: center;
     color: $primary;
-    font-family: $secfont;
+    font-family: $font-bold;
     font-weight: 700;
 
     i {
-      --size: 65px;
+      --size: 60px;
       @include trans;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      top: 3px;
       left: 10px;
-      font-size: 15px;
+      font-size: 18px;
       height: var(--size);
       width: var(--size);
       border: solid 1px $primary;
       border-radius: var(--size);
       z-index: 0;
+
+      &::before {
+        position: relative;
+        left: 1px;
+        top: 1px;
+      }
 
       @media screen and (max-width: $smalldevice) {
         --size: 55px;
@@ -173,9 +179,10 @@ main {
 	min-height: min-content;
   width: 100%;
 
-  // When modal is open
+  // When book library modal is open
   &.open {
-    opacity: 0.5;
+    opacity: 0.3;
+    pointer-events: none;
   }
 
   @media screen and (max-width: $mediumdevice) {

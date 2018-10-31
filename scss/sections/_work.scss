@@ -16,13 +16,13 @@
   .project {
     @include border-radius;
     flex: 1;
-    margin-right: ($gutter / 2);
-    margin-bottom: ($gutter / 2);
+    margin-right: ($gutter / 1.5);
+    margin-bottom: ($gutter / 1.5);
 
     .project-cover {
       @include border-radius;
-      margin-bottom: ($gutter / 6);
-      background: $offwhite;
+      margin-bottom: ($gutter / 4);
+      border: solid 1px rgba($black, 0.5);
       overflow: hidden;
 
       img {
