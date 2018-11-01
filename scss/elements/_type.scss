@@ -66,18 +66,19 @@ h5 {
 
 // Paragraph
 p {
-	color: $base;
-  font-size: 1em;
+  color: $base;
+  font-family: $secfont;
+  font-size: 1.2em;
   font-weight: 300;
-  line-height: 1.5em;
+  line-height: 1.6em;
   margin: 0;
   padding: 0;
 
   &.small {
-    font-size: 0.7em;
+    font-size: 0.85em;
   }
 
 	@media screen and (max-width: $smalldevice) {
-		font-size: 0.9em;
+		font-size: 1em;
   }
 }

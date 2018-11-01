@@ -175,36 +175,44 @@ pre {
 main {
   @include trans;
   padding: 0;
-  padding: 0 $horizontal-padding;
 	min-height: min-content;
   width: 100%;
 
   // When book library modal is open
   &.open {
-    opacity: 0.3;
+    opacity: 0.25;
     pointer-events: none;
-  }
-
-  @media screen and (max-width: $mediumdevice) {
-    padding-right: ($horizontal-padding / 2);
-    padding-left: ($horizontal-padding / 2);
   }
 }
 
 section {
   display: flex;
   flex-direction: column;
-  padding: $vertical-padding 0;
+  padding: $vertical-padding $horizontal-padding;
+
+  .section-header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: $maxdesktop;
+
+    @media screen and (max-width: $smalldevice) {
+      text-align: center;
+      padding: 0 ($gutter / 2);
+    }
+  }
 
   @media screen and (max-width: $smalldevice) {
-    padding-top: ($vertical-padding / 2);
-    padding-bottom: ($vertical-padding / 2);
+    padding: ($vertical-padding / 2) ($gutter / 2);
   }
 }
 
 // Inner section wrapper
 .wrap {
   display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $maxdesktop;
 
   @media screen and (max-width: $smalldevice) {
     flex-direction: column;

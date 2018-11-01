@@ -15,6 +15,7 @@ $primary: #0432ff; // Blue
 $basefontsize: 20px;
 $font-bold: 'aktiv-bold', Helvetica, Arial, sans-serif;
 $font-regular: 'aktiv-regular', Helvetica, Arial, sans-serif;
+$secfont: 'EB Garamond', Helvetica, Arial, sans-serif;
 $iconfont: 'noah-shrader';
 
 // Project colors
@@ -23,16 +24,8 @@ $tagtician: #f58f31;
 $tagtician-blue: #292e3a;
 $pullr: #2bbb9a;
 
-// Structure
-$radius: 2px;
-
-// Padding & Spacing
-$gutter: 60px;
-$vertical-padding: 160px;
-$horizontal-padding: 16%;
-
 // Header
-$headerheight: 140px;
+$headerwidth: 100px;
 
 // Footer
 $footerheight: 140px;
@@ -43,7 +36,16 @@ $book-list-width: 460px;
 // Miscellaneous
 $intro-image-size: 400px;
 
+// Structure
+$radius: 2px;
+
+// Padding & Spacing
+$gutter: 60px;
+$vertical-padding: 160px;
+$horizontal-padding: ($headerwidth + $gutter);
+
 // Breakpoints
+$maxdesktop: 1600px;
 $largedesktop: 1200px;
 $desktop: 1024px;
 $largedevice: 850px;

@@ -7,21 +7,22 @@
   // Individual repo container
   .repo {
     flex: 1;
-    margin-right: ($gutter / 2);
+    margin-right: $gutter;
 
     .repo-top {
-      @include border-radius;
       display: flex;
       align-items: center;
       justify-content: center;
       color: $black;
-      margin-bottom: ($gutter / 2);
+      margin-bottom: ($gutter / 1.5);
       min-height: 200px;
-      border: solid 1px rgba($black, 0.25);
+      border: solid 1px $primary;
+      box-shadow: 10px 10px 0px 0px $primary;
 
       &:hover {
         border-color: $primary;
         background: $primary;
+        box-shadow: none;
 
         span {
           &::before {
@@ -46,11 +47,12 @@
 
         i {
           @include trans;
-          font-size: 55px;
+          color: $primary;
+          font-size: 60px;
         }
 
         &::before {
-          --size: 50px;
+          --size: 55px;
           @include hidden;
           @include trans;
           display: flex;
@@ -71,8 +73,16 @@
 
       img {
         @include trans;
-        height: 55px;
+        height: 60px;
         width: auto;
+
+        &.layer-cake {
+          height: 65px;
+        }
+      }
+
+      p {
+        padding-right: $gutter;
       }
     }
 

@@ -1,3 +1,17 @@
+.work {
+  padding-left: 0;
+  padding-right: 0;
+
+  .section-header {
+    padding-left: $gutter;
+  }
+
+  .wrap {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -14,15 +28,18 @@
 
   // Invdividual project listing
   .project {
-    @include border-radius;
     flex: 1;
-    margin-right: ($gutter / 1.5);
     margin-bottom: ($gutter / 1.5);
 
+    &.blank {
+      @media screen and (max-width: $largedevice) {
+        display: none;
+      }
+    }
+
     .project-cover {
-      @include border-radius;
-      margin-bottom: ($gutter / 4);
-      border: solid 1px rgba($black, 0.25);
+      margin-bottom: ($gutter / 3);
+      //background: $primary;
       overflow: hidden;
 
       img {
@@ -32,8 +49,8 @@
       }
     }
 
-    &:last-child {
-      margin-right: 0;
+    p {
+      text-align: center;
     }
 
     @media screen and (max-width: $largedevice) {
@@ -46,7 +63,7 @@
 .view-behance {
   display: flex;
   justify-content: flex-end;
-  margin-right: 10px;
+  margin-right: ($headerwidth + $gutter);
 
   @media screen and (max-width: $largedevice) {
     justify-content: center;

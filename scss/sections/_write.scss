@@ -6,6 +6,7 @@
 
   .date {
     display: block;
+    font-family: $secfont;
     font-size: 18px;
     font-weight: 400;
     line-height: 1;
@@ -27,7 +28,7 @@
 
     @media screen and (max-width: $smalldevice) {
       padding-right: 0;
-      margin-bottom: ($gutter / 2);
+      margin-bottom: $gutter;
     }
   }
 

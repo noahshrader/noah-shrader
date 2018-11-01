@@ -2,10 +2,10 @@
   text-align: center;
   margin: 0 auto;
   padding: 0 0 140px;
-  max-width: 740px;
+  max-width: 650px;
 
-  p {
-    font-size: 1.2em;
-    line-height: 1.8em;
+  @media screen and (max-width: $smalldevice) {
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
   }
 }
