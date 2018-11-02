@@ -22,13 +22,13 @@
     padding: $gutter;
   }
 
-  h4,
+  h3,
   li {
     color: $white;
   }
 
   // Main title
-  h4 {
+  h3 {
     margin-bottom: $gutter;
     margin-bottom: ($gutter / 2);
   }
@@ -40,6 +40,7 @@
     li {
       position: relative;
       font-family: $secfont;
+      font-size: 1em;
       padding-bottom: 1em;
       margin-bottom: 1em;
 
