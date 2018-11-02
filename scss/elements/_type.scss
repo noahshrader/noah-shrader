@@ -5,7 +5,7 @@ h3,
 h4,
 h5 {
   color: $black;
-  font-family: $font-bold;
+  font-family: $mainfont;
 	padding: 0;
 	margin: 0;
 }
@@ -38,7 +38,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.7em;
+  font-size: 1.8em;
   font-weight: 700;
 	line-height: 1.2em;
 
@@ -68,14 +68,14 @@ h5 {
 p {
   color: $base;
   font-family: $secfont;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 300;
   line-height: 1.6em;
   margin: 0;
   padding: 0;
 
   &.small {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 
 	@media screen and (max-width: $smalldevice) {

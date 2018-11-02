@@ -13,9 +13,8 @@ $primary: #0432ff; // Blue
 
 // Fonts
 $basefontsize: 20px;
-$font-bold: 'aktiv-bold', Helvetica, Arial, sans-serif;
-$font-regular: 'aktiv-regular', Helvetica, Arial, sans-serif;
-$secfont: 'EB Garamond', Helvetica, Arial, sans-serif;
+$mainfont: 'Poppins', Helvetica, Arial, sans-serif;
+$secfont: 'Lora', Helvetica, Arial, sans-serif;
 $iconfont: 'noah-shrader';
 
 // Project colors
@@ -42,7 +41,7 @@ $radius: 2px;
 // Padding & Spacing
 $gutter: 60px;
 $vertical-padding: 160px;
-$horizontal-padding: ($headerwidth + $gutter);
+$horizontal-padding: ($headerwidth * 2);
 
 // Breakpoints
 $maxdesktop: 1600px;

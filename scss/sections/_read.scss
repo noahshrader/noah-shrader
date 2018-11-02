@@ -9,7 +9,12 @@
       padding-right: $gutter;
 
       .book-title {
+        padding-right: $gutter;
         margin-bottom: ($gutter / 4);
+
+        @media screen and (max-width: $smalldevice) {
+          padding-right: 0;
+        }
       }
 
       .book-author {

@@ -20,7 +20,7 @@ body {
 
 body {
   @include trans;
-	font-family: $font-regular;
+	font-family: $mainfont;
 	font-size: $basefontsize;
   font-weight: 400;
 
@@ -53,7 +53,7 @@ a {
     flex: 0 0 auto;
     align-items: center;
     color: $primary;
-    font-family: $font-bold;
+    font-family: $mainfont;
     font-weight: 700;
 
     i {
