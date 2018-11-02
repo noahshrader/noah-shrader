@@ -76,9 +76,13 @@ p {
 
   &.small {
     font-size: 0.85em;
+
+    @media screen and (max-width: $smalldevice) {
+      font-size: 0.75em;
+    }
   }
 
 	@media screen and (max-width: $smalldevice) {
-		font-size: 1em;
+		font-size: 0.85em;
   }
 }

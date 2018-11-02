@@ -11,6 +11,10 @@
     font-weight: 400;
     line-height: 1;
     margin-top: ($gutter / 3);
+
+    @media screen and (max-width: $smalldevice) {
+      font-size: 15px;
+    }
   }
 
   // Most recent article
