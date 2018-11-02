@@ -63,6 +63,10 @@
         width: 40px;
         background: rgba($white, 0.5);
       }
+
+      @media screen and (max-width: $smalldevice) {
+        font-size: 0.85em;
+      }
     }
   }
 
@@ -118,7 +122,7 @@
 
   @media screen and (max-width: $smalldevice) {
     --size: 45px;
-    right: ($horizontal-padding / 2);
+    right: 50%;
     margin-right: 0;
   }
 }
