@@ -13,9 +13,7 @@
 
     &::after {
       @include hidden;
-      @include trans(
-        $trans-speed: 0.6s
-      );
+      @include trans;
       content: '';
       position: absolute;
       top: 0;
@@ -48,7 +46,6 @@
       }
 
       img {
-        @include trans;
         filter: grayscale(0);
       }
     }
@@ -64,9 +61,7 @@
   }
 
   img {
-    @include trans(
-      $trans-speed: 0.6s
-    );
+    @include trans;
     height: auto;
     width: $intro-image-size;
     border-radius: $intro-image-size;

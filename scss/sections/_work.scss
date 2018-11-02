@@ -4,6 +4,10 @@
 
   .section-header {
     padding-left: $gutter;
+
+    @media screen and (max-width: $mediumdevice) {
+      padding: 0;
+    }
   }
 
   .wrap {

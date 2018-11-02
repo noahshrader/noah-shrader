@@ -32,12 +32,21 @@
       justify-content: center;
       color: $black;
 
-      &:hover {
-        color: $primary;
-      }
+      // Reduce size of Medium
+      &.medium {
+        svg {
+          transform: scale(0.8);
 
-      i {
-        font-size: 1em !important;
+          path {
+            @include trans;
+          }
+
+          &:hover {
+            path {
+              fill: $primary;
+            }
+          }
+        }
       }
 
       // Reduce size of LinkedIn
@@ -45,6 +54,14 @@
         i {
           font-size: 0.8em !important;
         }
+      }
+
+      &:hover {
+        color: $primary;
+      }
+
+      i {
+        font-size: 1em !important;
       }
     }
 
