@@ -68,7 +68,11 @@
     filter: grayscale(100%);
 
     @media screen and (max-width: $mediumdevice) {
-      width: ($intro-image-size - 160px);
+      width: ($intro-image-size - 80px);
+    }
+
+    @media screen and (max-width: $smalldevice) {
+      width: ($intro-image-size - 140px);
     }
   }
 

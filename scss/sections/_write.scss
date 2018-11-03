@@ -12,7 +12,7 @@
     line-height: 1;
     margin-top: ($gutter / 3);
 
-    @media screen and (max-width: $smalldevice) {
+    @media screen and (max-width: $mediumdevice) {
       font-size: 15px;
     }
   }
@@ -30,7 +30,11 @@
       }
     }
 
-    @media screen and (max-width: $smalldevice) {
+    @media screen and (max-width: $largedevice) {
+      padding-right: $gutter;
+    }
+
+    @media screen and (max-width: $mediumdevice) {
       padding-right: 0;
       margin-bottom: $gutter;
     }
@@ -55,6 +59,10 @@
         height: 1px;
         width: 60px;
         background: $black;
+
+        @media screen and (max-width: $mediumdevice) {
+          display: none;
+        }
       }
 
       a {
@@ -69,5 +77,9 @@
         padding-bottom: ($gutter / 2);
       }
     }
+  }
+
+  @media screen and (max-width: $mediumdevice) {
+    text-align: center;
   }
 }

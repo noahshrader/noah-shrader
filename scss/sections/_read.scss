@@ -12,7 +12,7 @@
         padding-right: $gutter;
         margin-bottom: ($gutter / 4);
 
-        @media screen and (max-width: $smalldevice) {
+        @media screen and (max-width: $mediumdevice) {
           padding-right: 0;
         }
       }
@@ -21,7 +21,7 @@
         margin-left: 2px;
       }
 
-      @media screen and (max-width: $smalldevice) {
+      @media screen and (max-width: $mediumdevice) {
         padding-right: 0;
         margin-bottom: ($gutter / 2);
       }
@@ -31,6 +31,15 @@
     .book-library {
       display: flex;
       flex: 0 0 auto;
+
+      @media screen and (max-width: $mediumdevice) {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: $mediumdevice) {
+      text-align: center;
     }
 
     @media screen and (max-width: $smalldevice) {

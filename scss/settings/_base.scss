@@ -92,6 +92,10 @@ a {
         left: 20px;
       }
     }
+
+    @media screen and (max-width: $mediumdevice) {
+      justify-content: center;
+    }
   }
 }
 
@@ -196,13 +200,18 @@ section {
     width: 100%;
     max-width: $maxdesktop;
 
-    @media screen and (max-width: $smalldevice) {
+    @media screen and (max-width: $mediumdevice) {
       text-align: center;
       padding: 0 ($gutter / 2);
     }
   }
 
-  @media screen and (max-width: $smalldevice) {
+  @media screen and (max-width: $largedevice) {
+    padding-right: ($headerwidth + ($gutter / 2));
+    padding-left: ($headerwidth + ($gutter / 2));
+  }
+
+  @media screen and (max-width: $mediumdevice) {
     padding: ($vertical-padding / 2) ($gutter / 2);
   }
 }
@@ -214,7 +223,7 @@ section {
   width: 100%;
   max-width: $maxdesktop;
 
-  @media screen and (max-width: $smalldevice) {
+  @media screen and (max-width: $mediumdevice) {
     flex-direction: column;
   }
 }
