@@ -84,6 +84,10 @@
       p {
         padding-right: $gutter;
       }
+
+      @media screen and (max-width: $smalldevice) {
+        min-height: 160px;
+      }
     }
 
     .repo-bottom {
@@ -110,5 +114,10 @@
       margin-right: 0;
       margin-bottom: $gutter;
     }
+  }
+
+  @media screen and (max-width: $mediumdevice) {
+    padding-left: $gutter;
+    padding-right: $gutter;
   }
 }

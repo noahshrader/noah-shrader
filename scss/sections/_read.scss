@@ -41,9 +41,5 @@
     @media screen and (max-width: $mediumdevice) {
       text-align: center;
     }
-
-    @media screen and (max-width: $smalldevice) {
-      align-items: flex-start;
-    }
   }
 }
