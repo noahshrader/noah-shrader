@@ -1,6 +1,7 @@
 // Main book list container
 .book-list {
   @include trans;
+  @include hidden;
   position: fixed;
   top: 10%;
   left: 50%;
@@ -9,11 +10,12 @@
   max-width: $book-list-width;
   background: $primary;
   z-index: 9998;
-  transform: translateX(-50%) scale(0);
+  transform: translateX(-50%) scale(0.8);
   overflow: auto;
 
   // When visible
   &.open {
+    @include visible;
     transform: translateX(-50%) scale(1);
   }
 
