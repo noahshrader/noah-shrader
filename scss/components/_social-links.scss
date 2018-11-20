@@ -21,7 +21,7 @@
   }
 
   li {
-    margin-bottom: ($gutter / 3);
+    margin-bottom: ($gutter / 2);
 
     &:last-child {
       margin-bottom: 0;
@@ -47,12 +47,20 @@
             }
           }
         }
+
+        @media screen and (max-width: $mediumdevice) {
+          margin-top: -4px;
+        }
       }
 
       // Reduce size of LinkedIn
       &.linkedin {
         i {
           font-size: 0.8em !important;
+        }
+
+        @media screen and (max-width: $mediumdevice) {
+          margin-top: -2px;
         }
       }
 
