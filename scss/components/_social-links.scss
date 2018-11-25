@@ -57,6 +57,10 @@
       &.linkedin {
         i {
           font-size: 0.8em !important;
+
+          @media screen and (max-width: $mediumdevice) {
+            font-size: 0.7em !important;
+          }
         }
 
         @media screen and (max-width: $mediumdevice) {
@@ -70,6 +74,10 @@
 
       i {
         font-size: 1em !important;
+
+        @media screen and (max-width: $mediumdevice) {
+          font-size: 0.9em !important;
+        }
       }
     }
 
@@ -88,7 +96,7 @@
     flex-direction: row;
     align-items: center;
     padding: 0 5%;
-    height: 64px;
+    height: 60px;
     background: $white;
 
     .active & {
