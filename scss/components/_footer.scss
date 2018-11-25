@@ -1,5 +1,6 @@
 // Social media
 footer {
+  @include trans;
   margin-top: ($vertical-padding / 2);
   background: $offwhite;
 
