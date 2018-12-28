@@ -25,6 +25,12 @@
     display: flex;
     justify-content: space-between;
 
+    &.reverse {
+      @media screen and (max-width: $largedevice) {
+        flex-direction: column-reverse;
+      }
+    }
+
     @media screen and (max-width: $largedevice) {
       flex-direction: column;
     }
@@ -33,6 +39,7 @@
   // Invdividual project listing
   .project {
     flex: 1;
+    overflow: hidden;
 
     // In case there isn't a graphic here
     &.blank {
@@ -51,21 +58,30 @@
 
     .project-cover {
       position: relative;
-      background: $primary;
       overflow: hidden;
+
+      &::after {
+        @include trans;
+        @include hidden;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $primary;
+        z-index: 0;
+      }
 
       &:hover {
         img {
-          box-shadow: -10px 10px 40px 0 rgba($black, 0.3);
-          transform: scale(0.65) translateY(15%);
+          opacity: 0.07;
+          filter: brightness(150%);
+          transform: scale(1.1);
+        }
 
-          @media screen and (max-width: $mediumdevice) {
-            transform: scale(0.65) translateY(20%);
-          }
-
-          @media screen and (max-width: $smalldevice) {
-            transform: scale(0.5) translateY(30%);
-          }
+        &::after {
+          @include visible;
         }
 
         .project-info {
@@ -86,11 +102,12 @@
     .project-info {
       @include hidden;
       position: absolute;
-      top: 9%;
+      top: 50%;
       left: 0;
       right: 0;
       text-align: center;
-      z-index: 0;
+      z-index: 10;
+      transform: translateY(-50%);
     }
 
     .button.secondary {
@@ -124,7 +141,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: $gutter;
-  margin-right: ($headerwidth + $gutter);
+  margin-right: $horizontal-padding;
 
   @media screen and (max-width: $largedevice) {
     justify-content: center;

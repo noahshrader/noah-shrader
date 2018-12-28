@@ -55,6 +55,10 @@
       z-index: 1;
     }
 
+    @media screen and (max-width: $mediumdevice) {
+      margin-bottom: ($gutter / 3);
+    }
+
     @media screen and (max-width: $smalldevice) {
       transform: translateY(15%);
     }
@@ -65,14 +69,14 @@
     height: auto;
     width: $intro-image-size;
     border-radius: $intro-image-size;
-    filter: grayscale(100%);
+    filter: grayscale(100%) brightness(110%);
 
     @media screen and (max-width: $mediumdevice) {
-      width: ($intro-image-size - 100px);
+      width: ($intro-image-size - 160px);
     }
 
     @media screen and (max-width: $smalldevice) {
-      width: ($intro-image-size - 160px);
+      width: ($intro-image-size - 220px);
     }
   }
 

@@ -16,13 +16,11 @@
       color: $black;
       margin-bottom: ($gutter / 1.5);
       min-height: 200px;
-      border: solid 1px $primary;
-      box-shadow: 10px 10px 0px 0px $primary;
+      border: solid 1px $black;
 
       &:hover {
         border-color: $primary;
-        background: $primary;
-        box-shadow: none;
+        box-shadow: 10px 10px 0px 0px $primary;
 
         span {
           &::before {
@@ -47,7 +45,7 @@
 
         i {
           @include trans;
-          color: $primary;
+          color: $black;
           font-size: 60px;
         }
 
@@ -61,11 +59,11 @@
           position: absolute;
           top: 50%;
           left: 50%;
-          color: $white;
+          color: $primary;
           font-size: 16px;
           height: var(--size);
           width: var(--size);
-          border: solid 2px $white;
+          border: solid 2px $primary;
           border-radius: var(--size);
           transform: translate(-50%, 50%) scale(0);
         }

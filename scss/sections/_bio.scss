@@ -2,15 +2,7 @@
   text-align: center;
   margin: 0 auto;
   padding: 0 0 140px;
-  max-width: 660px;
-
-  p {
-    line-height: 1.8em;
-
-    @media screen and (max-width: $smalldevice) {
-      line-height: 1.7em;
-    }
-  }
+  max-width: 800px;
 
   @media screen and (max-width: $mediumdevice) {
     padding-left: ($gutter / 1.5);

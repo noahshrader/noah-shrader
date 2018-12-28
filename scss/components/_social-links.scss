@@ -21,10 +21,16 @@
   }
 
   li {
-    margin-bottom: ($gutter / 2);
+    margin-bottom: ($gutter / 3);
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &.github {
+      @media screen and (max-width: $mediumdevice) {
+        display: none;
+      }
     }
 
     a {
@@ -57,10 +63,6 @@
       &.linkedin {
         i {
           font-size: 0.8em !important;
-
-          @media screen and (max-width: $mediumdevice) {
-            font-size: 0.7em !important;
-          }
         }
 
         @media screen and (max-width: $mediumdevice) {
