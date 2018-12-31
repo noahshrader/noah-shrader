@@ -61,27 +61,28 @@
       overflow: hidden;
 
       &::after {
+        --position: 25px;
         @include trans;
         @include hidden;
         content: '';
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: $primary;
-        z-index: 0;
+        top: var(--position);
+        right: var(--position);
+        bottom: var(--position);
+        left: var(--position);
+        background: rgba($primary, 0.96);
+        z-index: 2;
+        transform: scale(0.9);
       }
 
       &:hover {
         img {
-          opacity: 0.07;
           filter: brightness(150%);
-          transform: scale(1.1);
         }
 
         &::after {
           @include visible;
+          transform: scale(1);
         }
 
         .project-info {
