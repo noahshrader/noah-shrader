@@ -87,6 +87,7 @@
 
         .project-info {
           @include visible;
+          transform: translateY(-50%) scale(1);
         }
       }
 
@@ -102,13 +103,14 @@
 
     .project-info {
       @include hidden;
+      @include trans;
       position: absolute;
       top: 50%;
       left: 0;
       right: 0;
       text-align: center;
       z-index: 10;
-      transform: translateY(-50%);
+      transform: translateY(-50%) scale(1.1);
     }
 
     .button.secondary {
