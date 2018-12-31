@@ -78,7 +78,7 @@ a {
       }
 
       @media screen and (max-width: $smalldevice) {
-        --size: 55px;
+        --size: 50px;
       }
     }
 
@@ -94,6 +94,7 @@ a {
     }
 
     @media screen and (max-width: $mediumdevice) {
+      font-size: 0.9em;
       justify-content: center;
     }
   }
@@ -117,7 +118,7 @@ strong a {
 }
 
 [disabled] {
-  opacity: 0.3;
+  opacity: 0.5;
   pointer-events: none;
 }
 
