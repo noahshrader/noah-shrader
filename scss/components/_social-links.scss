@@ -10,7 +10,7 @@
   position: fixed;
   right: -($horizontal-padding);
   bottom: 0;
-  padding-bottom: ($gutter / 2);
+  padding-bottom: ($gutter / 1.5);
   width: $horizontal-padding;
   max-width: $headerwidth;
   z-index: 9990;
