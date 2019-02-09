@@ -4,9 +4,23 @@
     justify-content: space-between;
   }
 
+  .subline {
+    display: block;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-top: ($gutter / 4);
+
+    @media screen and (max-width: $mediumdevice) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: ($gutter / 4);
+    }
+  }
+
   .date {
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1;
     margin-top: ($gutter / 3);
@@ -61,6 +75,18 @@
 
         @media screen and (max-width: $mediumdevice) {
           display: none;
+        }
+      }
+
+      .subline {
+        display: block;
+        font-size: 22px;
+        line-height: 30px;
+        margin-top: ($gutter / 4);
+
+        @media screen and (max-width: $mediumdevice) {
+          font-size: 16px;
+          line-height: 25px;
         }
       }
 

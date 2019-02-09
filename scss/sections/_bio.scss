@@ -4,6 +4,13 @@
   padding: 0 0 140px;
   max-width: 740px;
 
+  a {
+    &:hover {
+      color: $white;
+      background: $primary;
+    }
+  }
+
   @media screen and (max-width: $mediumdevice) {
     padding-left: ($gutter / 1.1);
     padding-right: ($gutter / 1.1);

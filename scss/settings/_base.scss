@@ -40,13 +40,6 @@ a {
   z-index: 10;
   cursor: pointer;
 
-  p & {
-    &:hover {
-      color: $white;
-      background: $primary;
-    }
-  }
-
   // Large links with circular arrows
   &.main {
     display: flex;
