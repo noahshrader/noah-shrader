@@ -37,49 +37,58 @@
       display: flex;
       justify-content: center;
       color: $black;
+    }
 
-      // Reduce size of Medium
-      &.medium {
-        svg {
-          transform: scale(0.8);
+    // Reduce size of Medium
+    &.medium {
+      svg {
+        transform: scale(0.8);
 
+        path {
+          @include trans;
+        }
+
+        &:hover {
           path {
-            @include trans;
-          }
-
-          &:hover {
-            path {
-              fill: $primary;
-            }
+            fill: $primary;
           }
         }
-
-        @media screen and (max-width: $mediumdevice) {
-          margin-top: -4px;
-        }
       }
 
-      // Reduce size of LinkedIn
-      &.linkedin {
-        i {
-          font-size: 0.8em !important;
-        }
+      @media screen and (max-width: $mediumdevice) {
+        margin-top: -4px;
+      }
+    }
 
-        @media screen and (max-width: $mediumdevice) {
-          margin-top: -2px;
-        }
+    // Reduce size of LinkedIn
+    &.linkedin {
+      i {
+        font-size: 0.8em !important;
       }
 
-      &:hover {
-        color: $primary;
+      @media screen and (max-width: $mediumdevice) {
+        margin-top: -2px;
       }
+    }
+
+    &.behance {
 
       i {
-        font-size: 1em !important;
-
         @media screen and (max-width: $mediumdevice) {
-          font-size: 0.9em !important;
+          font-size: 1em !important;
         }
+      }
+    }
+
+    &:hover {
+      color: $primary;
+    }
+
+    i {
+      font-size: 1em;
+
+      @media screen and (max-width: $mediumdevice) {
+        font-size: 0.9em;
       }
     }
 
