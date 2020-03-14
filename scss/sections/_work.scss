@@ -101,8 +101,16 @@
 // Link to Behance
 .view-behance {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: $gutter;
+
+  span {
+    display: inline-block;
+    font-size: 0.7em;
+    margin-top: ($gutter / 4);
+  }
 
   @media screen and (max-width: $largedevice) {
     justify-content: center;
