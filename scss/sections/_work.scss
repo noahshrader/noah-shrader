@@ -9,11 +9,6 @@
       padding: 0;
     }
   }
-
-  .wrap {
-    margin: 0;
-    max-width: 100%;
-  }
 }
 
 .projects {
@@ -23,109 +18,51 @@
 
   .projects-row {
     display: flex;
-    justify-content: space-between;
+    margin-bottom: ($gutter * 2);
 
     &.reverse {
-      @media screen and (max-width: $largedevice) {
-        flex-direction: column-reverse;
+      flex-direction: row-reverse;
+
+      .project-info {
+        margin-right: -10vw;
+        margin-left: 0;
       }
     }
 
-    @media screen and (max-width: $largedevice) {
-      flex-direction: column;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
   // Invdividual project listing
   .project {
-    flex: 1;
+    @include border-radius;
+    position: relative;
     overflow: hidden;
+    flex: 2;
+    max-width: 60vw;
 
-    // In case there isn't a graphic here
-    &.blank {
-      .project-cover {
-        background: transparent;
-
-        img {
-          display: none;
-        }
-      }
-
-      @media screen and (max-width: $mediumdevice) {
-        display: none;
-      }
-    }
-
-    .project-cover {
-      position: relative;
-      overflow: hidden;
-
-      &::after {
-        --position: 25px;
-        @include trans;
-        @include hidden;
-        content: '';
-        position: absolute;
-        top: var(--position);
-        right: var(--position);
-        bottom: var(--position);
-        left: var(--position);
-        background: rgba($primary, 0.96);
-        z-index: 2;
-        transform: scale(0.9);
-      }
-
-      &:hover {
-        img {
-          filter: brightness(150%);
-        }
-
-        &::after {
-          @include visible;
-          transform: scale(1);
-        }
-
-        .project-info {
-          @include visible;
-          transform: translateY(-50%) scale(1);
-        }
-      }
-
-      img {
-        position: relative;
-        @include trans;
-        float: left;
-        width: 100%;
-        height: auto;
-        z-index: 1;
-      }
-    }
-
-    .project-info {
-      @include hidden;
-      @include trans;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      text-align: center;
-      z-index: 10;
-      transform: translateY(-50%) scale(1.1);
-    }
-
-    .button.secondary {
-      color: $white;
-      margin-top: 10px;
-      border-color: $white;
-    }
-
-    p {
-      color: $white;
-      padding: 0 ($gutter / 2);
+    img {
+      float: left;
     }
 
     @media screen and (max-width: $mediumdevice) {
-      margin-right: 0;
+
+    }
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    flex: 1;
+    margin-left: -10vw;
+    z-index: 9999;
+
+    h2,
+    p {
+      margin-bottom: ($gutter / 2);
     }
   }
 }
@@ -142,9 +79,8 @@
 // Link to Behance
 .view-behance {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: $gutter;
-  margin-right: $horizontal-padding;
 
   @media screen and (max-width: $largedevice) {
     justify-content: center;

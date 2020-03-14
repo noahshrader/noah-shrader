@@ -1,7 +1,8 @@
 .read {
+  background: $primary;
 
   .wrap {
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 
     // Container with current book selection
@@ -9,6 +10,7 @@
       padding-right: $gutter;
 
       .book-title {
+        color: $white;
         padding-right: $gutter;
 
         @media screen and (max-width: $mediumdevice) {
@@ -37,6 +39,22 @@
       @media screen and (max-width: $mediumdevice) {
         padding-right: 0;
         margin-bottom: ($gutter / 2);
+      }
+    }
+
+    a.main {
+      color: $white;
+
+      &:hover {
+
+        i {
+          color: $primary;
+          background: $white;
+        }
+      }
+
+      i {
+        border-color: $white;
       }
     }
 

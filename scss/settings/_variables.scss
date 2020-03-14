@@ -13,7 +13,7 @@ $primary: #0432ff; // Blue
 
 // Fonts
 $basefontsize: 20px;
-$mainfont: 'Poppins', Helvetica, Arial, sans-serif;
+$mainfont: 'Spartan', Helvetica, Arial, sans-serif;
 $iconfont: 'noah-shrader';
 
 // Project colors
@@ -35,7 +35,7 @@ $book-list-width: 550px;
 $intro-image-size: 480px;
 
 // Structure
-$radius: 2px;
+$radius: 10px;
 
 // Padding & Spacing
 $gutter: 60px;
@@ -46,4 +46,4 @@ $horizontal-padding: ($headerwidth * 2);
 $maxdesktop: 1600px;
 $largedevice: 1024px;
 $mediumdevice: 800px;
-$smalldevice: 480px;
+$smalldevice: 500px;

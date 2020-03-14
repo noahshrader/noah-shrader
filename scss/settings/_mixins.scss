@@ -67,9 +67,9 @@
 // Small caps
 @mixin smallcaps {
 	font-size: 0.7em;
-  font-weight: 600;
+  font-weight: 800;
 	line-height: 1.2em;
-	letter-spacing: 3px;
+	letter-spacing: 4px;
 	text-transform: uppercase;
 
 	@media screen and (max-width: $mediumdevice) {

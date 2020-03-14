@@ -10,6 +10,7 @@
     margin-right: $gutter;
 
     .repo-top {
+      @include border-radius;
       display: flex;
       align-items: center;
       justify-content: center;

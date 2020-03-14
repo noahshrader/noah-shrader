@@ -23,7 +23,7 @@ header {
 
   // Noah Shrader icon
   .logo {
-    width: 35px;
+    width: 40px;
   }
 
   // Rotated name
@@ -31,8 +31,9 @@ header {
     @include smallcaps;
     @include trans;
     font-family: $mainfont;
-    margin-bottom: ($gutter + 10px);
-    width: 150px;
+    font-weight: 800;
+    margin-bottom: ($gutter * 1.5);
+    width: 180px;
     text-transform: uppercase;
     transform: rotate(-90deg);
     transform-origin: center;
