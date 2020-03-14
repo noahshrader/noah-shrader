@@ -17,7 +17,8 @@
       color: $black;
       margin-bottom: ($gutter / 1.5);
       min-height: 200px;
-      border: solid 2px $primary;
+      border: solid 2px transparent;
+      background: $offwhite;
 
       &:hover {
         border-color: $primary;

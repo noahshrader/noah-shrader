@@ -39,9 +39,10 @@
 
     a {
       color: $black;
+      box-shadow: inset 0px -10px 0px 0 $primary;
 
       &:hover {
-        color: $primary;
+        box-shadow: inset 0px -100px 0px 0 $primary;
       }
     }
 
@@ -94,9 +95,10 @@
 
       a {
         color: $black;
+        box-shadow: inset 0px -6px 0px 0 $primary;
 
         &:hover {
-          color: $primary;
+          box-shadow: inset 0px -100px 0px 0 $primary;
         }
       }
 

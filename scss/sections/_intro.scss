@@ -11,8 +11,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: solid 2px $primary;
-    border-radius: 1000px;
 
     &::after {
       @include hidden;
