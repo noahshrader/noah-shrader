@@ -1048,7 +1048,7 @@ header {
   .intro img {
     -webkit-transition: ease-in-out 0.2s;
     transition: ease-in-out 0.2s;
-    height: 480px;
+    height: auto;
     width: 480px;
     border-radius: 480px;
     -webkit-filter: grayscale(100%) brightness(110%) contrast(110%);

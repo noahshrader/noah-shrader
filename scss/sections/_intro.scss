@@ -65,7 +65,7 @@
 
   img {
     @include trans;
-    height: $intro-image-size;
+    height: auto;
     width: $intro-image-size;
     border-radius: $intro-image-size;
     filter: grayscale(100%) brightness(110%) contrast(110%);
