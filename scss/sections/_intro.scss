@@ -5,11 +5,14 @@
   height: 100vh;
 
   &-wrap {
+    @include trans;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: solid 2px $primary;
+    border-radius: 1000px;
 
     &::after {
       @include hidden;
@@ -38,9 +41,9 @@
     }
 
     &:hover {
+      border-color: transparent;
 
       &::after {
-        @include trans;
         margin-top: 0;
         margin-left: 0;
       }
@@ -62,7 +65,7 @@
 
   img {
     @include trans;
-    height: auto;
+    height: $intro-image-size;
     width: $intro-image-size;
     border-radius: $intro-image-size;
     filter: grayscale(100%) brightness(110%) contrast(110%);

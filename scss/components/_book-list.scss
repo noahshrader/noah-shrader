@@ -79,20 +79,17 @@
   color: $primary;
   height: var(--size);
   width: var(--size);
-  background: $white;
+  background: $primary;
   border-radius: var(--size);
-  border: solid 2px $primary;
+  border: solid 2px $white;
   transform: scale(0.5);
   transition: none;
   z-index: 9999;
 
-  &:hover {
-    transform: translate(50%, -50%) scale(0.85);
-  }
-
   i {
     position: relative;
     top: 2px;
+    color: $white;
     font-size: 16px;
   }
 }

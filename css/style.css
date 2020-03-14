@@ -663,20 +663,18 @@ p {
   color: #0432ff;
   height: var(--size);
   width: var(--size);
-  background: #fff;
+  background: #0432ff;
   border-radius: var(--size);
-  border: solid 2px #0432ff;
+  border: solid 2px #fff;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   -webkit-transition: none;
   transition: none;
   z-index: 9999; }
-  .book-list-close:hover {
-    -webkit-transform: translate(50%, -50%) scale(0.85);
-            transform: translate(50%, -50%) scale(0.85); }
   .book-list-close i {
     position: relative;
     top: 2px;
+    color: #fff;
     font-size: 16px; }
 
 footer {
@@ -899,8 +897,7 @@ header {
     color: #000;
     margin-bottom: 40px;
     min-height: 200px;
-    border: solid 2px #f6f6f6;
-    background: #f6f6f6; }
+    border: solid 2px #0432ff; }
     .code .repo .repo-top:hover {
       border-color: #0432ff;
       box-shadow: 10px 10px 0px 0px #0432ff; }
@@ -996,6 +993,8 @@ header {
           justify-content: center;
   height: 100vh; }
   .intro-wrap {
+    -webkit-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
     position: relative;
     display: -webkit-box;
     display: flex;
@@ -1005,7 +1004,9 @@ header {
             justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column; }
+            flex-direction: column;
+    border: solid 2px #0432ff;
+    border-radius: 1000px; }
     .intro-wrap::after {
       opacity: 0;
       visibility: hidden;
@@ -1029,14 +1030,14 @@ header {
         @media screen and (max-width: 500px) {
           .active .intro-wrap::after {
             --offset: 6px; } }
-    .intro-wrap:hover::after {
-      -webkit-transition: ease-in-out 0.2s;
-      transition: ease-in-out 0.2s;
-      margin-top: 0;
-      margin-left: 0; }
-    .intro-wrap:hover img {
-      -webkit-filter: grayscale(0) brightness(110%) contrast(110%);
-              filter: grayscale(0) brightness(110%) contrast(110%); }
+    .intro-wrap:hover {
+      border-color: transparent; }
+      .intro-wrap:hover::after {
+        margin-top: 0;
+        margin-left: 0; }
+      .intro-wrap:hover img {
+        -webkit-filter: grayscale(0) brightness(110%) contrast(110%);
+                filter: grayscale(0) brightness(110%) contrast(110%); }
     .intro-wrap img {
       position: relative;
       z-index: 1; }
@@ -1047,7 +1048,7 @@ header {
   .intro img {
     -webkit-transition: ease-in-out 0.2s;
     transition: ease-in-out 0.2s;
-    height: auto;
+    height: 480px;
     width: 480px;
     border-radius: 480px;
     -webkit-filter: grayscale(100%) brightness(110%) contrast(110%);
@@ -1084,7 +1085,9 @@ header {
       -webkit-transform: scale(1);
               transform: scale(1); }
       .read.open .book-list-close:hover {
-        font-size: 15px; }
+        font-size: 15px;
+        -webkit-transform: scale(0.85);
+                transform: scale(0.85); }
   .read .section-header {
     -webkit-transition: ease-in-out 0.2s;
     transition: ease-in-out 0.2s; }
