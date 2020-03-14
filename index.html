@@ -21,7 +21,7 @@
   <link href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" rel="stylesheet" media="all" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="js/min/site.js"></script>
+  <script src="js/site.js"></script>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -55,38 +55,34 @@
       <h5 class="section-header">What I'm Building</h5>
       <div class="wrap">
         <div class="projects">
-          <div class="projects-row">
-            <div class="project">
+          <div class="projects-row reverse">
+            <div class="project layer-cake">
               <img src="images/layer-cake-brand.jpg" alt="Layer Cake" />
             </div>
             <div class="project-info">
               <h2>Layer Cake Co.</h2>
-              <p>This is a descriptin of the product</p>
-              <a class="main" href="https://layercakeco.com" target="_blank">Visit Website <i class="im im-angle-right"></i></a>
-            </div>
-          </div>
-          <div class="projects-row reverse">
-            <div class="project">
-              <div class="project-cover">
-                <img src="images/pion-brand.jpg" alt="Pion" />
-              </div>
-            </div>
-            <div class="project-info">
-              <h2>Tagtician</h2>
-              <p>This is a descriptin of the product</p>
+              <p>A full-service design and development studio for food and lifestyle bloggers.</p>
               <a class="main" href="https://layercakeco.com" target="_blank">Visit Website <i class="im im-angle-right"></i></a>
             </div>
           </div>
           <div class="projects-row">
             <div class="project">
-              <div class="project-cover">
-                <img src="images/tagtician-brand.jpg" alt="Tagtician" />
-              </div>
+              <img style="opacity: 0;" src="images/tagtician-brand.jpg" alt="Tagtician" />
+            </div>
+            <div class="project-info">
+              <h2>Tagtician</h2>
+              <p>A must-have tag management and debugger extension for Adobe Launch and DTM users.</p>
+              <a class="main" href="https://chrome.google.com/webstore/detail/tagtician-adobe-launch-dt/hiaoiehpkillodoeillmodjcadmfmcbg?hl=en" target="_blank" rel="nofollow">Visit Extension <i class="im im-angle-right"></i></a>
+            </div>
+          </div>
+          <div class="projects-row reverse">
+            <div class="project">
+              <img style="opacity: 0;" src="images/pion-brand.jpg" alt="Pion" />
             </div>
             <div class="project-info">
               <h2>Pion</h2>
-              <p>This is a descriptin of the product</p>
-              <a class="main" href="https://layercakeco.com" target="_blank">Visit Website <i class="im im-angle-right"></i></a>
+              <p>A pure Golang implementation of the WebRTC Native API.</p>
+              <a class="main" href="https://layercakeco.com" target="_blank">Visit Repo <i class="im im-angle-right"></i></a>
             </div>
           </div>
         </div>
@@ -121,30 +117,30 @@
       <h5 class="section-header">What I'm Developing</h5>
       <div class="wrap">
         <div class="repo">
-          <a class="repo-top" href="https://github.com/pions" target="_blank" rel="nofollow">
-            <span class="im im-angle-right"><img src="images/pion-logo.svg" /></span>
-          </a>
-          <div class="repo-bottom">
-            <h4>Pion</h4>
-            <p class="small">A pure Golang implementation of the WebRTC Native API.</p>
-          </div>
-        </div>
-        <div class="repo">
-          <a class="repo-top" href="https://github.com/LayerCakeCo/mince" target="_blank" rel="nofollow">
+          <a class="repo-top" href="https://layercakeco.com/slice" target="_blank" rel="nofollow">
             <span class="im im-angle-right"><img class="layer-cake" src="images/layer-cake-icon.svg" /></span>
           </a>
           <div class="repo-bottom">
-            <h4>Slice</h4>
-            <p class="small">Genesis child theme framework for food bloggers.</p>
+            <h3>Slice</h3>
+            <p class="small">A highly customizable, performance-focused Genesis child theme framework for food and lifestyle bloggers.</p>
           </div>
         </div>
         <div class="repo">
-          <a class="repo-top" href="https://github.com/noahshrader/openweathermap" target="_blank" rel="nofollow">
+          <a class="repo-top" href="https://github.com/pions" target="_blank" rel="nofollow">
+            <span class="im im-angle-right"><img src="images/talk-logo.svg" /></span>
+          </a>
+          <div class="repo-bottom">
+            <h3>Talk</h3>
+            <p class="small">A web conferencing interfcae built using Pion, a pure Golang implementation of the WebRTC Native API.</p>
+          </div>
+        </div>
+        <div class="repo">
+          <a class="repo-top" href="https://noahshrader.github.io/openweathermap/" target="_blank" rel="nofollow">
             <span class="im im-angle-right"><i class="im im-cloud"></i></span>
           </a>
           <div class="repo-bottom">
-            <h4>OpenWeather</h4>
-            <p class="small">Javascript &amp; API development exploration project.</p>
+            <h3>OpenWeather</h4>
+            <p class="small">A javascript &amp; API development exploration project.</p>
           </div>
         </div>
       </div>
@@ -162,14 +158,49 @@
           <a class="view-library main">View My Library <i class="im im-angle-right"></i></a>
         </div>
       </div>
+
+      <div class="book-list">
+        <div class="list">
+          <h3>Library</h3>
+          <ul>
+            <li>Digital Minimalism - Cal Newport</li>
+            <li>Mindful Design - Scott Riley</li>
+            <li>The Field Guide to Human-Centered Design - IDEO</li>
+            <li>The Big Leap - Gay Hendricks</li>
+            <li>Crossing The Chasm: Marketing and Selling Disruptive Products to Mainstream Customers - Geoffrey A. Moore</li>
+            <li>The Culture Code: The Secrets of Highly Successful Groups - Daniel Coyle</li>
+            <li>Hooked: How to Build Habit-Forming Products - Nir Eyal</li>
+            <li>The Opposable Mind: Winning Through Integrative Thinking - Roger Martin</li>
+            <li>Radical Candor - Kim Scott</li>
+            <li>Inspired: How To Create Tech Products Customers Love - Marty Cagan</li>
+            <li>Building a StoryBrand: Clarify Your Message So Customers Will Listen - Donald Miller</li>
+            <li>Creative Strategy and the Business of Design - Douglas Davis</li>
+            <li>The Book of Not Knowing: Exploring the True Nature of Self, Mind, and Consciousness - Peter Ralston</li>
+            <li>UX Research: Practical Techniques for Designing Better Products - Brad Nunnally</li>
+            <li>Well Designed: How to Use Empathy to Create Products People Love - Jon Kolko</li>
+            <li>Data Points: Visualization That Means Something - Nathan Yau</li>
+            <li>The Four Agreements - Don Miguel Ruiz</li>
+            <li>The Master Key System - Charles F. Haanel</li>
+            <li>Start With Why - Simon Sinek</li>
+            <li>Execute - Drew Wilson</li>
+            <li>Lean UX: Applying Lean Principles to Improve User Experience - Jeff Gothelf</li>
+            <li>The Power of Habit - Charles Duhigg</li>
+            <li>The Power of Intention - Dr. Wayne Dyer</li>
+            <li>The Power of Positive Thinking - Norman Vincent Peale</li>
+            <li>Think And Grow Rich - Napoleon Hill</li>
+            <li>Psycho-Cybernetics - Maxwell Maltz</li>
+            <li>As a Man Thinketh - James Allen</li>
+          </ul>
+        </div>
+      </div>
+      <a class="book-list-close"><i class="im im-x-mark"></i></a>
     </section>
   </main>
 
 	<footer class="contact">
     <div class="wrap">
       <a class="contact-link" href="mailto:noahshrader@gmail.com" rel="nofollow">
-        <h5>Get A Hold of Me</h5>
-        <h4>Email</h4>
+        <h4>Get a Hold of Me</h4>
       </a>
     </div>
   </footer>
@@ -182,41 +213,5 @@
     <li class="github"><a class="github" href="https://github.com/noahshrader" title="Github" target="_blank" rel="nofollow"><i class="im im-github"></i></a></li>
     <li class="linkedin"><a class="linkedin" href="https://linkedin.com/in/noahshrader" title="LinkedIn" target="_blank" rel="nofollow"><i class="im im-linkedin"></i></a></li>
   </ul>
-
-  <div class="book-list">
-    <div class="list">
-      <h3>Library</h3>
-      <ul>
-        <li>Digital Minimalism - Cal Newport</li>
-        <li>Mindful Design - Scott Riley</li>
-        <li>The Field Guide to Human-Centered Design - IDEO</li>
-        <li>The Big Leap - Gay Hendricks</li>
-        <li>Crossing The Chasm: Marketing and Selling Disruptive Products to Mainstream Customers - Geoffrey A. Moore</li>
-        <li>The Culture Code: The Secrets of Highly Successful Groups - Daniel Coyle</li>
-        <li>Hooked: How to Build Habit-Forming Products - Nir Eyal</li>
-        <li>The Opposable Mind: Winning Through Integrative Thinking - Roger Martin</li>
-        <li>Radical Candor - Kim Scott</li>
-        <li>Inspired: How To Create Tech Products Customers Love - Marty Cagan</li>
-        <li>Building a StoryBrand: Clarify Your Message So Customers Will Listen - Donald Miller</li>
-        <li>Creative Strategy and the Business of Design - Douglas Davis</li>
-        <li>The Book of Not Knowing: Exploring the True Nature of Self, Mind, and Consciousness - Peter Ralston</li>
-        <li>UX Research: Practical Techniques for Designing Better Products - Brad Nunnally</li>
-        <li>Well Designed: How to Use Empathy to Create Products People Love - Jon Kolko</li>
-        <li>Data Points: Visualization That Means Something - Nathan Yau</li>
-        <li>The Four Agreements - Don Miguel Ruiz</li>
-        <li>The Master Key System - Charles F. Haanel</li>
-        <li>Start With Why - Simon Sinek</li>
-        <li>Execute - Drew Wilson</li>
-        <li>Lean UX: Applying Lean Principles to Improve User Experience - Jeff Gothelf</li>
-        <li>The Power of Habit - Charles Duhigg</li>
-        <li>The Power of Intention - Dr. Wayne Dyer</li>
-        <li>The Power of Positive Thinking - Norman Vincent Peale</li>
-        <li>Think And Grow Rich - Napoleon Hill</li>
-        <li>Psycho-Cybernetics - Maxwell Maltz</li>
-        <li>As a Man Thinketh - James Allen</li>
-      </ul>
-    </div>
-  </div>
-  <a class="book-list-close"><i class="im im-x-mark"></i></a>
 </body>
 </html>

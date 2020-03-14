@@ -1,7 +1,40 @@
 .read {
+  @include trans;
+  position: relative;
   background: $primary;
+  overflow: hidden;
+
+  &.open {
+    padding: ($vertical-padding * 1.5) $horizontal-padding;
+
+    .section-header,
+    .wrap {
+      opacity: 0.08;
+    }
+
+    // When visible
+    .book-list {
+      top: 0;
+    }
+
+    // When visible
+    .book-list-close {
+      @include visible;
+      @include trans;
+      transform: scale(1);
+
+      &:hover {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .section-header {
+    @include trans;
+  }
 
   .wrap {
+    @include trans;
     align-items: flex-start;
     justify-content: space-between;
 
@@ -71,6 +104,7 @@
 
     @media screen and (max-width: $mediumdevice) {
       text-align: center;
+      align-items: center;
     }
   }
 }

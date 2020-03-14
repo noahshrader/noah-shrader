@@ -1,27 +1,20 @@
 // Main book list container
 .book-list {
   @include trans;
-  @include hidden;
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  bottom: 10%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  bottom: 0;
+  padding-top: ($gutter * 1.5);
   width: 100%;
-  max-width: $book-list-width;
-  background: $primary;
   z-index: 9998;
-  transform: translateX(-50%) scale(0.8);
   overflow: auto;
-
-  // When visible
-  &.open {
-    @include visible;
-    transform: translateX(-50%) scale(1);
-  }
 
   // Inner list wrapper
   .list {
     padding: $gutter;
+    margin: 0 auto;
+    max-width: $book-list-width;
   }
 
   h3,
@@ -42,8 +35,9 @@
     li {
       position: relative;
       font-size: 1em;
-      padding-bottom: 1em;
-      margin-bottom: 1em;
+      line-height: 1.6em;
+      padding-bottom: 1.2em;
+      margin-bottom: 1.2em;
 
       &:last-child {
         margin-bottom: 0;
@@ -70,46 +64,27 @@
       }
     }
   }
-
-  @media screen and (max-width: $smalldevice) {
-    width: 85%;
-    bottom: calc(10% + 64px);
-  }
 }
 
 // Close button
 .book-list-close {
   --size: 50px;
   @include hidden;
-  position: fixed;
-  top: 10%;
-  right: 50%;
+  position: absolute;
+  top: ($gutter / 2);
+  right: ($gutter / 2);
   display: flex;
   align-items: center;
   justify-content: center;
   color: $primary;
-  margin-right: -($book-list-width / 2);
   height: var(--size);
   width: var(--size);
   background: $white;
   border-radius: var(--size);
   border: solid 2px $primary;
-  transform: translate(50%, -50%) scale(0.5);
+  transform: scale(0.5);
   transition: none;
   z-index: 9999;
-
-  // When visible
-  &.open {
-    @include visible;
-    @include trans;
-    transition-delay: 0.15s;
-    transform: translate(50%, -50%) scale(1);
-
-    &:hover {
-      font-size: 15px;
-      transition-delay: 0s;
-    }
-  }
 
   &:hover {
     transform: translate(50%, -50%) scale(0.85);
@@ -119,11 +94,5 @@
     position: relative;
     top: 2px;
     font-size: 16px;
-  }
-
-  @media screen and (max-width: $smalldevice) {
-    --size: 45px;
-    right: 50%;
-    margin-right: 0;
   }
 }

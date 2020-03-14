@@ -23,10 +23,6 @@ body {
 	font-family: $mainfont;
 	font-size: $basefontsize;
   font-weight: 400;
-
-  &.stuck {
-    overflow: hidden;
-  }
 }
 
 // Links
@@ -180,12 +176,6 @@ main {
   padding: 0;
 	min-height: min-content;
   width: 100%;
-
-  // When book library modal is open
-  &.open {
-    opacity: 0.25;
-    pointer-events: none;
-  }
 }
 
 section {

@@ -17,7 +17,8 @@
       color: $black;
       margin-bottom: ($gutter / 1.5);
       min-height: 200px;
-      border: solid 1px $black;
+      border: solid 2px $offwhite;
+      background: $offwhite;
 
       &:hover {
         border-color: $primary;
@@ -46,7 +47,7 @@
 
         i {
           @include trans;
-          color: $black;
+          color: $primary;
           font-size: 80px;
 
           &::before {
@@ -77,7 +78,7 @@
 
       img {
         @include trans;
-        height: 80px;
+        height: 70px;
         width: auto;
       }
 
