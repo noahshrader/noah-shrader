@@ -741,7 +741,7 @@ header {
   .active header {
     left: 0; }
   header .logo {
-    width: 40px; }
+    width: 38px; }
   header .name {
     font-size: 0.7em;
     font-weight: 800;
@@ -764,13 +764,22 @@ header {
         font-size: .6em; } }
     @media screen and (max-width: 800px) {
       header .name {
-        display: none; } }
+        text-align: right;
+        margin-bottom: 0;
+        -webkit-transform: none;
+                transform: none; } }
   @media screen and (max-width: 800px) {
     header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      -webkit-box-align: center;
+              align-items: center;
       position: absolute;
       top: -150px;
       bottom: auto;
       left: 0;
+      padding: 30px;
       width: 100%;
       max-width: 100%; }
       .active header {
@@ -927,7 +936,7 @@ header {
         -webkit-transition: ease-in-out 0.2s;
         transition: ease-in-out 0.2s;
         color: #0432ff;
-        font-size: 80px; }
+        font-size: 70px; }
         .code .repo .repo-top span i::before {
           position: relative;
           top: 5px; }
@@ -957,7 +966,7 @@ header {
     .code .repo .repo-top img {
       -webkit-transition: ease-in-out 0.2s;
       transition: ease-in-out 0.2s;
-      height: 70px;
+      height: 60px;
       width: auto; }
     .code .repo .repo-top p {
       padding-right: 60px; }

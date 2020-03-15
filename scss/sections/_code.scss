@@ -48,7 +48,7 @@
         i {
           @include trans;
           color: $primary;
-          font-size: 80px;
+          font-size: 70px;
 
           &::before {
             position: relative;
@@ -78,7 +78,7 @@
 
       img {
         @include trans;
-        height: 70px;
+        height: 60px;
         width: auto;
       }
 
