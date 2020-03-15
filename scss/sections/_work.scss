@@ -11,7 +11,7 @@
       flex-direction: row-reverse;
 
       .project-info {
-        margin-right: -15vw;
+        margin-right: -20vw;
         margin-left: 0;
       }
 
@@ -45,22 +45,13 @@
       }
     }
 
-    &::before {
-      content: 'Coming soon';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 0.9em;
-      transform: translate(-50%, -50%);
-      opacity: 0.3;
-    }
-
     img {
       float: left;
     }
 
     @media screen and (max-width: $mediumdevice) {
       max-width: 100%;
+      margin-bottom: ($gutter / 2);
     }
   }
 
@@ -70,7 +61,7 @@
     justify-content: center;
     position: relative;
     flex: 1;
-    margin-left: -10vw;
+    margin-left: -5vw;
     z-index: 9990;
 
     h2,
@@ -79,22 +70,17 @@
     }
 
     p {
-      max-width: 80%;
+      max-width: 65%;
+
+      @media screen and (max-width: $mediumdevice) {
+        max-width: 100%;
+      }
     }
 
     @media screen and (max-width: $mediumdevice) {
       text-align: center;
-      margin: -60px 0 0 !important;
+      margin: 0 !important;
     }
-  }
-}
-
-.mini-projects {
-  display: flex;
-  margin-bottom: $gutter;
-
-  .mini-project {
-    flex: 1;
   }
 }
 

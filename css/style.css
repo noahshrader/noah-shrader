@@ -765,7 +765,7 @@ header {
     @media screen and (max-width: 800px) {
       header .name {
         text-align: right;
-        margin-bottom: 0;
+        margin-bottom: -5px;
         -webkit-transform: none;
                 transform: none; } }
   @media screen and (max-width: 800px) {
@@ -775,6 +775,8 @@ header {
               flex-direction: row;
       -webkit-box-align: center;
               align-items: center;
+      -webkit-box-pack: center;
+              justify-content: center;
       position: absolute;
       top: -150px;
       bottom: auto;
@@ -1172,7 +1174,7 @@ header {
       -webkit-box-direction: reverse;
               flex-direction: row-reverse; }
       .projects .projects-row.reverse .project-info {
-        margin-right: -15vw;
+        margin-right: -20vw;
         margin-left: 0; }
       @media screen and (max-width: 800px) {
         .projects .projects-row.reverse {
@@ -1197,20 +1199,12 @@ header {
     background: #f6f6f6; }
     .projects .project.layer-cake::before {
       display: none; }
-    .projects .project::before {
-      content: 'Coming soon';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 0.9em;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      opacity: 0.3; }
     .projects .project img {
       float: left; }
     @media screen and (max-width: 800px) {
       .projects .project {
-        max-width: 100%; } }
+        max-width: 100%;
+        margin-bottom: 30px; } }
   .projects .project-info {
     display: -webkit-box;
     display: flex;
@@ -1222,25 +1216,20 @@ header {
     position: relative;
     -webkit-box-flex: 1;
             flex: 1;
-    margin-left: -10vw;
+    margin-left: -5vw;
     z-index: 9990; }
     .projects .project-info h2,
     .projects .project-info p {
       margin-bottom: 30px; }
     .projects .project-info p {
-      max-width: 80%; }
+      max-width: 65%; }
+      @media screen and (max-width: 800px) {
+        .projects .project-info p {
+          max-width: 100%; } }
     @media screen and (max-width: 800px) {
       .projects .project-info {
         text-align: center;
-        margin: -60px 0 0 !important; } }
-
-.mini-projects {
-  display: -webkit-box;
-  display: flex;
-  margin-bottom: 60px; }
-  .mini-projects .mini-project {
-    -webkit-box-flex: 1;
-            flex: 1; }
+        margin: 0 !important; } }
 
 .view-behance {
   display: -webkit-box;
