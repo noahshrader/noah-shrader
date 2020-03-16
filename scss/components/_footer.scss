@@ -50,6 +50,6 @@ footer {
 
   @media screen and (max-width: $mediumdevice) {
     margin-top: 0;
-    margin-bottom: 64px;
+    padding-bottom: $socialmenumobile;
   }
 }

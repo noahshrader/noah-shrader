@@ -21,7 +21,7 @@
   }
 
   li {
-    margin-bottom: ($gutter / 3);
+    margin-bottom: ($gutter / 2.5);
 
     &:last-child {
       margin-bottom: 0;
@@ -37,6 +37,13 @@
       display: flex;
       justify-content: center;
       color: $black;
+
+      &:hover {
+        i {
+          @include trans;
+          color: $primary;
+        }
+      }
     }
 
     // Reduce size of Medium
@@ -80,10 +87,6 @@
       }
     }
 
-    &:hover {
-      color: $primary;
-    }
-
     i {
       font-size: 1em;
 
@@ -107,7 +110,7 @@
     flex-direction: row;
     align-items: center;
     padding: 0 5%;
-    height: 60px;
+    height: $socialmenumobile;
     background: $white;
 
     .active & {
