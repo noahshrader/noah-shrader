@@ -887,8 +887,8 @@ header {
       box-shadow: inset 0px -100px 0px 0 #0432ff; }
   @media screen and (max-width: 800px) {
     .bio {
-      padding-left: 54.5454545455px;
-      padding-right: 54.5454545455px;
+      padding-left: 30px;
+      padding-right: 30px;
       padding-bottom: 80px; } }
 
 .code .wrap {
