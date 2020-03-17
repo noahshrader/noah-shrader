@@ -1085,7 +1085,7 @@ header {
   background: #0432ff;
   overflow: hidden; }
   .read.open {
-    padding: 240px 150px; }
+    padding: 240px 30px; }
     .read.open .section-header,
     .read.open .wrap {
       opacity: 0.08; }

@@ -5,7 +5,7 @@
   overflow: hidden;
 
   &.open {
-    padding: ($vertical-padding * 1.5) $horizontal-padding;
+    padding: ($vertical-padding * 1.5) ($gutter / 2);
 
     .section-header,
     .wrap {
