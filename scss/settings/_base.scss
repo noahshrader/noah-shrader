@@ -45,6 +45,18 @@ a {
     font-family: $mainfont;
     font-weight: 700;
 
+    span {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        display: block;
+        font-size: 0.7em;
+        line-height: 1;
+        margin-top: 5px;
+      }
+    }
+
     i {
       --size: 60px;
       @include trans;

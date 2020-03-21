@@ -92,12 +92,6 @@
   justify-content: center;
   margin-top: $gutter;
 
-  span {
-    display: inline-block;
-    font-size: 0.7em;
-    margin-top: ($gutter / 4);
-  }
-
   @media screen and (max-width: $largedevice) {
     justify-content: center;
     margin-right: 0;
