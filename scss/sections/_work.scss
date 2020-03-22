@@ -11,8 +11,8 @@
       flex-direction: row-reverse;
 
       .project-info {
-        margin-right: -20vw;
-        margin-left: 0;
+        padding-right: $gutter;
+        padding-left: 0;
       }
 
       @media screen and (max-width: $mediumdevice) {
@@ -61,7 +61,7 @@
     justify-content: center;
     position: relative;
     flex: 1;
-    margin-left: -5vw;
+    padding-left: $gutter;
     z-index: 9990;
 
     h2,
@@ -70,11 +70,7 @@
     }
 
     p {
-      max-width: 65%;
-
-      @media screen and (max-width: $mediumdevice) {
-        max-width: 100%;
-      }
+      max-width: 95%;
     }
 
     @media screen and (max-width: $mediumdevice) {

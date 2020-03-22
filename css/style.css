@@ -1194,8 +1194,8 @@ header {
       -webkit-box-direction: reverse;
               flex-direction: row-reverse; }
       .projects .projects-row.reverse .project-info {
-        margin-right: -20vw;
-        margin-left: 0; }
+        padding-right: 60px;
+        padding-left: 0; }
       @media screen and (max-width: 800px) {
         .projects .projects-row.reverse {
           -webkit-box-orient: vertical;
@@ -1236,16 +1236,13 @@ header {
     position: relative;
     -webkit-box-flex: 1;
             flex: 1;
-    margin-left: -5vw;
+    padding-left: 60px;
     z-index: 9990; }
     .projects .project-info h2,
     .projects .project-info p {
       margin-bottom: 30px; }
     .projects .project-info p {
-      max-width: 65%; }
-      @media screen and (max-width: 800px) {
-        .projects .project-info p {
-          max-width: 100%; } }
+      max-width: 95%; }
     @media screen and (max-width: 800px) {
       .projects .project-info {
         text-align: center;
