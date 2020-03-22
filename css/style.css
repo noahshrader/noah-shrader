@@ -492,7 +492,7 @@ section {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  padding: 160px 150px; }
+  padding: 140px 150px; }
   section .section-header {
     margin-left: auto;
     margin-right: auto;
@@ -508,7 +508,7 @@ section {
       padding-left: 130px; } }
   @media screen and (max-width: 800px) {
     section {
-      padding: 80px 30px; } }
+      padding: 70px 30px; } }
 
 .wrap {
   display: -webkit-box;
@@ -705,7 +705,7 @@ footer {
       -webkit-box-flex: 1;
               flex: 1;
       text-align: center;
-      padding: 80px 150px; }
+      padding: 70px 150px; }
       footer .wrap .contact-link:hover {
         background: #0432ff; }
         footer .wrap .contact-link:hover h4,
@@ -718,11 +718,11 @@ footer {
         margin-bottom: 30px; }
       @media screen and (max-width: 800px) {
         footer .wrap .contact-link {
-          padding: 80px 30px; } }
+          padding: 70px 30px; } }
       @media screen and (max-width: 500px) {
         footer .wrap .contact-link {
-          padding-top: 40px;
-          padding-bottom: 40px; } }
+          padding-top: 35px;
+          padding-bottom: 35px; } }
   @media screen and (max-width: 800px) {
     footer {
       margin-top: 0;
@@ -893,8 +893,8 @@ header {
 .bio {
   text-align: center;
   margin: 0 auto;
-  padding: 0 0 140px;
-  max-width: 820px; }
+  padding: 0 150px 140px;
+  max-width: 1024px; }
   .bio h4 {
     line-height: 1.7em; }
   .bio a {
@@ -906,7 +906,7 @@ header {
     .bio {
       padding-left: 30px;
       padding-right: 30px;
-      padding-bottom: 80px; } }
+      padding-bottom: 35px; } }
 
 .code .wrap {
   -webkit-box-pack: justify;
@@ -1102,8 +1102,8 @@ header {
   background: #0432ff;
   overflow: hidden; }
   .read.open {
-    padding-top: 240px;
-    padding-bottom: 240px; }
+    padding-top: 210px;
+    padding-bottom: 210px; }
     .read.open .section-header,
     .read.open .wrap {
       opacity: 0.08; }
@@ -1231,7 +1231,7 @@ header {
     @media screen and (max-width: 800px) {
       .projects .project {
         max-width: 100%;
-        margin-bottom: 30px; } }
+        margin-bottom: 40px; } }
   .projects .project-info {
     display: -webkit-box;
     display: flex;
@@ -1256,7 +1256,8 @@ header {
     @media screen and (max-width: 800px) {
       .projects .project-info {
         text-align: center;
-        padding: 0; } }
+        padding: 0;
+        padding-bottom: 30px; } }
 
 .view-behance {
   display: -webkit-box;
@@ -1269,8 +1270,8 @@ header {
   -webkit-box-pack: center;
           justify-content: center;
   position: relative;
-  margin-top: 40px;
-  padding-top: 40px; }
+  margin-top: 60px;
+  padding-top: 60px; }
   .view-behance::before {
     content: '';
     display: none;
