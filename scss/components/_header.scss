@@ -24,6 +24,10 @@ header {
   // Noah Shrader icon
   .logo {
     width: 38px;
+
+    @media screen and (max-width: $mediumdevice) {
+      width: 28px;
+    }
   }
 
   // Rotated name
@@ -39,8 +43,9 @@ header {
     transform-origin: center;
 
     @media screen and (max-width: $mediumdevice) {
-      text-align: right;
       margin-bottom: -5px;
+      margin-left: ($gutter / 4);
+      width: auto;
       transform: none;
     }
   }

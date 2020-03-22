@@ -380,7 +380,7 @@ a {
               align-items: center;
       -webkit-box-pack: center;
               justify-content: center;
-      left: 10px;
+      left: 15px;
       font-size: 18px;
       height: var(--size);
       width: var(--size);
@@ -753,6 +753,9 @@ header {
     left: 0; }
   header .logo {
     width: 38px; }
+    @media screen and (max-width: 800px) {
+      header .logo {
+        width: 28px; } }
   header .name {
     font-size: 0.7em;
     font-weight: 800;
@@ -775,8 +778,9 @@ header {
         font-size: .6em; } }
     @media screen and (max-width: 800px) {
       header .name {
-        text-align: right;
         margin-bottom: -5px;
+        margin-left: 15px;
+        width: auto;
         -webkit-transform: none;
                 transform: none; } }
   @media screen and (max-width: 800px) {
@@ -1264,7 +1268,24 @@ header {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
-  margin-top: 60px; }
+  position: relative;
+  margin-top: 40px;
+  padding-top: 40px; }
+  .view-behance::before {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 1px;
+    width: 80px;
+    background: #000;
+    opacity: 0.3;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+    @media screen and (max-width: 800px) {
+      .view-behance::before {
+        display: block; } }
   @media screen and (max-width: 1024px) {
     .view-behance {
       -webkit-box-pack: center;
