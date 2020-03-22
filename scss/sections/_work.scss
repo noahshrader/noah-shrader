@@ -13,6 +13,11 @@
       .project-info {
         padding-right: $gutter;
         padding-left: 0;
+
+
+        @media screen and (max-width: $mediumdevice) {
+          padding-right: 0;
+        }
       }
 
       @media screen and (max-width: $mediumdevice) {
@@ -71,11 +76,15 @@
 
     p {
       max-width: 95%;
+
+      @media screen and (max-width: $mediumdevice) {
+        margin: 0 auto ($gutter / 4);
+      }
     }
 
     @media screen and (max-width: $mediumdevice) {
       text-align: center;
-      margin: 0 !important;
+      padding: 0;
     }
   }
 }

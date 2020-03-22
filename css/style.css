@@ -545,7 +545,7 @@ h5 {
 h1 {
   font-size: 6em;
   font-weight: 800;
-  line-height: 1.05em;
+  line-height: 1.1em;
   letter-spacing: -2px; }
   @media screen and (max-width: 1024px) {
     h1 {
@@ -557,7 +557,7 @@ h1 {
 h2 {
   font-size: 4em;
   font-weight: 800;
-  line-height: 1.05em; }
+  line-height: 1.1em; }
   @media screen and (max-width: 1024px) {
     h2 {
       font-size: 2.6em; } }
@@ -1196,6 +1196,9 @@ header {
       .projects .projects-row.reverse .project-info {
         padding-right: 60px;
         padding-left: 0; }
+        @media screen and (max-width: 800px) {
+          .projects .projects-row.reverse .project-info {
+            padding-right: 0; } }
       @media screen and (max-width: 800px) {
         .projects .projects-row.reverse {
           -webkit-box-orient: vertical;
@@ -1243,10 +1246,13 @@ header {
       margin-bottom: 30px; }
     .projects .project-info p {
       max-width: 95%; }
+      @media screen and (max-width: 800px) {
+        .projects .project-info p {
+          margin: 0 auto 15px; } }
     @media screen and (max-width: 800px) {
       .projects .project-info {
         text-align: center;
-        margin: 0 !important; } }
+        padding: 0; } }
 
 .view-behance {
   display: -webkit-box;
