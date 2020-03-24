@@ -714,8 +714,19 @@ footer {
       footer .wrap .contact-link h4,
       footer .wrap .contact-link h5 {
         margin-bottom: 0; }
-      footer .wrap .contact-link h5 {
-        margin-bottom: 30px; }
+      footer .wrap .contact-link i {
+        font-size: 28px;
+        margin-right: 12px; }
+        @media screen and (max-width: 800px) {
+          footer .wrap .contact-link i {
+            font-size: 20px; } }
+      footer .wrap .contact-link h4 {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+                justify-content: center; }
       @media screen and (max-width: 800px) {
         footer .wrap .contact-link {
           padding: 70px 30px; } }

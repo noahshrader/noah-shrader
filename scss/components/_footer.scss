@@ -33,8 +33,19 @@ footer {
         margin-bottom: 0;
       }
 
-      h5 {
-        margin-bottom: ($gutter / 2);
+      i {
+        font-size: 28px;
+        margin-right: 12px;
+
+        @media screen and (max-width: $mediumdevice) {
+          font-size: 20px;
+        }
+      }
+
+      h4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       @media screen and (max-width: $mediumdevice) {
