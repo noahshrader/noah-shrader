@@ -42,6 +42,7 @@
       box-shadow: inset 0px -10px 0px 0 $primary;
 
       &:hover {
+        color: $white;
         box-shadow: inset 0px -100px 0px 0 $primary;
       }
     }
@@ -98,6 +99,7 @@
         box-shadow: inset 0px -6px 0px 0 $primary;
 
         &:hover {
+          color: $white;
           box-shadow: inset 0px -100px 0px 0 $primary;
         }
       }

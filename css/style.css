@@ -912,6 +912,7 @@ header {
     color: #000;
     box-shadow: inset 0px -6px 0px 0 #0432ff; }
     .bio a:hover {
+      color: #fff;
       box-shadow: inset 0px -100px 0px 0 #0432ff; }
   @media screen and (max-width: 800px) {
     .bio {
@@ -1050,8 +1051,8 @@ header {
     .intro-wrap::after {
       opacity: 0;
       visibility: hidden;
-      -webkit-transition: ease-in-out 0.2s;
-      transition: ease-in-out 0.2s;
+      -webkit-transition: ease-in-out 0.6s;
+      transition: ease-in-out 0.6s;
       content: '';
       position: absolute;
       top: 0;
@@ -1059,7 +1060,7 @@ header {
       height: 100%;
       width: 100%;
       background: #0432ff;
-      border-radius: 480px;
+      border-radius: 500px;
       z-index: 0; }
       .active .intro-wrap::after {
         --offset: 10px;
@@ -1088,19 +1089,19 @@ header {
         -webkit-transform: translateY(15%);
                 transform: translateY(15%); } }
   .intro img {
-    -webkit-transition: ease-in-out 0.2s;
-    transition: ease-in-out 0.2s;
+    -webkit-transition: ease-in-out 0.6s;
+    transition: ease-in-out 0.6s;
     height: auto;
-    width: 480px;
-    border-radius: 480px;
+    width: 500px;
+    border-radius: 500px;
     -webkit-filter: grayscale(100%) brightness(110%) contrast(110%);
             filter: grayscale(100%) brightness(110%) contrast(110%); }
     @media screen and (max-width: 800px) {
       .intro img {
-        width: 320px; } }
+        width: 340px; } }
     @media screen and (max-width: 500px) {
       .intro img {
-        width: 260px; } }
+        width: 280px; } }
   @media screen and (max-width: 500px) {
     .intro {
       height: auto;
@@ -1203,7 +1204,7 @@ header {
   .projects .projects-row {
     display: -webkit-box;
     display: flex;
-    margin-bottom: 120px; }
+    margin-bottom: 210px; }
     .projects .projects-row.reverse {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
@@ -1338,6 +1339,7 @@ header {
       color: #000;
       box-shadow: inset 0px -10px 0px 0 #0432ff; }
       .write .current a:hover {
+        color: #fff;
         box-shadow: inset 0px -100px 0px 0 #0432ff; }
     @media screen and (max-width: 1024px) {
       .write .current {
@@ -1378,6 +1380,7 @@ header {
         color: #000;
         box-shadow: inset 0px -6px 0px 0 #0432ff; }
         .write .articles .article a:hover {
+          color: #fff;
           box-shadow: inset 0px -100px 0px 0 #0432ff; }
       @media screen and (max-width: 500px) {
         .write .articles .article {
