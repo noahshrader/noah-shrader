@@ -34,6 +34,8 @@
 
   // Most recent article
   .current {
+    display: flex;
+    align-items: center;
     flex: 2;
     padding-right: ($gutter * 2);
 

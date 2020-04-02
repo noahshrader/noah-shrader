@@ -1,4 +1,5 @@
 .code {
+  padding-top: 0;
 
   .wrap {
     justify-content: space-between;
@@ -120,5 +121,38 @@
   @media screen and (max-width: $mediumdevice) {
     padding-left: $gutter;
     padding-right: $gutter;
+  }
+}
+
+// Link to Behance
+.view-behance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: $gutter;
+  padding-top: $gutter;
+
+  &::before {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 1px;
+    width: 80px;
+    background: $black;
+    opacity: 0.3;
+    transform: translateX(-50%);
+
+    @media screen and (max-width: $mediumdevice) {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: $largedevice) {
+    justify-content: center;
+    margin-right: 0;
   }
 }
