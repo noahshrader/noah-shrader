@@ -1355,11 +1355,10 @@ header {
       color: #000; }
       .write .current a:hover {
         color: #0432ff; }
-    @media screen and (max-width: 1024px) {
-      .write .current {
-        padding-right: 60px; } }
     @media screen and (max-width: 800px) {
       .write .current {
+        -webkit-box-pack: center;
+                justify-content: center;
         padding-right: 0;
         margin-bottom: 60px; } }
   .write .articles {

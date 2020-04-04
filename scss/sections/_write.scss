@@ -47,11 +47,8 @@
       }
     }
 
-    @media screen and (max-width: $largedevice) {
-      padding-right: $gutter;
-    }
-
     @media screen and (max-width: $mediumdevice) {
+      justify-content: center;
       padding-right: 0;
       margin-bottom: $gutter;
     }
