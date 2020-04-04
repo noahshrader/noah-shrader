@@ -1,5 +1,4 @@
 .code {
-  padding-top: 0;
 
   .wrap {
     flex-direction: column;
@@ -15,7 +14,7 @@
       align-items: center;
       color: $black;
       margin-bottom: ($gutter / 3);
-      padding: ($gutter / 4) $gutter;
+      padding: ($gutter / 4) ($gutter / 2);
       border: solid 2px transparent;
       background: $offwhite;
 
@@ -39,14 +38,16 @@
 
       // Image/icon wrapper
       span {
+        --size: 40px;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: $gutter;
+        margin-right: ($gutter / 2);
+        height: var(--size);
+        width: var(--size);
 
         i {
-          --size: 40px;
           @include trans;
           display: flex;
           align-items: center;
