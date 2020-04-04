@@ -41,11 +41,9 @@
 
     a {
       color: $black;
-      box-shadow: inset 0px -10px 0px 0 $primary;
 
       &:hover {
-        color: $white;
-        box-shadow: inset 0px -100px 0px 0 $primary;
+        color: $primary;
       }
     }
 
@@ -78,6 +76,7 @@
         height: 1px;
         width: 60px;
         background: $black;
+        opacity: 0.25;
 
         @media screen and (max-width: $mediumdevice) {
           display: none;
@@ -98,11 +97,9 @@
 
       a {
         color: $black;
-        box-shadow: inset 0px -6px 0px 0 $primary;
 
         &:hover {
-          color: $white;
-          box-shadow: inset 0px -100px 0px 0 $primary;
+          color: $primary;
         }
       }
 

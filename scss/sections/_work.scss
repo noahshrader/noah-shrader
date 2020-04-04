@@ -1,92 +1,173 @@
-.projects {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-bottom: 0;
-
-  .projects-row {
+.current-projects {
+  .projects {
     display: flex;
-    margin-bottom: ($gutter * 3.5);
+    flex-direction: column;
+    width: 100%;
 
-    &.reverse {
-      flex-direction: row-reverse;
+    .projects-row {
+      display: flex;
+      margin-bottom: ($gutter * 2.5);
 
-      .project-info {
-        padding-right: $gutter;
-        padding-left: 0;
+      &.reverse {
+        flex-direction: row-reverse;
 
+        .project-info {
+          padding-right: $gutter;
+          padding-left: 0;
+
+
+          @media screen and (max-width: $mediumdevice) {
+            padding-right: 0;
+          }
+        }
 
         @media screen and (max-width: $mediumdevice) {
-          padding-right: 0;
+          flex-direction: column;
         }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
 
       @media screen and (max-width: $mediumdevice) {
         flex-direction: column;
+        margin-bottom: ($gutter / 2);
       }
     }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+    // Invdividual project listing
+    .project {
+      @include border-radius;
+      position: relative;
+      overflow: hidden;
+      flex: 2;
+      max-width: 60vw;
+      background: $offwhite;
 
-    @media screen and (max-width: $mediumdevice) {
-      flex-direction: column;
-      margin-bottom: ($gutter / 2);
-    }
-  }
-
-  // Invdividual project listing
-  .project {
-    @include border-radius;
-    position: relative;
-    overflow: hidden;
-    flex: 2;
-    max-width: 60vw;
-    background: $offwhite;
-
-    &.layer-cake {
-      &::before {
-        display: none;
+      &.layer-cake {
+        &::before {
+          display: none;
+        }
       }
-    }
 
-    img {
-      float: left;
-    }
-
-    @media screen and (max-width: $mediumdevice) {
-      max-width: 100%;
-      margin-bottom: ($gutter / 1.5);
-    }
-  }
-
-  .project-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    flex: 1;
-    padding-left: $gutter;
-    z-index: 9990;
-
-    h2,
-    p {
-      margin-bottom: ($gutter / 2);
-    }
-
-    p {
-      max-width: 95%;
+      img {
+        float: left;
+      }
 
       @media screen and (max-width: $mediumdevice) {
-        margin: 0 auto ($gutter / 4);
+        max-width: 100%;
+        margin-bottom: ($gutter / 1.5);
       }
     }
 
+    .project-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      flex: 1;
+      padding-left: $gutter;
+      z-index: 9990;
+
+      h2 {
+        margin-bottom: ($gutter / 4);
+      }
+
+      span {
+        display: block;
+        font-size: 0.65em;
+        font-weight: 800;
+        letter-spacing: 2px;
+        line-height: 1.6em;
+        text-transform: uppercase;
+        padding: ($gutter / 4) 0 ($gutter / 2);
+
+        @media screen and (max-width: $mediumdevice) {
+          font-size: 0.55em;
+        }
+      }
+
+      p {
+        margin-bottom: ($gutter / 1.5);
+        max-width: 95%;
+
+        @media screen and (max-width: $mediumdevice) {
+          margin: 0 auto ($gutter / 4);
+        }
+      }
+
+      @media screen and (max-width: $mediumdevice) {
+        text-align: center;
+        padding: 0;
+        padding-bottom: ($gutter / 2);
+      }
+    }
+  }
+
+  @media screen and (max-width: $mediumdevice) {
+    padding-bottom: ($gutter / 2);
+  }
+}
+
+.other-projects {
+  flex-direction: column;
+  padding-top: 0;
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    margin-right: ($gutter / 1.5);
+
+    &:last-child {
+      margin-right: 0;
+
+      @media screen and (max-width: $mediumdevice) {
+        margin-bottom: 0;
+      }
+    }
+
+    .project-image {
+      margin-bottom: ($gutter / 1.5);
+      border-radius: $radius;
+      overflow: hidden;
+
+      img {
+        float: left;
+      }
+    }
+
+    .project-info {
+      span {
+        display: block;
+        font-size: 0.65em;
+        font-weight: 800;
+        letter-spacing: 2px;
+        line-height: 1.6em;
+        text-transform: uppercase;
+        padding: ($gutter / 6) 0 ($gutter / 2);
+
+        @media screen and (max-width: $mediumdevice) {
+          font-size: 0.55em;
+        }
+
+        p {
+          margin-bottom: ($gutter / 1.5);
+        }
+      }
+
+      @media screen and (max-width: $mediumdevice) {
+        text-align: center;
+      }
+    }
+
+    .main {
+      margin-top: ($gutter / 2);
+    }
+
     @media screen and (max-width: $mediumdevice) {
-      text-align: center;
-      padding: 0;
-      padding-bottom: ($gutter / 2);
+      margin-right: 0;
+      margin-bottom: $gutter;
     }
   }
 }

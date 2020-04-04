@@ -38,7 +38,7 @@ a {
 
   // Large links with circular arrows
   &.main {
-    display: flex;
+    display: inline-flex;
     flex: 0 0 auto;
     align-items: center;
     color: $primary;
@@ -48,17 +48,10 @@ a {
     span {
       display: flex;
       flex-direction: column;
-
-      span {
-        display: block;
-        font-size: 0.7em;
-        line-height: 1;
-        margin-top: 5px;
-      }
     }
 
     i {
-      --size: 60px;
+      --size: 58px;
       @include trans;
       position: relative;
       display: flex;
@@ -79,7 +72,8 @@ a {
       }
 
       @media screen and (max-width: $smalldevice) {
-        --size: 50px;
+        --size: 40px;
+        font-size: 14px;
       }
     }
 

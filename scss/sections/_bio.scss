@@ -5,7 +5,12 @@
   max-width: $largedevice;
 
   h4 {
+    font-size: 1.4em;
     line-height: 1.7em;
+
+    @media screen and (max-width: $smalldevice) {
+      font-size: 0.9em;
+    }
   }
 
   a {

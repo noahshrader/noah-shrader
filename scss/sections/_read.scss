@@ -90,11 +90,17 @@
         i {
           color: $primary;
           background: $white;
+          left: 15px !important;
         }
       }
 
       i {
         border-color: $white;
+        transform: rotate(90deg);
+
+        &::before {
+          top: 2px;
+        }
       }
     }
 
