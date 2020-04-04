@@ -71,21 +71,7 @@
       z-index: 9990;
 
       h2 {
-        margin-bottom: ($gutter / 4);
-      }
-
-      span {
-        display: block;
-        font-size: 0.65em;
-        font-weight: 800;
-        letter-spacing: 2px;
-        line-height: 1.6em;
-        text-transform: uppercase;
-        padding: ($gutter / 4) 0 ($gutter / 2);
-
-        @media screen and (max-width: $mediumdevice) {
-          font-size: 0.55em;
-        }
+        margin-bottom: ($gutter / 2);
       }
 
       p {
@@ -138,24 +124,6 @@
     }
 
     .project-info {
-      span {
-        display: block;
-        font-size: 0.65em;
-        font-weight: 800;
-        letter-spacing: 2px;
-        line-height: 1.6em;
-        text-transform: uppercase;
-        padding: ($gutter / 6) 0 ($gutter / 2);
-
-        @media screen and (max-width: $mediumdevice) {
-          font-size: 0.55em;
-        }
-
-        p {
-          margin-bottom: ($gutter / 1.5);
-        }
-      }
-
       @media screen and (max-width: $mediumdevice) {
         text-align: center;
       }

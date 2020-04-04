@@ -1265,18 +1265,7 @@ header {
     padding-left: 60px;
     z-index: 9990; }
     .current-projects .projects .project-info h2 {
-      margin-bottom: 15px; }
-    .current-projects .projects .project-info span {
-      display: block;
-      font-size: 0.65em;
-      font-weight: 800;
-      letter-spacing: 2px;
-      line-height: 1.6em;
-      text-transform: uppercase;
-      padding: 15px 0 30px; }
-      @media screen and (max-width: 800px) {
-        .current-projects .projects .project-info span {
-          font-size: 0.55em; } }
+      margin-bottom: 30px; }
     .current-projects .projects .project-info p {
       margin-bottom: 40px;
       max-width: 95%; }
@@ -1316,19 +1305,6 @@ header {
       overflow: hidden; }
       .other-projects .project .project-image img {
         float: left; }
-    .other-projects .project .project-info span {
-      display: block;
-      font-size: 0.65em;
-      font-weight: 800;
-      letter-spacing: 2px;
-      line-height: 1.6em;
-      text-transform: uppercase;
-      padding: 10px 0 30px; }
-      @media screen and (max-width: 800px) {
-        .other-projects .project .project-info span {
-          font-size: 0.55em; } }
-      .other-projects .project .project-info span p {
-        margin-bottom: 40px; }
     @media screen and (max-width: 800px) {
       .other-projects .project .project-info {
         text-align: center; } }
