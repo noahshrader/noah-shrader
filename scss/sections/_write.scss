@@ -2,6 +2,7 @@
   background: $offwhite;
 
   .wrap {
+    flex-direction: column;
     justify-content: space-between;
   }
 
@@ -10,7 +11,7 @@
     font-size: 32px;
     font-weight: 400;
     line-height: 45px;
-    margin-top: ($gutter / 3);
+    margin-top: ($gutter / 4);
 
     @media screen and (max-width: $mediumdevice) {
       font-size: 20px;
@@ -21,88 +22,93 @@
 
   .date {
     display: block;
-    font-size: 16px;
+    font-size: 0.75em;
     font-weight: 400;
     line-height: 1;
-    margin-top: ($gutter / 2);
+    margin-bottom: ($gutter / 3);
     opacity: 0.5;
 
     @media screen and (max-width: $mediumdevice) {
-      font-size: 15px;
+      font-size: 0.65em;
     }
   }
 
   // Most recent article
   .current {
     display: flex;
-    align-items: center;
-    flex: 2;
+    flex-direction: column;
     padding-right: ($gutter * 2);
 
-    a {
-      color: $black;
+    h2 {
+      position: relative;
+      left: -7px;
+    }
 
-      &:hover {
-        color: $primary;
-      }
+    .date {
+      margin-bottom: ($gutter / 2);
     }
 
     @media screen and (max-width: $mediumdevice) {
       justify-content: center;
       padding-right: 0;
-      margin-bottom: $gutter;
     }
   }
 
-  .articles {
-    flex: 1;
-    min-width: 280px;
+  .recent {
+    display: flex;
+  }
 
-    // Individual article container
-    .article {
-      position: relative;
-      padding-bottom: $gutter;
-      margin-bottom: ($gutter / 3);
+  .upcoming {
+    position: relative;
+    display: flex;
+    margin-top: $gutter;
+    padding-top: $gutter;
 
-      // Article separator
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 1px;
-        width: 60px;
-        background: $black;
-        opacity: 0.25;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100px;
+      background: $black;
 
-        @media screen and (max-width: $mediumdevice) {
-          display: none;
-        }
+      @media screen and (max-width: $mediumdevice) {
+        left: 50%;
+        transform: translateX(-50%);
       }
+    }
 
-      .subline {
-        display: block;
-        font-size: 20px;
-        line-height: 30px;
-        margin-top: ($gutter / 4);
+    .story {
+      flex: 1;
+      padding-right: $gutter;
 
-        @media screen and (max-width: $mediumdevice) {
-          font-size: 16px;
-          line-height: 25px;
-        }
+      @media screen and (max-width: $mediumdevice) {
+        padding-right: 0;
+        padding-top: $gutter;
       }
+    }
 
-      a {
-        color: $black;
+    @media screen and (max-width: $mediumdevice) {
+      flex-direction: column;
+      padding-top: ($gutter / 6);
+    }
+  }
 
-        &:hover {
-          color: $primary;
-        }
-      }
+  .view-medium {
+    align-self: flex-end;
+    margin-top: ($gutter * 1.2);
 
-      @media screen and (max-width: $smalldevice) {
-        padding-bottom: ($gutter / 2);
-      }
+    @media screen and (max-width: $mediumdevice) {
+      align-self: center;
+    }
+  }
+
+  a:not(.main) {
+    color: $black;
+
+    &:hover {
+      color: $primary;
     }
   }
 

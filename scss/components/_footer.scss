@@ -33,12 +33,17 @@ footer {
         margin-bottom: 0;
       }
 
-      i {
-        font-size: 26px;
+      svg {
+        --size: 32px;
+        position: relative;
+        top: -2px;
+        height: var(--size);
+        width: var(--size);
         margin-right: 12px;
 
         @media screen and (max-width: $mediumdevice) {
-          font-size: 20px;
+          --size: 24px;
+          top: -3px;
         }
       }
 

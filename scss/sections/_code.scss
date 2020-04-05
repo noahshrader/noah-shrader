@@ -1,4 +1,5 @@
 .code {
+  padding-top: 0;
 
   .wrap {
     flex-direction: column;
@@ -13,7 +14,7 @@
       display: flex;
       align-items: center;
       color: $black;
-      margin-bottom: ($gutter / 3);
+      margin-bottom: ($gutter / 2.5);
       padding: ($gutter / 4) ($gutter / 2);
       border: solid 2px transparent;
       background: $offwhite;
@@ -22,7 +23,7 @@
         border-color: $primary;
         box-shadow: 6px 6px 0px 0px $primary;
 
-        i {
+        svg {
 
           &:first-child{
             @include visible;
@@ -47,7 +48,7 @@
         height: var(--size);
         width: var(--size);
 
-        i {
+        svg {
           @include trans;
           display: flex;
           align-items: center;
@@ -62,25 +63,15 @@
 
           &:first-child {
             @include hidden;
-            font-size: 15px;
+            padding: 5px;
             border: solid 2px $primary;
             border-radius: var(--size);
             transform: translate(-50%, -50%) scale(0);
-
-            &::before {
-              position: relative;
-              left: 1px;
-            }
           }
 
           &:last-child {
-            font-size: 35px;
+            padding: 2px;
             transform: translate(-50%, -50%) scale(1.1);
-
-            &::before {
-              position: relative;
-              top: 2px;
-            }
           }
         }
 

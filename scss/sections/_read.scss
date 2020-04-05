@@ -87,19 +87,19 @@
 
       &:hover {
 
-        i {
-          color: $primary;
+        svg {
+          stroke: $primary;
           background: $white;
           left: 15px !important;
         }
       }
 
-      i {
+      svg {
+        stroke: $white;
         border-color: $white;
-        transform: rotate(90deg);
 
-        &::before {
-          top: 2px;
+        line {
+          fill: $white;
         }
       }
     }

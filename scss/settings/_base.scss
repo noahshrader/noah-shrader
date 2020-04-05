@@ -45,20 +45,15 @@ a {
     font-family: $mainfont;
     font-weight: 700;
 
-    span {
-      display: flex;
-      flex-direction: column;
-    }
-
-    i {
-      --size: 58px;
+    svg {
+      --size: 55px;
       @include trans;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       left: 15px;
-      font-size: 18px;
+      padding: 10px;
       height: var(--size);
       width: var(--size);
       border: solid 2px $primary;
@@ -73,7 +68,6 @@ a {
 
       @media screen and (max-width: $smalldevice) {
         --size: 40px;
-        font-size: 14px;
       }
     }
 
@@ -81,7 +75,7 @@ a {
       color: $primary;
       background: transparent;
 
-      i {
+      svg {
         color: $white;
         background: $primary;
         left: 20px;

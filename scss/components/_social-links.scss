@@ -21,77 +21,32 @@
   }
 
   li {
-    margin-bottom: ($gutter / 2.5);
+    margin-bottom: ($gutter / 3);
 
     &:last-child {
       margin-bottom: 0;
-    }
-
-    &.github {
-      @media screen and (max-width: $mediumdevice) {
-        display: none;
-      }
     }
 
     a {
       display: flex;
       justify-content: center;
       color: $black;
+    }
+
+    svg {
+      --size: 25px;
+      height: var(--size);
+      width: var(--size);
+      transform: scale(0.8);
+
+      path {
+        @include trans;
+      }
 
       &:hover {
-        i {
-          @include trans;
-          color: $primary;
-        }
-      }
-    }
-
-    // Reduce size of Medium
-    &.medium {
-      svg {
-        transform: scale(0.8);
-
         path {
-          @include trans;
+          fill: $primary;
         }
-
-        &:hover {
-          path {
-            fill: $primary;
-          }
-        }
-      }
-
-      @media screen and (max-width: $mediumdevice) {
-        margin-top: -4px;
-      }
-    }
-
-    // Reduce size of LinkedIn
-    &.linkedin {
-      i {
-        font-size: 0.8em !important;
-      }
-
-      @media screen and (max-width: $mediumdevice) {
-        margin-top: -2px;
-      }
-    }
-
-    &.behance {
-
-      i {
-        @media screen and (max-width: $mediumdevice) {
-          font-size: 1em !important;
-        }
-      }
-    }
-
-    i {
-      font-size: 1em;
-
-      @media screen and (max-width: $mediumdevice) {
-        font-size: 0.9em;
       }
     }
 
