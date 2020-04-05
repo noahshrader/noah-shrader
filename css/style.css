@@ -1272,6 +1272,9 @@ header {
       overflow: hidden; }
       .other-projects .project .project-image img {
         float: left; }
+      @media screen and (max-width: 800px) {
+        .other-projects .project .project-image {
+          margin-bottom: 30px; } }
     .other-projects .project .project-info {
       text-align: center; }
       .other-projects .project .project-info p {
@@ -1345,8 +1348,8 @@ header {
       top: 0;
       left: 0;
       height: 1px;
-      width: 100px;
-      background: #000; }
+      width: 80px;
+      background: rgba(0, 0, 0, 0.5); }
       @media screen and (max-width: 800px) {
         .write .upcoming::before {
           left: 50%;

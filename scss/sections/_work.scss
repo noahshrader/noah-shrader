@@ -121,6 +121,10 @@
       img {
         float: left;
       }
+
+      @media screen and (max-width: $mediumdevice) {
+        margin-bottom: ($gutter / 2);
+      }
     }
 
     .project-info {

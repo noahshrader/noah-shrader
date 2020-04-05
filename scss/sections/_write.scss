@@ -70,8 +70,8 @@
       top: 0;
       left: 0;
       height: 1px;
-      width: 100px;
-      background: $black;
+      width: 80px;
+      background: rgba($black, 0.5);
 
       @media screen and (max-width: $mediumdevice) {
         left: 50%;
