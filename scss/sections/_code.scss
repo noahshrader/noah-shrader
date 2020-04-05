@@ -8,13 +8,13 @@
   // Individual repo container
   .repo {
     flex: 1;
+    margin-bottom: ($gutter / 2.5);
 
     .repo-top {
       @include border-radius;
       display: flex;
       align-items: center;
       color: $black;
-      margin-bottom: ($gutter / 2.5);
       padding: ($gutter / 4) ($gutter / 2);
       border: solid 2px transparent;
       background: $offwhite;
@@ -101,16 +101,9 @@
     }
 
     &:last-child {
-      margin-right: 0;
-
       @media screen and (max-width: $mediumdevice) {
         margin-bottom: 0;
       }
     }
-  }
-
-  @media screen and (max-width: $mediumdevice) {
-    padding-left: $gutter;
-    padding-right: $gutter;
   }
 }
