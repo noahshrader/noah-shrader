@@ -44,7 +44,7 @@
 
 // Slow transitions
 @mixin trans (
-  $trans-speed: 0.2s,
+  $trans-speed: 0.25s,
   $trans-timing: ease-in-out
 ) {
 	transition: $trans-timing $trans-speed;

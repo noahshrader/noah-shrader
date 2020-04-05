@@ -12,6 +12,7 @@
     justify-content: center;
     flex-direction: column;
 
+    // Blue background bubble
     &::after {
       @include hidden;
       @include trans(
@@ -64,6 +65,7 @@
     }
   }
 
+  // Noah
   img {
     @include trans(
       $trans-speed: 0.6s

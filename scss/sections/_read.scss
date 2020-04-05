@@ -4,6 +4,7 @@
   background: $primary;
   overflow: hidden;
 
+  // When book list visible
   &.open {
     padding-top: ($vertical-padding * 1.5);
     padding-bottom: ($vertical-padding * 1.5);
@@ -13,12 +14,10 @@
       opacity: 0.08;
     }
 
-    // When visible
     .book-list {
       top: 0;
     }
 
-    // When visible
     .book-list-close {
       @include visible;
       @include trans;
@@ -46,7 +45,7 @@
     justify-content: space-between;
 
     // Container with current book selection
-    .current {
+    .recent {
       padding-right: $gutter;
 
       .book-title {
@@ -58,6 +57,7 @@
         }
       }
 
+      // Books that have a subtitle
       .subline {
         display: block;
         font-size: 26px;
@@ -71,6 +71,7 @@
         }
       }
 
+      // Book author
       .book-author {
         margin-top: ($gutter / 4);
         margin-left: 2px;
@@ -82,13 +83,13 @@
       }
     }
 
+    // Make the more link white for contrast
     a.main {
       color: $white;
 
       &:hover {
 
         svg {
-          stroke: $primary;
           background: $white;
           left: 15px !important;
         }
