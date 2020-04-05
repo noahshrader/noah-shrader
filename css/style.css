@@ -890,7 +890,7 @@ header {
       padding-bottom: 35px; } }
 
 .code {
-  padding-top: 0; }
+  padding-top: 70px; }
   .code .wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -986,6 +986,9 @@ header {
     @media screen and (max-width: 800px) {
       .code .repo:last-child {
         margin-bottom: 0; } }
+  @media screen and (max-width: 800px) {
+    .code {
+      padding-top: 35px; } }
 
 .intro {
   display: -webkit-box;

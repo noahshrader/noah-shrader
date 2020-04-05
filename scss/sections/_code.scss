@@ -1,5 +1,5 @@
 .code {
-  padding-top: 0;
+  padding-top: ($vertical-padding / 2);
 
   .wrap {
     flex-direction: column;
@@ -104,5 +104,9 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  @media screen and (max-width: $mediumdevice) {
+    padding-top: ($vertical-padding / 4);
   }
 }
