@@ -90,6 +90,7 @@
       &:hover {
 
         svg {
+          stroke: $primary;
           background: $white;
           left: 15px !important;
         }
