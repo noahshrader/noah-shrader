@@ -18,12 +18,12 @@
           padding-left: 0;
 
 
-          @media screen and (max-width: $mediumdevice) {
+          @media screen and (max-width: $largedevice) {
             padding-right: 0;
           }
         }
 
-        @media screen and (max-width: $mediumdevice) {
+        @media screen and (max-width: $largedevice) {
           flex-direction: column;
         }
       }
@@ -32,7 +32,7 @@
         margin-bottom: 0;
       }
 
-      @media screen and (max-width: $mediumdevice) {
+      @media screen and (max-width: $largedevice) {
         flex-direction: column;
         margin-bottom: ($gutter / 2);
       }
@@ -43,15 +43,14 @@
       @include border-radius;
       position: relative;
       overflow: hidden;
-      flex: 2;
+      flex: 2.5;
       max-width: 60vw;
-      background: $offwhite;
 
       img {
         float: left;
       }
 
-      @media screen and (max-width: $mediumdevice) {
+      @media screen and (max-width: $largedevice) {
         max-width: 100%;
         margin-bottom: ($gutter / 1.5);
       }
@@ -75,12 +74,13 @@
         margin-bottom: ($gutter / 1.5);
         max-width: 95%;
 
-        @media screen and (max-width: $mediumdevice) {
+        @media screen and (max-width: $largedevice) {
           margin: 0 auto ($gutter / 4);
         }
       }
 
-      @media screen and (max-width: $mediumdevice) {
+      @media screen and (max-width: $largedevice) {
+        align-items: center;
         text-align: center;
         padding: 0;
         padding-bottom: ($gutter / 2);
@@ -88,7 +88,7 @@
     }
   }
 
-  @media screen and (max-width: $mediumdevice) {
+  @media screen and (max-width: $largedevice) {
     padding-bottom: ($gutter / 2);
   }
 }
