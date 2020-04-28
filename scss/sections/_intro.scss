@@ -44,15 +44,10 @@
     &:hover {
       border-color: transparent;
 
-      &::after {
-        margin-top: 0;
-        margin-left: 0;
-        transform: scale(0.9);
-      }
-
-      img {
-        filter: grayscale(0) brightness(110%) contrast(110%);
-      }
+      // &::after {
+      //   margin-top: 0;
+      //   margin-left: 0;
+      // }
     }
 
     img {
@@ -73,7 +68,7 @@
     height: auto;
     width: $intro-image-size;
     border-radius: $intro-image-size;
-    filter: grayscale(100%) brightness(110%) contrast(110%);
+    filter: brightness(110%) contrast(110%);
 
     @media screen and (max-width: $mediumdevice) {
       width: ($intro-image-size - 160px);

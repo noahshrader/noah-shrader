@@ -11,7 +11,7 @@
 
     .section-header,
     .wrap {
-      opacity: 0.08;
+      opacity: 0.06;
     }
 
     .book-list {
@@ -60,6 +60,7 @@
       // Books that have a subtitle
       .subline {
         display: block;
+        color: $white;
         font-size: 26px;
         line-height: 35px;
         margin-top: ($gutter / 6);
@@ -73,7 +74,7 @@
 
       // Book author
       .book-author {
-        margin-top: ($gutter / 4);
+        margin-top: ($gutter / 2);
         margin-left: 2px;
       }
 

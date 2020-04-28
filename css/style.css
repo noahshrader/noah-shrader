@@ -501,16 +501,16 @@ h5 {
   margin: 0; }
 
 h1 {
-  font-size: 6em;
+  font-size: 4.6em;
   font-weight: 800;
   line-height: 1.1em;
-  letter-spacing: -2px; }
+  letter-spacing: -1px; }
   @media screen and (max-width: 1024px) {
     h1 {
-      font-size: 4em; } }
+      font-size: 3em; } }
   @media screen and (max-width: 800px) {
     h1 {
-      font-size: 2.8em; } }
+      font-size: 2.4em; } }
 h2 {
   font-size: 4em;
   font-weight: 800;
@@ -920,7 +920,7 @@ header {
       height: 100%;
       width: 100%;
       background: #0432ff;
-      border-radius: 500px;
+      border-radius: 550px;
       z-index: 0; }
       .active .intro-wrap::after {
         --offset: 10px;
@@ -933,13 +933,6 @@ header {
             --offset: 6px; } }
     .intro-wrap:hover {
       border-color: transparent; }
-      .intro-wrap:hover::after {
-        margin-top: 0;
-        margin-left: 0;
-        transform: scale(0.9); }
-      .intro-wrap:hover img {
-        -webkit-filter: grayscale(0) brightness(110%) contrast(110%);
-                filter: grayscale(0) brightness(110%) contrast(110%); }
     .intro-wrap img {
       position: relative;
       z-index: 1; }
@@ -949,16 +942,16 @@ header {
   .intro img {
     transition: ease-in-out 0.6s;
     height: auto;
-    width: 500px;
-    border-radius: 500px;
-    -webkit-filter: grayscale(100%) brightness(110%) contrast(110%);
-            filter: grayscale(100%) brightness(110%) contrast(110%); }
+    width: 550px;
+    border-radius: 550px;
+    -webkit-filter: brightness(110%) contrast(110%);
+            filter: brightness(110%) contrast(110%); }
     @media screen and (max-width: 800px) {
       .intro img {
-        width: 340px; } }
+        width: 390px; } }
     @media screen and (max-width: 500px) {
       .intro img {
-        width: 280px; } }
+        width: 330px; } }
   @media screen and (max-width: 500px) {
     .intro {
       height: auto;
@@ -973,7 +966,7 @@ header {
     padding-bottom: 210px; }
     .read.open .section-header,
     .read.open .wrap {
-      opacity: 0.08; }
+      opacity: 0.06; }
     .read.open .book-list {
       top: 0; }
     .read.open .book-list-close {
@@ -1004,6 +997,7 @@ header {
             padding-right: 0; } }
       .read .wrap .recent .subline {
         display: block;
+        color: #fff;
         font-size: 26px;
         line-height: 35px;
         margin-top: 10px;
@@ -1013,7 +1007,7 @@ header {
             font-size: 20px;
             line-height: 26px; } }
       .read .wrap .recent .book-author {
-        margin-top: 15px;
+        margin-top: 30px;
         margin-left: 2px; }
       @media screen and (max-width: 800px) {
         .read .wrap .recent {
@@ -1069,7 +1063,7 @@ header {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    flex: 2.5;
+    flex: 2.8;
     max-width: 60vw; }
     .current-projects .projects .project img {
       float: left; }
