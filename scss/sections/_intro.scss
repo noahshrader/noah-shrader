@@ -43,11 +43,6 @@
 
     &:hover {
       border-color: transparent;
-
-      // &::after {
-      //   margin-top: 0;
-      //   margin-left: 0;
-      // }
     }
 
     img {
@@ -68,7 +63,6 @@
     height: auto;
     width: $intro-image-size;
     border-radius: $intro-image-size;
-    filter: brightness(110%) contrast(110%);
 
     @media screen and (max-width: $mediumdevice) {
       width: ($intro-image-size - 160px);
