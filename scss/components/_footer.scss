@@ -22,8 +22,7 @@ footer {
       &:hover {
         background: $primary;
 
-        h4,
-        h5 {
+        h4 {
           color: $white;
         }
       }
@@ -31,6 +30,7 @@ footer {
       h4,
       h5 {
         margin-bottom: 0;
+        line-height: 0;
       }
 
       svg {

@@ -1,5 +1,9 @@
 .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: ($vertical-padding * 2);
+  min-height: 70vh;
 
   .wrap {
     flex-direction: column;

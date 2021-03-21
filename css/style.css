@@ -453,17 +453,17 @@ section {
   padding: 140px 30px; }
   section.large {
     margin: 0 auto;
-    max-width: 1200px; }
+    max-width: 1024px; }
   section .section-header {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 1200px; }
+    max-width: 1024px; }
     @media screen and (max-width: 800px) {
       section .section-header {
         text-align: center;
         padding: 0 30px; } }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1024px) {
     section {
       padding-right: 130px;
       padding-left: 130px; } }
@@ -474,7 +474,7 @@ section {
   display: flex;
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px; }
+  max-width: 1024px; }
   @media screen and (max-width: 800px) {
     .wrap {
       flex-direction: column; } }
@@ -486,14 +486,15 @@ h5 {
   color: #000;
   font-family: "Spartan", Helvetica, Arial, sans-serif;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  margin-bottom: 0.5em; }
 
 h1 {
   font-size: 4.6em;
   font-weight: 800;
   line-height: 1.1em;
   letter-spacing: -1px; }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1024px) {
     h1 {
       font-size: 3em; } }
   @media screen and (max-width: 800px) {
@@ -503,7 +504,7 @@ h2 {
   font-size: 3.6em;
   font-weight: 800;
   line-height: 1.1em; }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1024px) {
     h2 {
       font-size: 2.6em; } }
   @media screen and (max-width: 800px) {
@@ -513,9 +514,8 @@ h2 {
 h3 {
   font-size: 2.4em;
   font-weight: 800;
-  line-height: 1.15em;
-  margin-bottom: 0.5em; }
-  @media screen and (max-width: 1200px) {
+  line-height: 1.15em; }
+  @media screen and (max-width: 1024px) {
     h3 {
       font-size: 1.6em; } }
   @media screen and (max-width: 800px) {
@@ -525,8 +525,7 @@ h3 {
 h4 {
   font-size: 1.4em;
   font-weight: 700;
-  line-height: 1.5em;
-  margin-bottom: 0.5em; }
+  line-height: 1.5em; }
   @media screen and (max-width: 500px) {
     h4 {
       font-size: 1.1em;
@@ -637,12 +636,12 @@ footer {
       padding: 70px 150px; }
       footer .wrap .contact-link:hover {
         background: #0432ff; }
-        footer .wrap .contact-link:hover h4,
-        footer .wrap .contact-link:hover h5 {
+        footer .wrap .contact-link:hover h4 {
           color: #fff; }
       footer .wrap .contact-link h4,
       footer .wrap .contact-link h5 {
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        line-height: 0; }
       footer .wrap .contact-link svg {
         --size: 32px;
         position: relative;
@@ -690,7 +689,7 @@ header {
     justify-content: space-between;
     max-width: 1600px; }
   header a {
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin-left: 30px; }
   @media screen and (max-width: 800px) {
     header {
@@ -763,7 +762,7 @@ header {
   text-align: center;
   margin: 0 auto;
   padding: 0 150px 140px;
-  max-width: 1200px; }
+  max-width: 1024px; }
   .bio h4 {
     font-size: 1.4em;
     line-height: 1.7em; }
@@ -863,7 +862,11 @@ header {
     .code {
       padding-top: 35px; } }
 .intro {
-  padding-top: 280px; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 280px;
+  min-height: 70vh; }
   .intro .wrap {
     flex-direction: column; }
   @media screen and (max-width: 500px) {
@@ -961,15 +964,15 @@ header {
       .current-projects .projects .projects-row.reverse .project-info {
         padding-right: 60px;
         padding-left: 0; }
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1024px) {
           .current-projects .projects .projects-row.reverse .project-info {
             padding-right: 0; } }
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 1024px) {
         .current-projects .projects .projects-row.reverse {
           flex-direction: column; } }
     .current-projects .projects .projects-row:last-child {
       margin-bottom: 0; }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1024px) {
       .current-projects .projects .projects-row {
         flex-direction: column;
         margin-bottom: 30px; } }
@@ -981,7 +984,7 @@ header {
     max-width: 60vw; }
     .current-projects .projects .project img {
       float: left; }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1024px) {
       .current-projects .projects .project {
         max-width: 100%;
         margin-bottom: 40px; } }
@@ -998,16 +1001,16 @@ header {
     .current-projects .projects .project-info p {
       margin-bottom: 40px;
       max-width: 95%; }
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 1024px) {
         .current-projects .projects .project-info p {
           margin: 0 auto 15px; } }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1024px) {
       .current-projects .projects .project-info {
         align-items: center;
         text-align: center;
         padding: 0;
         padding-bottom: 30px; } }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .current-projects {
     padding-bottom: 30px; } }
 
