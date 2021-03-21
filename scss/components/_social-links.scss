@@ -1,7 +1,7 @@
 .social {
   @include clean-ul;
   @include trans(
-    $trans-speed: 0.6s
+    $trans-speed: 0.4s
   );
   display: flex;
   align-items: center;

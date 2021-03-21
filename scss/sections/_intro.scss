@@ -1,76 +1,8 @@
 .intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  padding-top: ($vertical-padding * 2);
 
-  &-wrap {
-    @include trans;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .wrap {
     flex-direction: column;
-
-    // Blue background bubble
-    &::after {
-      @include hidden;
-      @include trans(
-        $trans-speed: 0.6s
-      );
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: $primary;
-      border-radius: $intro-image-size;
-      z-index: 0;
-
-      // When the page is loaded
-      .active & {
-        --offset: 10px;
-        @include visible;
-        margin-top: var(--offset);
-        margin-left: var(--offset);
-
-        @media screen and (max-width: $smalldevice) {
-          --offset: 6px;
-        }
-      }
-    }
-
-    &:hover {
-      border-color: transparent;
-    }
-
-    img {
-      position: relative;
-      z-index: 1;
-    }
-
-    @media screen and (max-width: $smalldevice) {
-      transform: translateY(15%);
-    }
-  }
-
-  // Noah
-  img {
-    @include trans(
-      $trans-speed: 0.6s
-    );
-    height: auto;
-    width: $intro-image-size;
-    border-radius: $intro-image-size;
-
-    @media screen and (max-width: $mediumdevice) {
-      width: ($intro-image-size - 160px);
-    }
-
-    @media screen and (max-width: $smalldevice) {
-      width: ($intro-image-size - 220px);
-    }
   }
 
 	@media screen and (max-width: $smalldevice) {

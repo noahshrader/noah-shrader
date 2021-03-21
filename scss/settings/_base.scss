@@ -180,15 +180,18 @@ main {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  padding: $vertical-padding $horizontal-padding;
+  padding: $vertical-padding ($gutter / 2);
+
+  &.large {
+    margin: 0 auto;
+    max-width: $largedevice;
+  }
 
   .section-header {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: $maxdesktop;
+    max-width: $largedevice;
 
     @media screen and (max-width: $mediumdevice) {
       text-align: center;
@@ -211,7 +214,7 @@ section {
   display: flex;
   margin: 0 auto;
   width: 100%;
-  max-width: $maxdesktop;
+  max-width: $largedevice;
 
   @media screen and (max-width: $mediumdevice) {
     flex-direction: column;

@@ -1,0 +1,17 @@
+.about-intro {
+  h4 {
+    margin: ($gutter / 2) 0;
+  }
+
+  img {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+.about-process {
+  .wrap {
+    flex-direction: column;
+    max-width: $mediumdevice;
+  }
+}
