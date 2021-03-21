@@ -1,7 +1,6 @@
 // Social media
 footer {
   @include trans;
-  background: $offwhite;
 
   // When book library modal is open
   &.open {

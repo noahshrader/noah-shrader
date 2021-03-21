@@ -112,6 +112,17 @@ strong a {
   pointer-events: none;
 }
 
+ul,
+ol {
+  margin: 0;
+  margin-bottom: ($gutter / 2);
+
+  li {
+    line-height: 1.4em;
+    margin-bottom: ($gutter / 4);
+  }
+}
+
 // Blockquotes
 blockquote,
 q {

@@ -15,3 +15,23 @@
     max-width: $mediumdevice;
   }
 }
+
+.about-tools {
+  display: flex;
+  background: $offwhite;
+
+  .wrap {
+    max-width: $maxdesktop;
+  }
+
+  .row {
+    display: flex;
+    flex: 1;
+
+    div {
+      flex: 1;
+      text-align: center;
+      padding: ($gutter / 2);
+    }
+  }
+}
