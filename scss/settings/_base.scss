@@ -191,11 +191,16 @@ main {
 }
 
 section {
+  margin: 0 auto;
   padding: $vertical-padding ($gutter / 2);
 
   &.large {
-    margin: 0 auto;
     max-width: $largedevice;
+  }
+
+
+  &.medium {
+    max-width: $mediumdevice;
   }
 
   .section-header {

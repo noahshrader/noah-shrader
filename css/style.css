@@ -374,7 +374,7 @@ a {
         color: #fff;
         background: #0432ff;
         left: 20px; }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       a.main {
         font-size: 0.9em;
         justify-content: center; } }
@@ -429,7 +429,7 @@ q {
   blockquote::after,
   q::after {
     bottom: 0; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     blockquote,
     q {
       font-size: 1.4em; } }
@@ -459,32 +459,34 @@ main {
   width: 100%; }
 
 section {
+  margin: 0 auto;
   padding: 140px 30px; }
   section.large {
-    margin: 0 auto;
-    max-width: 1024px; }
+    max-width: 1200px; }
+  section.medium {
+    max-width: 960px; }
   section .section-header {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 1024px; }
-    @media screen and (max-width: 860px) {
+    max-width: 1200px; }
+    @media screen and (max-width: 960px) {
       section .section-header {
         text-align: center;
         padding: 0 30px; } }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1200px) {
     section {
       padding-right: 130px;
       padding-left: 130px; } }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     section {
       padding: 70px 30px; } }
 .wrap {
   display: flex;
   margin: 0 auto;
   width: 100%;
-  max-width: 1024px; }
-  @media screen and (max-width: 860px) {
+  max-width: 1200px; }
+  @media screen and (max-width: 960px) {
     .wrap {
       flex-direction: column; } }
 h1,
@@ -494,47 +496,45 @@ h4,
 h5 {
   color: #000;
   font-family: "Spartan", Helvetica, Arial, sans-serif;
+  font-weight: 500;
   padding: 0;
   margin: 0;
   margin-bottom: 0.5em; }
 
 h1 {
   font-size: 4.6em;
-  font-weight: 800;
   line-height: 1.1em;
   letter-spacing: -1px; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1200px) {
     h1 {
       font-size: 3em; } }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     h1 {
       font-size: 2.4em; } }
 h2 {
-  font-size: 3.2em;
-  font-weight: 800;
-  line-height: 1.1em;
+  font-size: 3.4em;
+  line-height: 1.4em;
   letter-spacing: -1px; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1200px) {
     h2 {
       font-size: 2.6em; } }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     h2 {
       font-size: 1.6em;
       line-height: 1.2em; } }
 h3 {
-  font-size: 2.2em;
-  font-weight: 800;
-  line-height: 1.15em; }
-  @media screen and (max-width: 1024px) {
+  font-size: 2.4em;
+  line-height: 1.4em;
+  letter-spacing: -1px; }
+  @media screen and (max-width: 1200px) {
     h3 {
       font-size: 1.6em; } }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     h3 {
       font-size: 1.3em;
       line-height: 1.2em; } }
 h4 {
-  font-size: 1.4em;
-  font-weight: 700;
+  font-size: 1.6em;
   line-height: 1.5em; }
   @media screen and (max-width: 500px) {
     h4 {
@@ -547,12 +547,12 @@ h5 {
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 4.2em; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     h5 {
       font-size: .6em; } }
 p {
   color: #141414;
-  font-size: 0.95em;
+  font-size: 1.1em;
   font-weight: 500;
   line-height: 1.8em;
   margin: 0;
@@ -658,7 +658,7 @@ footer {
         height: var(--size);
         width: var(--size);
         margin-right: 12px; }
-        @media screen and (max-width: 860px) {
+        @media screen and (max-width: 960px) {
           footer .wrap .contact-link svg {
             --size: 24px;
             top: -3px; } }
@@ -666,14 +666,14 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center; }
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 960px) {
         footer .wrap .contact-link {
           padding: 70px 30px; } }
       @media screen and (max-width: 500px) {
         footer .wrap .contact-link {
           padding-top: 35px;
           padding-bottom: 35px; } }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     footer {
       margin-top: 0;
       padding-bottom: 60px; } }
@@ -689,18 +689,18 @@ header {
     top: 0; }
   header .logo {
     width: 40px; }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       header .logo {
         width: 30px; } }
   header .wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1400px; }
+    max-width: 100%; }
   header a {
     font-size: 0.7em;
     margin-left: 30px; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     header {
       flex-direction: row;
       align-items: center;
@@ -749,12 +749,12 @@ header {
         transition: ease-in-out 0.25s; }
       .social li svg:hover path {
         fill: #0432ff; }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .social li {
         flex: 1;
         margin-bottom: 0;
         margin-right: 0; } }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     .social {
       bottom: -100%;
       right: 0;
@@ -771,7 +771,7 @@ header {
   text-align: center;
   margin: 0 auto;
   padding: 0 150px 140px;
-  max-width: 1024px; }
+  max-width: 1200px; }
   .bio h4 {
     font-size: 1.4em;
     line-height: 1.7em; }
@@ -784,7 +784,7 @@ header {
     .bio a:hover {
       color: #fff;
       box-shadow: inset 0px -100px 0px 0 #0432ff; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     .bio {
       padding-left: 30px;
       padding-right: 30px;
@@ -845,7 +845,7 @@ header {
         .code .repo span svg:last-child {
           padding: 2px;
           transform: translate(-50%, -50%) scale(1.1); }
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 960px) {
         .code .repo span {
           margin: 0; } }
     .code .repo h4,
@@ -854,20 +854,20 @@ header {
       bottom: -2px;
       margin: 0;
       margin-right: 30px; }
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 960px) {
         .code .repo h4,
         .code .repo p {
           margin-right: 0;
           margin-top: 15px; } }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .code .repo {
         flex-direction: column;
         text-align: center;
         padding: 30px; } }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .code .repo:last-child {
         margin-bottom: 0; } }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     .code {
       padding-top: 35px; } }
 .intro {
@@ -903,7 +903,7 @@ header {
       .read.open .book-list-close:hover {
         font-size: 15px;
         transform: scale(0.85); }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .read.open {
         padding-left: 30px;
         padding-right: 30px; } }
@@ -918,7 +918,7 @@ header {
       .read .wrap .recent .book-title {
         color: #fff;
         padding-right: 60px; }
-        @media screen and (max-width: 860px) {
+        @media screen and (max-width: 960px) {
           .read .wrap .recent .book-title {
             padding-right: 0; } }
       .read .wrap .recent .subline {
@@ -928,14 +928,14 @@ header {
         line-height: 35px;
         margin-top: 10px;
         margin-bottom: 10px; }
-        @media screen and (max-width: 860px) {
+        @media screen and (max-width: 960px) {
           .read .wrap .recent .subline {
             font-size: 20px;
             line-height: 26px; } }
       .read .wrap .recent .book-author {
         margin-top: 30px;
         margin-left: 2px; }
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 960px) {
         .read .wrap .recent {
           padding-right: 0;
           margin-bottom: 30px; } }
@@ -953,11 +953,11 @@ header {
     .read .wrap .book-library {
       display: flex;
       flex: 0 0 auto; }
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 960px) {
         .read .wrap .book-library {
           justify-content: center;
           width: 100%; } }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .read .wrap {
         text-align: center;
         align-items: center; } }
@@ -973,15 +973,15 @@ header {
       .current-projects .projects .projects-row.reverse .project-info {
         padding-right: 60px;
         padding-left: 0; }
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1200px) {
           .current-projects .projects .projects-row.reverse .project-info {
             padding-right: 0; } }
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1200px) {
         .current-projects .projects .projects-row.reverse {
           flex-direction: column; } }
     .current-projects .projects .projects-row:last-child {
       margin-bottom: 0; }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
       .current-projects .projects .projects-row {
         flex-direction: column;
         margin-bottom: 30px; } }
@@ -993,7 +993,7 @@ header {
     max-width: 60vw; }
     .current-projects .projects .project img {
       float: left; }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
       .current-projects .projects .project {
         max-width: 100%;
         margin-bottom: 40px; } }
@@ -1010,16 +1010,16 @@ header {
     .current-projects .projects .project-info p {
       margin-bottom: 40px;
       max-width: 95%; }
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1200px) {
         .current-projects .projects .project-info p {
           margin: 0 auto 15px; } }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
       .current-projects .projects .project-info {
         align-items: center;
         text-align: center;
         padding: 0;
         padding-bottom: 30px; } }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .current-projects {
     padding-bottom: 30px; } }
 
@@ -1032,7 +1032,7 @@ header {
     margin-right: 40px; }
     .other-projects .project:last-child {
       margin-right: 0; }
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 960px) {
         .other-projects .project:last-child {
           margin-bottom: 0; } }
     .other-projects .project .project-image {
@@ -1041,7 +1041,7 @@ header {
       overflow: hidden; }
       .other-projects .project .project-image img {
         float: left; }
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 960px) {
         .other-projects .project .project-image {
           margin-bottom: 30px; } }
     .other-projects .project .project-info {
@@ -1051,7 +1051,7 @@ header {
         max-width: 500px; }
     .other-projects .project .main {
       margin-top: 30px; }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .other-projects .project {
         margin-right: 0;
         margin-bottom: 60px; } }
@@ -1066,7 +1066,7 @@ header {
     font-weight: 400;
     line-height: 45px;
     margin-top: 15px; }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .write .subline {
         font-size: 20px;
         line-height: 30px;
@@ -1078,7 +1078,7 @@ header {
     line-height: 1;
     margin-bottom: 20px;
     opacity: 0.5; }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .write .date {
         font-size: 0.65em; } }
   .write .recent {
@@ -1090,7 +1090,7 @@ header {
       left: -7px; }
     .write .recent .date {
       margin-bottom: 30px; }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .write .recent {
         justify-content: center;
         padding-right: 0; } }
@@ -1107,7 +1107,7 @@ header {
       height: 1px;
       width: 80px;
       background: rgba(0, 0, 0, 0.3); }
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 960px) {
         .write .upcoming::before {
           left: 50%;
           width: 60px;
@@ -1115,16 +1115,16 @@ header {
     .write .upcoming .story {
       flex: 1;
       padding-right: 60px; }
-      @media screen and (max-width: 860px) {
+      @media screen and (max-width: 960px) {
         .write .upcoming .story {
           padding: 0 30px 60px; } }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .write .upcoming {
         flex-direction: column; } }
   .write .main {
     align-self: flex-end;
     margin-top: 72px; }
-    @media screen and (max-width: 860px) {
+    @media screen and (max-width: 960px) {
       .write .main {
         align-self: center;
         margin-top: 15px; } }
@@ -1132,7 +1132,7 @@ header {
     color: #000; }
     .write a:not(.main):hover {
       color: #0432ff; }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 960px) {
     .write {
       text-align: center; } }
 .about-intro h4 {
@@ -1140,17 +1140,18 @@ header {
 
 .about-intro img {
   width: 100%;
-  max-width: 480px; }
+  max-width: 480px;
+  margin-bottom: 60px; }
 
 .about-process .wrap {
   flex-direction: column;
-  max-width: 860px; }
+  max-width: 960px; }
 
 .about-tools {
   display: flex;
   background: #f6f6f6; }
   .about-tools .wrap {
-    max-width: 1400px; }
+    max-width: 1600px; }
   .about-tools .row {
     display: flex;
     flex: 1; }

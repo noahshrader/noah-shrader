@@ -5,6 +5,7 @@ h4,
 h5 {
   color: $black;
   font-family: $mainfont;
+  font-weight: 500;
 	padding: 0;
 	margin: 0;
   margin-bottom: 0.5em;
@@ -12,7 +13,6 @@ h5 {
 
 h1 {
 	font-size: 4.6em;
-  font-weight: 800;
 	line-height: 1.1em;
   letter-spacing: -1px;
 
@@ -26,9 +26,8 @@ h1 {
 }
 
 h2 {
-  font-size: 3.2em;
-  font-weight: 800;
-  line-height: 1.1em;
+  font-size: 3.4em;
+  line-height: 1.4em;
   letter-spacing: -1px;
 
   @media screen and (max-width: $largedevice) {
@@ -42,9 +41,9 @@ h2 {
 }
 
 h3 {
-  font-size: 2.2em;
-  font-weight: 800;
-  line-height: 1.15em;
+  font-size: 2.4em;
+  line-height: 1.4em;
+  letter-spacing: -1px;
 
   @media screen and (max-width: $largedevice) {
     font-size: 1.6em;
@@ -57,8 +56,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.4em;
-  font-weight: 700;
+  font-size: 1.6em;
   line-height: 1.5em;
 
  	@media screen and (max-width: $smalldevice) {
@@ -74,7 +72,7 @@ h5 {
 
 p {
   color: $base;
-  font-size: 0.95em;
+  font-size: 1.1em;
   font-weight: 500;
   line-height: 1.8em;
   margin: 0;
