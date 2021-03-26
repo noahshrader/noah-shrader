@@ -5,7 +5,7 @@ header {
   position: fixed;
   top: -($horizontal-padding);
   left: 0;
-  padding: ($gutter / 2);
+  padding: ($gutter / 1.5);
   width: 100%;
   z-index: 9990;
 
@@ -16,36 +16,61 @@ header {
 
   // Noah Shrader icon
   .logo {
-    width: 40px;
+    position: relative;
+    height: 120px;
+    width: 120px;
+
+    &:hover {
+      &::before {
+        @include visible;
+        top: 8px;
+        left: 8px;
+      }
+    }
+
+    img {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before {
+      @include trans;
+      @include hidden;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $primary;
+      border-radius: 120px;
+      height: 120px;
+      width: 120px;
+      z-index: 0;
+    }
 
     @media screen and (max-width: $mediumdevice) {
-      width: 30px;
+      width: 60px;
+
+      &:hover {
+        &::before {
+          top: 4px;
+          left: 4px;
+        }
+      }
+
+      &::before {
+        height: 60px;
+        width: 60px;
+      }
     }
   }
 
   .wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     max-width: 100%;
-  }
-
-  a {
-    font-size: 0.7em;
-    margin-left: ($gutter / 2);
   }
 
   @media screen and (max-width: $mediumdevice) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -($horizontal-padding);
-    bottom: auto;
-    left: 0;
     padding: ($gutter / 2);
-    width: 100%;
-    max-width: 100%;
 
     .active & {
       top: 0;

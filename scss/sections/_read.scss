@@ -51,6 +51,7 @@
       .book-title {
         color: $white;
         padding-right: $gutter;
+        margin-bottom: ($gutter / 4);
 
         @media screen and (max-width: $mediumdevice) {
           padding-right: 0;

@@ -43,7 +43,7 @@ a {
     align-items: center;
     color: $primary;
     font-family: $mainfont;
-    font-weight: 700;
+    font-weight: 400;
 
     svg {
       --size: 55px;
@@ -118,7 +118,7 @@ ol {
   margin-bottom: ($gutter / 2);
 
   li {
-    line-height: 1.4em;
+    line-height: 1.6em;
     margin-bottom: ($gutter / 4);
   }
 }
@@ -198,7 +198,6 @@ section {
     max-width: $largedevice;
   }
 
-
   &.medium {
     max-width: $mediumdevice;
   }
@@ -207,12 +206,16 @@ section {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: $largedevice;
+    max-width: $maxdesktop;
 
     @media screen and (max-width: $mediumdevice) {
       text-align: center;
       padding: 0 ($gutter / 2);
     }
+  }
+
+  img {
+    margin-bottom: $gutter;
   }
 
   @media screen and (max-width: $largedevice) {
@@ -221,7 +224,7 @@ section {
   }
 
   @media screen and (max-width: $mediumdevice) {
-    padding: ($vertical-padding / 2) ($gutter / 2);
+    padding: ($vertical-padding / 1.5) ($gutter / 2);
   }
 }
 
@@ -230,7 +233,7 @@ section {
   display: flex;
   margin: 0 auto;
   width: 100%;
-  max-width: $largedevice;
+  max-width: $maxdesktop;
 
   @media screen and (max-width: $mediumdevice) {
     flex-direction: column;
