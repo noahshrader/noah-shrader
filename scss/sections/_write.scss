@@ -1,15 +1,20 @@
 .write {
-  background: $offwhite;
+  background: $primary;
 
   .wrap {
     flex-direction: column;
     justify-content: space-between;
   }
 
+  .section-header,
+  h4,
+  p {
+    color: $white;
+  }
+
   .subline {
     display: block;
     font-size: 32px;
-    font-weight: 400;
     line-height: 45px;
     margin-top: ($gutter / 4);
 
@@ -22,11 +27,11 @@
 
   .date {
     display: block;
+    color: $black;
     font-size: 0.75em;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1;
     margin-bottom: ($gutter / 3);
-    opacity: 0.5;
 
     @media screen and (max-width: $mediumdevice) {
       font-size: 0.65em;
@@ -42,6 +47,7 @@
     h2 {
       position: relative;
       left: -7px;
+      margin-bottom: ($gutter / 4);
     }
 
     .date {
@@ -65,9 +71,10 @@
       position: absolute;
       top: 0;
       left: 0;
+      margin: $gutter 0;
       height: 1px;
-      width: 80px;
-      background: rgba($black, 0.3);
+      width: 100%;
+      background: $black;
 
       @media screen and (max-width: $mediumdevice) {
         left: 50%;
@@ -91,23 +98,12 @@
     }
   }
 
-  // Medium link
-  .main {
-    align-self: flex-end;
-    margin-top: ($gutter * 1.2);
-
-    @media screen and (max-width: $mediumdevice) {
-      align-self: center;
-      margin-top: ($gutter / 4);
-    }
-  }
-
   // Other links that don't adhere to standard link button styling
   a:not(.main) {
-    color: $black;
+    color: $white;
 
     &:hover {
-      color: $primary;
+      box-shadow: 0px 2px 0px 0px $white;
     }
   }
 

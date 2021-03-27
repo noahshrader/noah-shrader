@@ -5,7 +5,7 @@
 
   img {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
   }
 }
 
@@ -24,13 +24,18 @@
     max-width: $maxdesktop;
   }
 
+  img {
+    height: 60px;
+    width: 60px;
+    margin-bottom: ($gutter / 2);
+  }
+
   .row {
     display: flex;
     flex: 1;
 
     div {
       flex: 1;
-      text-align: center;
       padding: ($gutter / 2);
     }
   }

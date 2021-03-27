@@ -44,7 +44,7 @@
 
 // Slow transitions
 @mixin trans (
-  $trans-speed: 0.25s,
+  $trans-speed: 0.15s,
   $trans-timing: ease-in-out
 ) {
 	transition: $trans-timing $trans-speed;
@@ -66,10 +66,10 @@
 
 // Small caps
 @mixin smallcaps {
-	font-size: 0.7em;
-  font-weight: 400;
+	font-size: max(16px, 0.8vw);
+  font-weight: 700;
 	line-height: 1.3em;
-	letter-spacing: 4px;
+	letter-spacing: 5px;
 	text-transform: uppercase;
 
 	@media screen and (max-width: $mediumdevice) {

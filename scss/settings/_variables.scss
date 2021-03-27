@@ -13,7 +13,7 @@ $primary: #0432ff; // Blue
 
 // Fonts
 $basefontsize: 20px;
-$mainfont: 'Spartan', Helvetica, Arial, sans-serif;
+$mainfont: 'Manrope', Helvetica, Arial, sans-serif;
 $iconfont: 'noah-shrader';
 
 // Header
@@ -38,7 +38,7 @@ $vertical-padding: 140px;
 $horizontal-padding: ($headerwidth * 1.5);
 
 // Breakpoints
-$maxdesktop: 1400px;
-$largedevice: 1140px;
-$mediumdevice: 900px;
+$maxdesktop: 1300px;
+$largedevice: 1024px;
+$mediumdevice: 860px;
 $smalldevice: 500px;
