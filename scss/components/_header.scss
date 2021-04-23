@@ -12,8 +12,8 @@ header {
       $trans-speed: 0.4s
     );
     position: relative;
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
     transform: scale(0);
 
     // When the page is loaded
@@ -43,9 +43,9 @@ header {
       top: 0;
       left: 0;
       background: $primary;
-      border-radius: 120px;
-      height: 85px;
-      width: 85px;
+      border-radius: 140px;
+      height: 140px;
+      width: 140px;
       z-index: 0;
     }
 
