@@ -1,7 +1,6 @@
 .read {
   @include trans;
   position: relative;
-  background: $primary;
   overflow: hidden;
 
   // When book list visible
@@ -11,7 +10,7 @@
 
     .section-header,
     .wrap {
-      opacity: 0.05;
+      opacity: 0;
     }
 
     .book-list {
@@ -49,7 +48,6 @@
       padding-right: $gutter;
 
       .book-title {
-        color: $white;
         padding-right: $gutter;
         margin-bottom: ($gutter / 4);
 
@@ -61,11 +59,9 @@
       // Books that have a subtitle
       .subline {
         display: block;
-        color: $white;
-        font-size: 26px;
+        font-size: 36px;
         line-height: 35px;
         margin-top: ($gutter / 6);
-        margin-bottom: ($gutter / 6);
 
         @media screen and (max-width: $mediumdevice) {
           font-size: 20px;
@@ -75,7 +71,7 @@
 
       // Book author
       .book-author {
-        margin-top: ($gutter / 2);
+        margin-top: $gutter;
         margin-left: 2px;
       }
 
@@ -87,23 +83,11 @@
 
     // Make the more link white for contrast
     a.main {
-      color: $white;
 
       &:hover {
 
         svg {
-          stroke: $primary;
-          background: $white;
           left: 15px !important;
-        }
-      }
-
-      svg {
-        stroke: $white;
-        border-color: $white;
-
-        line {
-          fill: $white;
         }
       }
     }

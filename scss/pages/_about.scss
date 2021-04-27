@@ -1,3 +1,9 @@
+.about {
+  main {
+    padding-top: ($gutter * 2);
+  }
+}
+
 .about-intro {
   h4 {
     margin: ($gutter / 2) 0;
@@ -5,7 +11,7 @@
 
   img {
     width: 100%;
-    max-width: 500px;
+    max-width: 520px;
   }
 }
 

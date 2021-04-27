@@ -17,11 +17,6 @@
     max-width: $book-list-width;
   }
 
-  h3,
-  li {
-    color: $white;
-  }
-
   // Main title
   h3 {
     margin-bottom: $gutter;
@@ -36,7 +31,7 @@
       font-size: 1em;
       line-height: 1.6em;
       padding-bottom: 1.2em;
-      margin-bottom: 1.2em;
+      margin-bottom: ($gutter / 3);
 
       &:last-child {
         margin-bottom: 0;
@@ -78,16 +73,16 @@
   color: $primary;
   height: var(--size);
   width: var(--size);
-  background: $primary;
+  background: $white;
   border-radius: var(--size);
-  border: solid 2px $white;
+  border: solid 2px $base;
   transform: scale(0.5);
   transition: none;
   z-index: 9999;
 
   svg {
     position: relative;
-    color: $white;
+    color: $base;
     font-size: 16px;
   }
 }

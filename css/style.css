@@ -376,8 +376,9 @@ a {
   text-decoration: none;
   z-index: 10;
   cursor: pointer;
+  box-shadow: 0px 0px 0px 0px transparent;
 }
-p a:hover {
+a:hover {
   color: #0432ff;
   box-shadow: 0px 2px 0px 0px #0432ff;
 }
@@ -388,16 +389,17 @@ a.main {
   color: #0432ff;
   font-family: "Manrope", Helvetica, Arial, sans-serif;
   font-weight: 500;
+  box-shadow: none;
 }
 a.main svg {
-  --size: 55px;
+  --size: 70px;
   transition: ease-in-out 0.15s;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   left: 15px;
-  padding: 10px;
+  padding: 20px;
   height: var(--size);
   width: var(--size);
   border: solid 2px #0432ff;
@@ -598,13 +600,15 @@ h5 {
 }
 
 h1 {
-  font-size: max(32px, 4.8vw);
+  font-size: max(32px, 5.3vw);
   font-weight: 400;
+  letter-spacing: -1px;
   line-height: 1.3em;
 }
 
 h2 {
   font-size: max(32px, 3.6vw);
+  letter-spacing: -0.5px;
   line-height: 1.4em;
 }
 
@@ -657,10 +661,6 @@ p {
   margin: 0 auto;
   max-width: 860px;
 }
-.book-list h3,
-.book-list li {
-  color: #fff;
-}
 .book-list h3 {
   margin-bottom: 60px;
 }
@@ -674,7 +674,7 @@ p {
   font-size: 1em;
   line-height: 1.6em;
   padding-bottom: 1.2em;
-  margin-bottom: 1.2em;
+  margin-bottom: 20px;
 }
 .book-list ul li:last-child {
   margin-bottom: 0;
@@ -711,16 +711,16 @@ p {
   color: #0432ff;
   height: var(--size);
   width: var(--size);
-  background: #0432ff;
+  background: #fff;
   border-radius: var(--size);
-  border: solid 2px #fff;
+  border: solid 2px #141414;
   transform: scale(0.5);
   transition: none;
   z-index: 9999;
 }
 .book-list-close svg {
   position: relative;
-  color: #fff;
+  color: #141414;
   font-size: 16px;
 }
 
@@ -797,12 +797,26 @@ header {
   width: 100%;
   z-index: 9990;
 }
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+header ul li {
+  margin-left: 60px;
+}
+header ul li a {
+  color: #141414;
+  font-weight: 500;
+}
 header .logo {
   transition: ease-in-out 0.4s;
   position: relative;
-  height: 140px;
-  width: 140px;
+  height: 130px;
+  width: 130px;
   transform: scale(0);
+  box-shadow: none;
 }
 .active header .logo {
   transform: scale(1);
@@ -827,9 +841,9 @@ header .logo::before {
   top: 0;
   left: 0;
   background: #0432ff;
-  border-radius: 140px;
-  height: 140px;
-  width: 140px;
+  border-radius: 130px;
+  height: 130px;
+  width: 130px;
   z-index: 0;
 }
 @media screen and (max-width: 860px) {
@@ -846,6 +860,8 @@ header .logo::before {
   }
 }
 header .wrap {
+  justify-content: space-between;
+  align-items: center;
   max-width: 100%;
 }
 @media screen and (max-width: 860px) {
@@ -889,7 +905,7 @@ header .wrap {
   color: #000;
 }
 .social li svg {
-  --size: 25px;
+  --size: 30px;
   height: var(--size);
   width: var(--size);
   transform: scale(0.8);
@@ -1078,7 +1094,6 @@ header .wrap {
 .read {
   transition: ease-in-out 0.15s;
   position: relative;
-  background: #0432ff;
   overflow: hidden;
 }
 .read.open {
@@ -1087,7 +1102,7 @@ header .wrap {
 }
 .read.open .section-header,
 .read.open .wrap {
-  opacity: 0.05;
+  opacity: 0;
 }
 .read.open .book-list {
   top: 0;
@@ -1120,7 +1135,6 @@ header .wrap {
   padding-right: 60px;
 }
 .read .wrap .recent .book-title {
-  color: #fff;
   padding-right: 60px;
   margin-bottom: 15px;
 }
@@ -1131,11 +1145,9 @@ header .wrap {
 }
 .read .wrap .recent .subline {
   display: block;
-  color: #fff;
-  font-size: 26px;
+  font-size: 36px;
   line-height: 35px;
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 @media screen and (max-width: 860px) {
   .read .wrap .recent .subline {
@@ -1144,7 +1156,7 @@ header .wrap {
   }
 }
 .read .wrap .recent .book-author {
-  margin-top: 30px;
+  margin-top: 60px;
   margin-left: 2px;
 }
 @media screen and (max-width: 860px) {
@@ -1153,20 +1165,8 @@ header .wrap {
     margin-bottom: 30px;
   }
 }
-.read .wrap a.main {
-  color: #fff;
-}
 .read .wrap a.main:hover svg {
-  stroke: #0432ff;
-  background: #fff;
   left: 15px !important;
-}
-.read .wrap a.main svg {
-  stroke: #fff;
-  border-color: #fff;
-}
-.read .wrap a.main svg line {
-  fill: #fff;
 }
 .read .wrap .book-library {
   display: flex;
@@ -1381,23 +1381,6 @@ header .wrap {
   margin-top: 40px;
   padding-top: 60px;
 }
-.write .upcoming::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 60px 0;
-  height: 1px;
-  width: 100%;
-  background: #000;
-}
-@media screen and (max-width: 860px) {
-  .write .upcoming::before {
-    left: 50%;
-    width: 60px;
-    transform: translateX(-50%);
-  }
-}
 .write .upcoming .story {
   flex: 1;
   padding-right: 60px;
@@ -1424,12 +1407,16 @@ header .wrap {
   }
 }
 
+.about main {
+  padding-top: 120px;
+}
+
 .about-intro h4 {
   margin: 30px 0;
 }
 .about-intro img {
   width: 100%;
-  max-width: 500px;
+  max-width: 520px;
 }
 
 .about-process .wrap {
