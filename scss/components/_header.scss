@@ -26,8 +26,6 @@ header {
       $trans-speed: 0.4s
     );
     position: relative;
-    height: 130px;
-    width: 130px;
     transform: scale(0);
     box-shadow: none;
 
@@ -37,31 +35,25 @@ header {
     }
 
     &:hover {
-      &::before {
-        @include visible;
-        top: 8px;
-        left: 8px;
+
+      svg {
+        #Group-2,
+        path {
+          stroke: $base;
+        }
       }
     }
 
-    img {
+    svg {
       position: relative;
+      width: 150px;
+      height: 150px;
       z-index: 2;
-    }
 
-    &::before {
-      @include trans;
-      @include hidden;
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: $primary;
-      border-radius: 130px;
-      height: 130px;
-      width: 130px;
-      z-index: 0;
+      #Group-2,
+      path {
+        stroke: $primary;
+      }
     }
 
     @media screen and (max-width: $mediumdevice) {

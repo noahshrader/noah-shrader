@@ -12,25 +12,23 @@ h5 {
 }
 
 h1 {
-	font-size: max(32px, 5.3vw);
+	font-size: max(32px, 6vw);
   font-weight: 400;
-  letter-spacing: -1px;
-	line-height: 1.3em;
+	line-height: 1.2em;
 }
 
 h2 {
-  font-size: max(32px, 3.6vw);
-  letter-spacing: -0.5px;
+  font-size: max(32px, 3.8vw);
   line-height: 1.4em;
 }
 
 h3 {
-  font-size: max(24px, 2.3vw);
-  line-height: 1.5em;
+  font-size: max(24px, 2.4vw);
+  line-height: 1.4em;
 }
 
 h4 {
-  font-size: max(24px, 1.5vw);
+  font-size: max(24px, 1.6vw);
   line-height: 1.5em;
 }
 
@@ -41,7 +39,7 @@ h5 {
 
 p {
   color: $base;
-  font-size: max(16px, 1.1vw);
+  font-size: max(16px, 1.2vw);
   line-height: 1.8em;
   margin: 0;
   margin-bottom: ($gutter / 1.5);

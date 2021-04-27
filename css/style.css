@@ -536,7 +536,7 @@ section {
   padding: 140px 30px;
 }
 section.large {
-  max-width: 1024px;
+  max-width: 1140px;
 }
 section.medium {
   max-width: 860px;
@@ -545,7 +545,7 @@ section .section-header {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 @media screen and (max-width: 860px) {
   section .section-header {
@@ -556,7 +556,7 @@ section .section-header {
 section img {
   margin-bottom: 60px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1140px) {
   section {
     padding-right: 130px;
     padding-left: 130px;
@@ -572,7 +572,7 @@ section img {
   display: flex;
   margin: 0 auto;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 @media screen and (max-width: 860px) {
   .wrap {
@@ -600,25 +600,23 @@ h5 {
 }
 
 h1 {
-  font-size: max(32px, 5.3vw);
+  font-size: max(32px, 6vw);
   font-weight: 400;
-  letter-spacing: -1px;
-  line-height: 1.3em;
+  line-height: 1.2em;
 }
 
 h2 {
-  font-size: max(32px, 3.6vw);
-  letter-spacing: -0.5px;
+  font-size: max(32px, 3.8vw);
   line-height: 1.4em;
 }
 
 h3 {
-  font-size: max(24px, 2.3vw);
-  line-height: 1.5em;
+  font-size: max(24px, 2.4vw);
+  line-height: 1.4em;
 }
 
 h4 {
-  font-size: max(24px, 1.5vw);
+  font-size: max(24px, 1.6vw);
   line-height: 1.5em;
 }
 
@@ -638,7 +636,7 @@ h5 {
 
 p {
   color: #141414;
-  font-size: max(16px, 1.1vw);
+  font-size: max(16px, 1.2vw);
   line-height: 1.8em;
   margin: 0;
   margin-bottom: 40px;
@@ -813,38 +811,25 @@ header ul li a {
 header .logo {
   transition: ease-in-out 0.4s;
   position: relative;
-  height: 130px;
-  width: 130px;
   transform: scale(0);
   box-shadow: none;
 }
 .active header .logo {
   transform: scale(1);
 }
-header .logo:hover::before {
-  opacity: 1;
-  visibility: visible;
-  top: 8px;
-  left: 8px;
+header .logo:hover svg #Group-2,
+header .logo:hover svg path {
+  stroke: #141414;
 }
-header .logo img {
+header .logo svg {
   position: relative;
+  width: 150px;
+  height: 150px;
   z-index: 2;
 }
-header .logo::before {
-  transition: ease-in-out 0.15s;
-  opacity: 0;
-  visibility: hidden;
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #0432ff;
-  border-radius: 130px;
-  height: 130px;
-  width: 130px;
-  z-index: 0;
+header .logo svg #Group-2,
+header .logo svg path {
+  stroke: #0432ff;
 }
 @media screen and (max-width: 860px) {
   header .logo {
@@ -944,7 +929,7 @@ header .wrap {
   text-align: center;
   margin: 0 auto;
   padding: 0 150px 140px;
-  max-width: 1024px;
+  max-width: 1140px;
 }
 .bio h4 {
   font-size: 1.4em;
@@ -1083,6 +1068,8 @@ header .wrap {
 }
 .intro .wrap {
   flex-direction: column;
+  padding: 0 60px;
+  max-width: 100%;
 }
 @media screen and (max-width: 500px) {
   .intro {
@@ -1201,12 +1188,12 @@ header .wrap {
   padding-right: 60px;
   padding-left: 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1140px) {
   .current-projects .projects .projects-row.reverse .project-info {
     padding-right: 0;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1140px) {
   .current-projects .projects .projects-row.reverse {
     flex-direction: column;
   }
@@ -1214,7 +1201,7 @@ header .wrap {
 .current-projects .projects .projects-row:last-child {
   margin-bottom: 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1140px) {
   .current-projects .projects .projects-row {
     flex-direction: column;
     margin-bottom: 30px;
@@ -1230,7 +1217,7 @@ header .wrap {
 .current-projects .projects .project img {
   float: left;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1140px) {
   .current-projects .projects .project {
     max-width: 100%;
     margin-bottom: 40px;
@@ -1252,12 +1239,12 @@ header .wrap {
   margin-bottom: 40px;
   max-width: 95%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1140px) {
   .current-projects .projects .project-info p {
     margin: 0 auto 15px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1140px) {
   .current-projects .projects .project-info {
     align-items: center;
     text-align: center;
@@ -1265,7 +1252,7 @@ header .wrap {
     padding-bottom: 30px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1140px) {
   .current-projects {
     padding-bottom: 30px;
   }
@@ -1319,16 +1306,11 @@ header .wrap {
 }
 
 .write {
-  background: #0432ff;
+  background: #f6f6f6;
 }
 .write .wrap {
   flex-direction: column;
   justify-content: space-between;
-}
-.write .section-header,
-.write h4,
-.write p {
-  color: #fff;
 }
 .write .subline {
   display: block;
@@ -1345,7 +1327,7 @@ header .wrap {
 }
 .write .date {
   display: block;
-  color: #000;
+  color: #141414;
   font-size: 0.75em;
   font-weight: 500;
   line-height: 1;
@@ -1363,11 +1345,7 @@ header .wrap {
 }
 .write .recent h2 {
   position: relative;
-  left: -7px;
   margin-bottom: 15px;
-}
-.write .recent .date {
-  margin-bottom: 30px;
 }
 @media screen and (max-width: 860px) {
   .write .recent {
@@ -1394,12 +1372,6 @@ header .wrap {
   .write .upcoming {
     flex-direction: column;
   }
-}
-.write a:not(.main) {
-  color: #fff;
-}
-.write a:not(.main):hover {
-  box-shadow: 0px 2px 0px 0px #fff;
 }
 @media screen and (max-width: 860px) {
   .write {
@@ -1429,7 +1401,7 @@ header .wrap {
   background: #f6f6f6;
 }
 .about-tools .wrap {
-  max-width: 1300px;
+  max-width: 1400px;
 }
 .about-tools img {
   height: 60px;
