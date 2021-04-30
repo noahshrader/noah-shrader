@@ -37,9 +37,30 @@ a {
   cursor: pointer;
   box-shadow: 0px 0px 0px 0px transparent;
 
-  &:hover {
-    color: $primary;
-    box-shadow: 0px 2px 0px 0px $primary;
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  p &,
+  li & {
+    &::before {
+      @include trans;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 0;
+      background: $primary;
+    }
+
+    &:hover {
+
+      &::before {
+        width: 100%;
+      }
+    }
   }
 
   // Button links (with arrows)
@@ -49,7 +70,7 @@ a {
     align-items: center;
     color: $primary;
     font-family: $mainfont;
-    font-weight: 500;
+    font-weight: 700;
     box-shadow: none;
 
     svg {
@@ -60,10 +81,10 @@ a {
       align-items: center;
       justify-content: center;
       left: 15px;
-      padding: 20px;
+      padding: 18px;
       height: var(--size);
       width: var(--size);
-      border: solid 2px $primary;
+      border: solid 3px $primary;
       border-radius: var(--size);
       z-index: 0;
 
@@ -209,9 +230,11 @@ section {
     max-width: $mediumdevice;
   }
 
+  // Section headers
   .section-header {
-    margin-left: auto;
-    margin-right: auto;
+    @include smallcaps;
+    font-weight: 700;
+    margin: 0 auto ($gutter * 1.5);
     width: 100%;
     max-width: $maxdesktop;
 
@@ -221,6 +244,7 @@ section {
     }
   }
 
+  // Images
   img {
     margin-bottom: $gutter;
   }

@@ -27,7 +27,6 @@ header {
     );
     position: relative;
     transform: scale(0);
-    box-shadow: none;
 
     // When the page is loaded
     .active & {
@@ -37,6 +36,8 @@ header {
     &:hover {
 
       svg {
+        transform: rotate(-15deg);
+
         #Group-2,
         path {
           stroke: $base;
@@ -45,29 +46,18 @@ header {
     }
 
     svg {
+      @include trans;
       position: relative;
-      width: 150px;
-      height: 150px;
+      width: 130px;
+      height: 130px;
       z-index: 2;
 
       #Group-2,
       path {
         stroke: $primary;
       }
-    }
 
-    @media screen and (max-width: $mediumdevice) {
-      width: 60px;
-
-      &:hover {
-        &::before {
-          top: 4px;
-          left: 4px;
-        }
-      }
-
-      &::before {
-        height: 60px;
+      @media screen and (max-width: $mediumdevice) {
         width: 60px;
       }
     }

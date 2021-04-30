@@ -7,8 +7,6 @@
 
   .wrap {
     flex-direction: column;
-    padding: 0 $gutter;
-    max-width: 100%;
   }
 
 	@media screen and (max-width: $smalldevice) {

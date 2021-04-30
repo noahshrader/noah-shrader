@@ -1,0 +1,135 @@
+.text-hero {
+  @include trans;
+  position: relative;
+  overflow: hidden;
+
+  &.write {
+    background: $offwhite;
+
+    .wrap {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    h4 {
+      margin-bottom: ($gutter / 4);
+    }
+
+    .date {
+      display: block;
+      color: $base;
+      font-size: 0.8em;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: ($gutter / 3);
+
+      @media screen and (max-width: $mediumdevice) {
+        font-size: 0.65em;
+      }
+    }
+
+    // Most recent article
+    .recent {
+      display: flex;
+      flex-direction: column;
+      padding-right: ($gutter * 2);
+
+      h2 {
+        position: relative;
+        margin-bottom: ($gutter / 4);
+      }
+
+      @media screen and (max-width: $mediumdevice) {
+        justify-content: center;
+        padding-right: 0;
+      }
+    }
+
+    .upcoming {
+      position: relative;
+      display: flex;
+      margin-top: ($gutter / 1.5);
+      padding-top: $gutter;
+
+      // Additional stories
+      .story {
+        flex: 1;
+        padding-right: $gutter;
+
+        @media screen and (max-width: $mediumdevice) {
+          padding: 0 ($gutter / 2) $gutter;
+        }
+      }
+
+      @media screen and (max-width: $mediumdevice) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &.read {
+    .wrap {
+      @include trans;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      @media screen and (max-width: $mediumdevice) {
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    h4 {
+      margin-bottom: ($gutter / 6);
+    }
+
+    // Link to launch book library
+    .book-library {
+      display: flex;
+      flex: 0 0 auto;
+
+      @media screen and (max-width: $mediumdevice) {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .book-author {
+      margin-top: $gutter;
+    }
+
+    // When book list visible
+    &.open {
+      padding-top: ($vertical-padding * 1.5);
+      padding-bottom: ($vertical-padding * 1.5);
+
+      .section-header,
+      .wrap {
+        opacity: 0;
+      }
+
+      .book-list {
+        top: 0;
+      }
+
+      .book-list-close {
+        @include visible;
+        @include trans;
+        transform: scale(1);
+
+        svg {
+          color: $primary;
+        }
+      }
+
+      @media screen and (max-width: $mediumdevice) {
+        padding-left: ($gutter / 2);
+        padding-right: ($gutter / 2);
+      }
+    }
+
+    .section-header {
+      @include trans;
+    }
+  }
+}
