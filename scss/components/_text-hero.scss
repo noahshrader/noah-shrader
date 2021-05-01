@@ -3,6 +3,7 @@
   position: relative;
   overflow: hidden;
 
+  // Writing
   &.write {
     background: $offwhite;
 
@@ -28,7 +29,6 @@
       }
     }
 
-    // Most recent article
     .recent {
       display: flex;
       flex-direction: column;
@@ -48,7 +48,6 @@
     .upcoming {
       position: relative;
       display: flex;
-      margin-top: ($gutter / 1.5);
       padding-top: $gutter;
 
       // Additional stories
@@ -57,7 +56,7 @@
         padding-right: $gutter;
 
         @media screen and (max-width: $mediumdevice) {
-          padding: 0 ($gutter / 2) $gutter;
+          padding: 0 0 ($gutter / 2);
         }
       }
 
@@ -67,6 +66,7 @@
     }
   }
 
+  // Reading
   &.read {
     .wrap {
       @include trans;
@@ -114,12 +114,6 @@
 
       .book-list-close {
         @include visible;
-        @include trans;
-        transform: scale(1);
-
-        svg {
-          color: $primary;
-        }
       }
 
       @media screen and (max-width: $mediumdevice) {

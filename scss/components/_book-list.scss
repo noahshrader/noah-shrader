@@ -63,6 +63,7 @@
 .book-list-close {
   --size: 50px;
   @include hidden;
+  @include trans;
   position: absolute;
   top: ($gutter / 2);
   right: ($gutter / 2);
@@ -75,9 +76,16 @@
   background: $white;
   border-radius: var(--size);
   border: solid 2px $base;
-  transform: scale(0.5);
   transition: none;
   z-index: 9999;
+
+  &:hover {
+    border-color: $primary;
+
+    svg {
+      color: $primary;
+    }
+  }
 
   svg {
     position: relative;

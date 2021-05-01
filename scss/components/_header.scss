@@ -70,7 +70,7 @@ header {
   }
 
   @media screen and (max-width: $mediumdevice) {
-    padding: ($gutter / 2);
+    padding: ($gutter / 4);
 
     .active & {
       top: 0;

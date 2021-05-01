@@ -378,18 +378,8 @@ a {
   cursor: pointer;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-h1 a::before, h2 a::before, h3 a::before, h4 a::before, h5 a::before, p a::before, li a::before {
-  transition: ease-in-out 0.15s;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 0;
-  background: #0432ff;
-}
-h1 a:hover::before, h2 a:hover::before, h3 a:hover::before, h4 a:hover::before, h5 a:hover::before, p a:hover::before, li a:hover::before {
-  width: 100%;
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, p a:hover, li a:hover {
+  box-shadow: 0px 3px 0px 0px #0432ff;
 }
 a.main {
   display: inline-flex;
@@ -424,6 +414,7 @@ a.main svg::before {
   a.main svg {
     --size: 40px;
     padding: 6px;
+    border-width: 2px;
   }
 }
 a.main:hover {
@@ -708,6 +699,7 @@ p {
   --size: 50px;
   opacity: 0;
   visibility: hidden;
+  transition: ease-in-out 0.15s;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -720,9 +712,14 @@ p {
   background: #fff;
   border-radius: var(--size);
   border: solid 2px #141414;
-  transform: scale(0.5);
   transition: none;
   z-index: 9999;
+}
+.book-list-close:hover {
+  border-color: #0432ff;
+}
+.book-list-close:hover svg {
+  color: #0432ff;
 }
 .book-list-close svg {
   position: relative;
@@ -854,7 +851,7 @@ header .wrap {
 }
 @media screen and (max-width: 860px) {
   header {
-    padding: 30px;
+    padding: 15px;
   }
   .active header {
     top: 0;
@@ -926,6 +923,120 @@ header .wrap {
   .active .social {
     bottom: 0;
   }
+}
+
+.text-hero {
+  transition: ease-in-out 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.text-hero.write {
+  background: #f6f6f6;
+}
+.text-hero.write .wrap {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-hero.write h4 {
+  margin-bottom: 15px;
+}
+.text-hero.write .date {
+  display: block;
+  color: #141414;
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 860px) {
+  .text-hero.write .date {
+    font-size: 0.65em;
+  }
+}
+.text-hero.write .recent {
+  display: flex;
+  flex-direction: column;
+  padding-right: 120px;
+}
+.text-hero.write .recent h2 {
+  position: relative;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 860px) {
+  .text-hero.write .recent {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+.text-hero.write .upcoming {
+  position: relative;
+  display: flex;
+  padding-top: 60px;
+}
+.text-hero.write .upcoming .story {
+  flex: 1;
+  padding-right: 60px;
+}
+@media screen and (max-width: 860px) {
+  .text-hero.write .upcoming .story {
+    padding: 0 0 30px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .text-hero.write .upcoming {
+    flex-direction: column;
+  }
+}
+.text-hero.read .wrap {
+  transition: ease-in-out 0.15s;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media screen and (max-width: 860px) {
+  .text-hero.read .wrap {
+    text-align: center;
+    align-items: center;
+  }
+}
+.text-hero.read h4 {
+  margin-bottom: 10px;
+}
+.text-hero.read .book-library {
+  display: flex;
+  flex: 0 0 auto;
+}
+@media screen and (max-width: 860px) {
+  .text-hero.read .book-library {
+    justify-content: center;
+    width: 100%;
+  }
+}
+.text-hero.read .book-author {
+  margin-top: 60px;
+}
+.text-hero.read.open {
+  padding-top: 210px;
+  padding-bottom: 210px;
+}
+.text-hero.read.open .section-header,
+.text-hero.read.open .wrap {
+  opacity: 0;
+}
+.text-hero.read.open .book-list {
+  top: 0;
+}
+.text-hero.read.open .book-list-close {
+  opacity: 1;
+  visibility: visible;
+}
+@media screen and (max-width: 860px) {
+  .text-hero.read.open {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.text-hero.read .section-header {
+  transition: ease-in-out 0.15s;
 }
 
 .bio {
@@ -1077,126 +1188,6 @@ header .wrap {
     height: auto;
     min-height: 70vh;
   }
-}
-
-.text-hero {
-  transition: ease-in-out 0.15s;
-  position: relative;
-  overflow: hidden;
-}
-.text-hero.write {
-  background: #f6f6f6;
-}
-.text-hero.write .wrap {
-  flex-direction: column;
-  justify-content: space-between;
-}
-.text-hero.write h4 {
-  margin-bottom: 15px;
-}
-.text-hero.write .date {
-  display: block;
-  color: #141414;
-  font-size: 0.8em;
-  font-weight: 500;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 860px) {
-  .text-hero.write .date {
-    font-size: 0.65em;
-  }
-}
-.text-hero.write .recent {
-  display: flex;
-  flex-direction: column;
-  padding-right: 120px;
-}
-.text-hero.write .recent h2 {
-  position: relative;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 860px) {
-  .text-hero.write .recent {
-    justify-content: center;
-    padding-right: 0;
-  }
-}
-.text-hero.write .upcoming {
-  position: relative;
-  display: flex;
-  margin-top: 40px;
-  padding-top: 60px;
-}
-.text-hero.write .upcoming .story {
-  flex: 1;
-  padding-right: 60px;
-}
-@media screen and (max-width: 860px) {
-  .text-hero.write .upcoming .story {
-    padding: 0 30px 60px;
-  }
-}
-@media screen and (max-width: 860px) {
-  .text-hero.write .upcoming {
-    flex-direction: column;
-  }
-}
-.text-hero.read .wrap {
-  transition: ease-in-out 0.15s;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-@media screen and (max-width: 860px) {
-  .text-hero.read .wrap {
-    text-align: center;
-    align-items: center;
-  }
-}
-.text-hero.read h4 {
-  margin-bottom: 10px;
-}
-.text-hero.read .book-library {
-  display: flex;
-  flex: 0 0 auto;
-}
-@media screen and (max-width: 860px) {
-  .text-hero.read .book-library {
-    justify-content: center;
-    width: 100%;
-  }
-}
-.text-hero.read .book-author {
-  margin-top: 60px;
-}
-.text-hero.read.open {
-  padding-top: 210px;
-  padding-bottom: 210px;
-}
-.text-hero.read.open .section-header,
-.text-hero.read.open .wrap {
-  opacity: 0;
-}
-.text-hero.read.open .book-list {
-  top: 0;
-}
-.text-hero.read.open .book-list-close {
-  opacity: 1;
-  visibility: visible;
-  transition: ease-in-out 0.15s;
-  transform: scale(1);
-}
-.text-hero.read.open .book-list-close svg {
-  color: #0432ff;
-}
-@media screen and (max-width: 860px) {
-  .text-hero.read.open {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-.text-hero.read .section-header {
-  transition: ease-in-out 0.15s;
 }
 
 .current-projects .projects {
@@ -1368,4 +1359,8 @@ header .wrap {
 .about-tools .row div {
   flex: 1;
   padding: 30px;
+}
+
+.study .intro {
+  height: 60vh;
 }

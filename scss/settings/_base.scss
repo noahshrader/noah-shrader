@@ -44,22 +44,8 @@ a {
   h5 &,
   p &,
   li & {
-    &::before {
-      @include trans;
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 3px;
-      width: 0;
-      background: $primary;
-    }
-
     &:hover {
-
-      &::before {
-        width: 100%;
-      }
+      box-shadow: 0px 3px 0px 0px $primary;
     }
   }
 
@@ -97,6 +83,7 @@ a {
       @media screen and (max-width: $smalldevice) {
         --size: 40px;
         padding: 6px;
+        border-width: 2px;
       }
     }
 
