@@ -1,11 +1,12 @@
 // Main book list container
 .book-list {
   @include trans;
+  @include hidden;
   position: absolute;
   top: 100%;
   left: 0;
   bottom: 0;
-  padding-top: ($gutter * 1.5);
+  padding-top: $gutter;
   width: 100%;
   z-index: 9998;
   overflow: auto;
@@ -62,7 +63,6 @@
 // Close button
 .book-list-close {
   --size: 50px;
-  @include hidden;
   @include trans;
   position: absolute;
   top: ($gutter / 2);
@@ -73,14 +73,14 @@
   color: $primary;
   height: var(--size);
   width: var(--size);
-  background: $white;
   border-radius: var(--size);
   border: solid 2px $base;
-  transition: none;
   z-index: 9999;
+  transform: scale(0);
 
   &:hover {
     border-color: $primary;
+    transform: scale(0.9) !important;
 
     svg {
       color: $primary;
@@ -88,6 +88,7 @@
   }
 
   svg {
+    @include trans;
     position: relative;
     color: $base;
     font-size: 16px;

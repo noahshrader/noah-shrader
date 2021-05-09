@@ -38,7 +38,6 @@ header {
     display: flex;
     font-weight: 500;
     align-items: center;
-    margin-right: ($gutter * 2);
 
     &:hover {
 
@@ -52,22 +51,8 @@ header {
       }
     }
 
-    svg {
-      @include trans;
-      position: relative;
-      width: 60px;
-      height: 60px;
-      margin-right: ($gutter / 4);
-      z-index: 2;
-
-      #Group-2,
-      path {
-        stroke: $base;
-      }
-
-      @media screen and (max-width: $mediumdevice) {
-        width: 60px;
-      }
+    .name {
+      margin-right: ($gutter * 1.5);
     }
   }
 
@@ -97,7 +82,64 @@ header {
 
   .wrap {
     align-items: center;
+    justify-content: space-between;
     max-width: $maxdesktop;
+  }
+
+  .social {
+    @include clean-ul;
+    display: flex;
+    z-index: 9998;
+
+    li {
+      margin: 0;
+      margin-left: ($gutter / 3);
+
+      a {
+        display: flex;
+        justify-content: center;
+        color: $black;
+      }
+
+      svg {
+        --size: 28px;
+        height: var(--size);
+        width: var(--size);
+        transform: scale(0.8);
+
+        path {
+          @include trans;
+        }
+
+        &:hover {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+
+      @media screen and (max-width: $mediumdevice) {
+        flex: 1;
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: $mediumdevice) {
+      bottom: -100%;
+      right: 0;
+      width: 100%;
+      max-width: 100%;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 5%;
+      height: $socialmenumobile;
+      background: $white;
+
+      .active & {
+        bottom: 0;
+      }
+    }
   }
 
   @media screen and (max-width: $mediumdevice) {

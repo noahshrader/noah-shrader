@@ -4,7 +4,12 @@
   overflow: hidden;
 
   .wrap {
+    flex-direction: column;
     max-width: $largedevice;
+
+    &-inner {
+      display: flex;
+    }
   }
 
   // Writing
@@ -12,7 +17,6 @@
     background: $offwhite;
 
     .wrap {
-      flex-direction: column;
       justify-content: space-between;
     }
 
@@ -74,8 +78,12 @@
   &.read {
     .wrap {
       @include trans;
-      align-items: flex-start;
-      justify-content: space-between;
+
+      &-inner {
+        @include trans;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
 
       @media screen and (max-width: $mediumdevice) {
         text-align: center;
@@ -104,20 +112,24 @@
 
     // When book list visible
     &.open {
-      padding-top: ($vertical-padding * 1.5);
-      padding-bottom: ($vertical-padding * 1.5);
 
       .section-header,
-      .wrap {
+      .wrap-inner {
         opacity: 0;
       }
 
+      .wrap-inner {
+        height: 500px;
+      }
+
       .book-list {
+        @include visible;
         top: 0;
       }
 
       .book-list-close {
         @include visible;
+        transform: scale(1);
       }
 
       @media screen and (max-width: $mediumdevice) {
