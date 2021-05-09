@@ -553,7 +553,7 @@ section {
   padding: 140px 30px;
 }
 section.large {
-  max-width: 1400px;
+  max-width: 1350px;
 }
 section.medium {
   max-width: 860px;
@@ -567,7 +567,7 @@ section .section-header {
   font-weight: 700;
   margin: 0 auto 90px;
   width: 100%;
-  max-width: 1800px;
+  max-width: 1700px;
 }
 @media screen and (max-width: 860px) {
   section .section-header {
@@ -583,7 +583,7 @@ section .section-header {
 section img {
   margin-bottom: 60px;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
   section {
     padding-right: 130px;
     padding-left: 130px;
@@ -599,7 +599,7 @@ section img {
   display: flex;
   margin: 0 auto;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1350px;
 }
 @media screen and (max-width: 860px) {
   .wrap {
@@ -892,7 +892,7 @@ header nav a.active::before {
 }
 header .wrap {
   align-items: center;
-  max-width: 1800px;
+  max-width: 1700px;
 }
 @media screen and (max-width: 860px) {
   header {
@@ -976,7 +976,7 @@ header .wrap {
   overflow: hidden;
 }
 .text-hero .wrap {
-  max-width: 1400px;
+  max-width: 1350px;
 }
 .text-hero.write {
   background: #f6f6f6;
@@ -1091,7 +1091,7 @@ header .wrap {
   text-align: center;
   margin: 0 auto;
   padding: 0 150px 140px;
-  max-width: 1400px;
+  max-width: 1350px;
 }
 .bio h4 {
   font-size: 1.4em;
@@ -1230,7 +1230,7 @@ header .wrap {
 }
 .intro .wrap {
   flex-direction: column;
-  max-width: 1800px;
+  max-width: 1700px;
 }
 @media screen and (max-width: 500px) {
   .intro {
@@ -1243,7 +1243,7 @@ header .wrap {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 .current-projects .projects .projects-row {
@@ -1257,12 +1257,12 @@ header .wrap {
   padding-right: 60px;
   padding-left: 0;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
   .current-projects .projects .projects-row.reverse .project-info {
     padding-right: 0;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
   .current-projects .projects .projects-row.reverse {
     flex-direction: column;
   }
@@ -1270,7 +1270,7 @@ header .wrap {
 .current-projects .projects .projects-row:last-child {
   margin-bottom: 0;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
   .current-projects .projects .projects-row {
     flex-direction: column;
     margin-bottom: 30px;
@@ -1286,7 +1286,7 @@ header .wrap {
 .current-projects .projects .project img {
   float: left;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
   .current-projects .projects .project {
     max-width: 100%;
     margin-bottom: 40px;
@@ -1308,12 +1308,12 @@ header .wrap {
   margin-bottom: 40px;
   max-width: 95%;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
   .current-projects .projects .project-info p {
     margin: 0 auto 15px;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
   .current-projects .projects .project-info {
     align-items: center;
     text-align: center;
@@ -1321,7 +1321,7 @@ header .wrap {
     padding-bottom: 30px;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
   .current-projects {
     padding-bottom: 30px;
   }
@@ -1387,7 +1387,7 @@ header .wrap {
 .about-intro img {
   width: 100%;
   max-width: 600px;
-  margin-top: -100px;
+  margin-top: -300px;
 }
 
 .about-process .wrap {
@@ -1400,7 +1400,7 @@ header .wrap {
   background: #f6f6f6;
 }
 .about-tools .wrap {
-  max-width: 1800px;
+  max-width: 1700px;
 }
 .about-tools img {
   height: 60px;
