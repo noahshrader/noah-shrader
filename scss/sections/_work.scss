@@ -1,10 +1,13 @@
 .current-projects {
 
+  .wrap {
+    max-width: $maxdesktop;
+  }
+
   .projects {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: $largedevice;
     margin: 0 auto;
 
     .projects-row {
@@ -92,59 +95,5 @@
 
   @media screen and (max-width: $largedevice) {
     padding-bottom: ($gutter / 2);
-  }
-}
-
-// Non-major projects
-.other-projects {
-  flex-direction: column;
-  padding: 0;
-
-  .project {
-    display: flex;
-    flex-direction: column;
-    margin-right: ($gutter / 1.5);
-
-    &:last-child {
-      margin-right: 0;
-
-      @media screen and (max-width: $mediumdevice) {
-        margin-bottom: 0;
-      }
-    }
-
-    // Project image
-    .project-image {
-      margin-bottom: $gutter;
-      border-radius: $radius;
-      overflow: hidden;
-
-      img {
-        float: left;
-      }
-
-      @media screen and (max-width: $mediumdevice) {
-        margin-bottom: ($gutter / 2);
-      }
-    }
-
-    // Project info
-    .project-info {
-      text-align: center;
-
-      p {
-        margin: 0 auto;
-        max-width: 500px;
-      }
-    }
-
-    .main {
-      margin-top: ($gutter / 2);
-    }
-
-    @media screen and (max-width: $mediumdevice) {
-      margin-right: 0;
-      margin-bottom: $gutter;
-    }
   }
 }

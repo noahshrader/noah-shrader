@@ -12,9 +12,10 @@
   }
 
   img {
+    display: block;
     width: 100%;
     max-width: 600px;
-    margin-top: -300px;
+    margin: -250px auto ($gutter * 1.5);
   }
 }
 
@@ -26,32 +27,24 @@
     &-inner {
       display: grid;
       grid-gap: $gutter;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr) ) ;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr) );
     }
   }
 }
 
 .about-tools {
   display: flex;
-  background: $offwhite;
 
   .wrap {
+    display: grid;
+    grid-gap: $gutter;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) );
     max-width: $largedevice;
   }
 
   img {
     height: 60px;
     width: 60px;
-    margin-bottom: ($gutter / 4);
-  }
-
-  .row {
-    display: flex;
-    flex: 1;
-
-    div {
-      flex: 1;
-      padding: ($gutter / 2);
-    }
+    margin-bottom: ($gutter / 2);
   }
 }

@@ -20,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			const id = entry.target.getAttribute('id');
 			if (entry.intersectionRatio > 0) {
 				document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
+        document.title = `Noah Shrader - ${id}`;
 			} else {
 				document.querySelector(`nav a[href="#${id}"]`).classList.remove('active');
 			}
