@@ -3,6 +3,10 @@
   position: relative;
   overflow: hidden;
 
+  .wrap {
+    max-width: $largedevice;
+  }
+
   // Writing
   &.write {
     background: $offwhite;

@@ -350,6 +350,10 @@ template {
   text-rendering: optimizeLegibility;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   font-size: 120%;
@@ -364,7 +368,20 @@ body {
   transition: ease-in-out 0.15s;
   font-family: "Manrope", Helvetica, Arial, sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: #0432ff;
+}
+.section .wrap {
+  align-items: center;
+}
+.section h1 {
+  color: #fff;
 }
 
 a {
@@ -401,7 +418,7 @@ a.main svg {
   padding: 18px;
   height: var(--size);
   width: var(--size);
-  border: solid 3px #0432ff;
+  border: solid 2px #0432ff;
   border-radius: var(--size);
   z-index: 0;
 }
@@ -536,7 +553,7 @@ section {
   padding: 140px 30px;
 }
 section.large {
-  max-width: 1140px;
+  max-width: 1400px;
 }
 section.medium {
   max-width: 860px;
@@ -550,7 +567,7 @@ section .section-header {
   font-weight: 700;
   margin: 0 auto 90px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1800px;
 }
 @media screen and (max-width: 860px) {
   section .section-header {
@@ -566,7 +583,7 @@ section .section-header {
 section img {
   margin-bottom: 60px;
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1400px) {
   section {
     padding-right: 130px;
     padding-left: 130px;
@@ -610,8 +627,13 @@ h5 {
 
 h1 {
   font-size: max(32px, 5.6vw);
-  font-weight: 400;
   line-height: 1.2em;
+  font-weight: 400;
+}
+h1.large {
+  font-size: max(32px, 8.6vw);
+  font-weight: 500;
+  letter-spacing: -1px;
 }
 
 h2 {
@@ -636,7 +658,7 @@ h5 {
 
 p {
   color: #141414;
-  font-size: max(16px, 1.2vw);
+  font-size: max(16px, 1.1vw);
   line-height: 1.8em;
   margin: 0;
   margin-bottom: 40px;
@@ -742,7 +764,7 @@ footer .wrap {
 footer .wrap .contact-link {
   flex: 1;
   text-align: center;
-  padding: 70px 150px;
+  padding: 140px 150px;
 }
 footer .wrap .contact-link:hover {
   background: #0432ff;
@@ -793,12 +815,19 @@ footer .wrap .contact-link h4 {
 }
 
 header {
+  transition: ease-in-out 0.4s;
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
-  padding: 40px;
+  padding: 30px;
   width: 100%;
-  z-index: 9990;
+  z-index: 99999;
+}
+.active header {
+  top: 0;
+}
+header a {
+  color: #141414;
 }
 header ul {
   list-style: none;
@@ -814,12 +843,11 @@ header ul li a {
   font-weight: 500;
 }
 header .logo {
-  transition: ease-in-out 0.4s;
   position: relative;
-  transform: scale(0);
-}
-.active header .logo {
-  transform: scale(1);
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  margin-right: 120px;
 }
 header .logo:hover svg {
   transform: rotate(-15deg);
@@ -831,23 +859,40 @@ header .logo:hover svg path {
 header .logo svg {
   transition: ease-in-out 0.15s;
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
   z-index: 2;
 }
 header .logo svg #Group-2,
 header .logo svg path {
-  stroke: #0432ff;
+  stroke: #141414;
 }
 @media screen and (max-width: 860px) {
   header .logo svg {
     width: 60px;
   }
 }
+header nav a {
+  position: relative;
+  margin-right: 20px;
+}
+header nav a::before {
+  display: none;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: #0432ff;
+}
+header nav a.active::before {
+  display: block;
+}
 header .wrap {
-  justify-content: space-between;
   align-items: center;
-  max-width: 100%;
+  max-width: 1800px;
 }
 @media screen and (max-width: 860px) {
   header {
@@ -929,6 +974,9 @@ header .wrap {
   transition: ease-in-out 0.15s;
   position: relative;
   overflow: hidden;
+}
+.text-hero .wrap {
+  max-width: 1400px;
 }
 .text-hero.write {
   background: #f6f6f6;
@@ -1043,7 +1091,7 @@ header .wrap {
   text-align: center;
   margin: 0 auto;
   padding: 0 150px 140px;
-  max-width: 1140px;
+  max-width: 1400px;
 }
 .bio h4 {
   font-size: 1.4em;
@@ -1182,6 +1230,7 @@ header .wrap {
 }
 .intro .wrap {
   flex-direction: column;
+  max-width: 1800px;
 }
 @media screen and (max-width: 500px) {
   .intro {
@@ -1194,6 +1243,8 @@ header .wrap {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .current-projects .projects .projects-row {
   display: flex;
@@ -1206,12 +1257,12 @@ header .wrap {
   padding-right: 60px;
   padding-left: 0;
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1400px) {
   .current-projects .projects .projects-row.reverse .project-info {
     padding-right: 0;
   }
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1400px) {
   .current-projects .projects .projects-row.reverse {
     flex-direction: column;
   }
@@ -1219,7 +1270,7 @@ header .wrap {
 .current-projects .projects .projects-row:last-child {
   margin-bottom: 0;
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1400px) {
   .current-projects .projects .projects-row {
     flex-direction: column;
     margin-bottom: 30px;
@@ -1235,7 +1286,7 @@ header .wrap {
 .current-projects .projects .project img {
   float: left;
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1400px) {
   .current-projects .projects .project {
     max-width: 100%;
     margin-bottom: 40px;
@@ -1257,12 +1308,12 @@ header .wrap {
   margin-bottom: 40px;
   max-width: 95%;
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1400px) {
   .current-projects .projects .project-info p {
     margin: 0 auto 15px;
   }
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1400px) {
   .current-projects .projects .project-info {
     align-items: center;
     text-align: center;
@@ -1270,7 +1321,7 @@ header .wrap {
     padding-bottom: 30px;
   }
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1400px) {
   .current-projects {
     padding-bottom: 30px;
   }
@@ -1327,12 +1378,16 @@ header .wrap {
   padding-top: 120px;
 }
 
+.about-intro {
+  padding-top: 0;
+}
 .about-intro h4 {
   margin: 30px 0;
 }
 .about-intro img {
   width: 100%;
-  max-width: 550px;
+  max-width: 600px;
+  margin-top: -100px;
 }
 
 .about-process .wrap {
@@ -1345,12 +1400,12 @@ header .wrap {
   background: #f6f6f6;
 }
 .about-tools .wrap {
-  max-width: 1400px;
+  max-width: 1800px;
 }
 .about-tools img {
   height: 60px;
   width: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .about-tools .row {
   display: flex;

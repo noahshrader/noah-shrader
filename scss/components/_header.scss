@@ -1,10 +1,22 @@
 header {
+  @include trans(
+    $trans-speed: 0.4s
+  );
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 0;
-  padding: ($gutter / 1.5);
+  padding: ($gutter / 2);
   width: 100%;
-  z-index: 9990;
+  z-index: 99999;
+
+  // When the page is loaded
+  .active & {
+    top: 0;
+  }
+
+  a {
+    color: $base;
+  }
 
   ul {
     @include clean-ul;
@@ -22,16 +34,11 @@ header {
 
   // Noah Shrader icon
   .logo {
-    @include trans(
-      $trans-speed: 0.4s
-    );
     position: relative;
-    transform: scale(0);
-
-    // When the page is loaded
-    .active & {
-      transform: scale(1);
-    }
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    margin-right: ($gutter * 2);
 
     &:hover {
 
@@ -48,13 +55,14 @@ header {
     svg {
       @include trans;
       position: relative;
-      width: 130px;
-      height: 130px;
+      width: 60px;
+      height: 60px;
+      margin-right: ($gutter / 4);
       z-index: 2;
 
       #Group-2,
       path {
-        stroke: $primary;
+        stroke: $base;
       }
 
       @media screen and (max-width: $mediumdevice) {
@@ -63,10 +71,33 @@ header {
     }
   }
 
+  nav {
+    a {
+      position: relative;
+      margin-right: ($gutter / 3);
+
+      &::before {
+        display: none;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background: $primary;
+      }
+
+      &.active {
+        &::before {
+          display: block;
+        }
+      }
+    }
+  }
+
   .wrap {
-    justify-content: space-between;
     align-items: center;
-    max-width: 100%;
+    max-width: $maxdesktop;
   }
 
   @media screen and (max-width: $mediumdevice) {

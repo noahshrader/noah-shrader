@@ -8,6 +8,10 @@
 	text-rendering: optimizeLegibility;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   font-size: 120%;
@@ -22,7 +26,22 @@ body {
   @include trans;
 	font-family: $mainfont;
 	font-size: $basefontsize;
-  font-weight: 400;
+  font-weight: 500;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: $primary;
+
+  .wrap {
+    align-items: center;
+  }
+
+  h1 {
+    color: $white;
+  }
 }
 
 // Links
@@ -70,7 +89,7 @@ a {
       padding: 18px;
       height: var(--size);
       width: var(--size);
-      border: solid 3px $primary;
+      border: solid 2px $primary;
       border-radius: var(--size);
       z-index: 0;
 
@@ -251,7 +270,7 @@ section {
   display: flex;
   margin: 0 auto;
   width: 100%;
-  max-width: $maxdesktop;
+  max-width: $largedevice;
 
   @media screen and (max-width: $mediumdevice) {
     flex-direction: column;
