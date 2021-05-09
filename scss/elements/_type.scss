@@ -23,28 +23,28 @@ h1 {
 }
 
 h2 {
-  font-size: max(32px, 3.8vw);
+  font-size: max(32px, 3.6vw);
   line-height: 1.2em;
   letter-spacing: -0.5px;
 }
 
 h3 {
-  font-size: max(24px, 2.4vw);
+  font-size: max(24px, 2.2vw);
   line-height: 1.4em;
 }
 
 h4 {
-  font-size: max(24px, 1.6vw);
-  line-height: 1.5em;
+  font-size: max(24px, 1.4vw);
+  line-height: 1.4em;
 }
 
 h5 {
-  font-size: max(24px, 1.2vw);
+  font-size: max(24px, 1.1vw);
 }
 
 p {
   color: $base;
-  font-size: max(16px, 1.1vw);
+  font-size: max(16px, 1vw);
   line-height: 1.8em;
   margin: 0;
   margin-bottom: ($gutter / 1.5);

@@ -20,8 +20,14 @@
 
 .about-process {
   .wrap {
-    flex-direction: column;
-    max-width: $mediumdevice;
+    display: block;
+    max-width: $maxdesktop;
+
+    &-inner {
+      display: grid;
+      grid-gap: $gutter;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr) ) ;
+    }
   }
 }
 
@@ -30,7 +36,7 @@
   background: $offwhite;
 
   .wrap {
-    max-width: $maxdesktop;
+    max-width: $largedevice;
   }
 
   img {
