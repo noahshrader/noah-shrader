@@ -1032,12 +1032,27 @@ header .social li svg:hover path {
 }
 
 .portfolio .wrap {
-  display: grid;
-  grid-gap: 60px;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  flex-direction: column;
   max-width: 1700px;
 }
-.portfolio img {
+.portfolio-wrap {
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  padding-top: 60px;
+}
+.portfolio-wrap > div {
+  border-radius: 10px;
+  transition: ease-in-out 0.2s;
+  border: solid 2px transparent;
+  overflow: hidden;
+}
+.portfolio-wrap > div:hover {
+  border-color: #0432ff;
+  box-shadow: 6px 6px 0px 0px #0432ff;
+}
+.portfolio-wrap > div img {
+  float: left;
   margin: 0;
 }
 
