@@ -65,6 +65,10 @@ header {
       position: relative;
       margin-right: ($gutter / 3);
 
+      &:hover {
+        color: rgba($base, 0.5);
+      }
+
       &::before {
         display: none;
         content: '';
@@ -73,7 +77,7 @@ header {
         bottom: 0;
         height: 1px;
         width: 100%;
-        background: $primary;
+        background: $base;
       }
 
       &.active {
@@ -97,19 +101,22 @@ header {
 
     li {
       margin: 0;
-      margin-left: ($gutter / 3);
+      margin-left: ($gutter / 2);
 
       a {
         display: flex;
         justify-content: center;
         color: $black;
+
+        &::before {
+          box-shadow: 0 !important;
+        }
       }
 
       svg {
-        --size: 24px;
+        --size: 22px;
         height: var(--size);
         width: var(--size);
-        transform: scale(0.8);
 
         path {
           @include trans;

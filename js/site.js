@@ -11,6 +11,10 @@ $(function () {
 
 $(window).load(function () {
   $('body').addClass('active')
+
+  $('.body-close').click(function () {
+    $('body').addClass('close')
+  })
 })
 
 window.addEventListener('DOMContentLoaded', () => {

@@ -20,14 +20,17 @@
 }
 
 .about-process {
+  padding-top: 0;
+
   .wrap {
     display: block;
-    max-width: $maxdesktop;
+    max-width: $largedevice;
 
     &-inner {
       display: grid;
       grid-gap: $gutter;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr) );
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr) );
+      padding-top: $gutter;
     }
   }
 }

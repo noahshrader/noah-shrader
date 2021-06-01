@@ -1,4 +1,5 @@
 .portfolio {
+  padding-top: 0;
 
   .wrap {
     flex-direction: column;
@@ -7,13 +8,14 @@
 
   &-wrap {
     display: grid;
-    grid-gap: $gutter;
+    grid-gap: ($gutter / 2);
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr) );
     padding-top: $gutter;
 
     > div {
       @include border-radius;
       @include trans;
+      position: relative;
       border: solid 2px transparent;
       overflow: hidden;
 
@@ -23,6 +25,7 @@
       }
 
       img {
+        @include trans;
         float: left;
         margin: 0;
       }

@@ -714,8 +714,8 @@ h5 {
 }
 
 h1, h2.large {
-  font-size: max(32px, 5.6vw);
-  line-height: 1.2em;
+  font-size: max(32px, 6.5vw);
+  line-height: 1.16em;
   font-weight: 400;
 }
 h1.jumbo, h2.jumbo.large {
@@ -953,6 +953,9 @@ header nav a {
   position: relative;
   margin-right: 20px;
 }
+header nav a:hover {
+  color: rgba(20, 20, 20, 0.5);
+}
 header nav a::before {
   display: none;
   content: "";
@@ -961,7 +964,7 @@ header nav a::before {
   bottom: 0;
   height: 1px;
   width: 100%;
-  background: #0432ff;
+  background: #141414;
 }
 header nav a.active::before {
   display: block;
@@ -980,18 +983,20 @@ header .social {
 }
 header .social li {
   margin: 0;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 header .social li a {
   display: flex;
   justify-content: center;
   color: #000;
 }
+header .social li a::before {
+  box-shadow: 0 !important;
+}
 header .social li svg {
-  --size: 24px;
+  --size: 22px;
   height: var(--size);
   width: var(--size);
-  transform: scale(0.8);
 }
 header .social li svg path {
   transition: ease-in-out 0.2s;
@@ -1031,19 +1036,23 @@ header .social li svg:hover path {
   }
 }
 
+.portfolio {
+  padding-top: 0;
+}
 .portfolio .wrap {
   flex-direction: column;
   max-width: 1700px;
 }
 .portfolio-wrap {
   display: grid;
-  grid-gap: 60px;
+  grid-gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   padding-top: 60px;
 }
 .portfolio-wrap > div {
   border-radius: 10px;
   transition: ease-in-out 0.2s;
+  position: relative;
   border: solid 2px transparent;
   overflow: hidden;
 }
@@ -1052,6 +1061,7 @@ header .social li svg:hover path {
   box-shadow: 6px 6px 0px 0px #0432ff;
 }
 .portfolio-wrap > div img {
+  transition: ease-in-out 0.2s;
   float: left;
   margin: 0;
 }
@@ -1228,8 +1238,8 @@ header .social li svg:hover path {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 420px;
-  min-height: 70vh;
+  padding-top: 560px;
+  min-height: 75vh;
 }
 .intro .wrap {
   flex-direction: column;
@@ -1349,14 +1359,18 @@ header .social li svg:hover path {
   margin: -250px auto 90px;
 }
 
+.about-process {
+  padding-top: 0;
+}
 .about-process .wrap {
   display: block;
-  max-width: 1700px;
+  max-width: 1350px;
 }
 .about-process .wrap-inner {
   display: grid;
   grid-gap: 60px;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  padding-top: 60px;
 }
 
 .about-tools {
