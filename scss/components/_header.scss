@@ -14,25 +14,22 @@ header {
     top: 0;
   }
 
+  .wrap {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   a {
-    color: $base;
+    color: $gray;
+
+    .home & {
+      color: $base;
+    }
 
     &:hover {
       color: $primary;
-    }
-  }
-
-  ul {
-    @include clean-ul;
-    display: flex;
-
-    li {
-      margin-left: $gutter;
-
-      a {
-        color: $base;
-        font-weight: 500;
-      }
     }
   }
 
@@ -56,14 +53,18 @@ header {
     }
 
     .name {
-      margin-right: ($gutter * 1.5);
+      margin-right: 6px;
     }
   }
 
   nav {
     a {
+      color: $gray;
+      font-size: 0.9em;
       position: relative;
-      margin-right: ($gutter / 3);
+      display: block;
+      text-align: right;
+      margin-bottom: ($gutter / 6);
 
       &:hover {
         color: rgba($base, 0.5);
@@ -84,6 +85,11 @@ header {
         &::before {
           display: block;
         }
+      }
+
+      .home &,
+      &.selected {
+        color: $base;
       }
     }
   }

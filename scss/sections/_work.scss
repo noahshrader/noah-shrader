@@ -1,4 +1,5 @@
 .current-projects {
+  overflow: hidden;
 
   .wrap {
     max-width: $maxdesktop;
@@ -17,6 +18,10 @@
       // When you want to flip display of image/copy
       &.reverse {
         flex-direction: row-reverse;
+
+        .project {
+          margin-right: -5vw;
+        }
 
         .project-info {
           padding-right: $gutter;
@@ -49,10 +54,11 @@
       position: relative;
       overflow: hidden;
       flex: 2.8;
-      max-width: 60vw;
+      margin-left: -5vw;
 
       img {
         float: left;
+        width: 100%;
       }
 
       @media screen and (max-width: $largedevice) {

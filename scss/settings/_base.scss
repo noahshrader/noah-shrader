@@ -8,10 +8,6 @@
 	text-rendering: optimizeLegibility;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
   font-size: 120%;
@@ -271,7 +267,7 @@ section {
   display: flex;
   margin: 0 auto;
   width: 100%;
-  max-width: $largedevice;
+  max-width: $maxdesktop;
 
   @media screen and (max-width: $mediumdevice) {
     flex-direction: column;

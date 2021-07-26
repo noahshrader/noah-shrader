@@ -7,7 +7,6 @@
 
   .wrap {
     flex-direction: column;
-    max-width: $maxdesktop;
   }
 
 	@media screen and (max-width: $smalldevice) {
