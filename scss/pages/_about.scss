@@ -1,21 +1,30 @@
-.about {
-  main {
-    padding-top: ($gutter * 2);
-  }
-}
-
 .about-intro {
   padding-top: 0;
+  padding-bottom: $gutter;
 
-  h4 {
-    margin: ($gutter / 2) 0;
+  .wrap {
+    max-width: $largedevice;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding-left: ($gutter * 2);
   }
 
   img {
+    flex: 1;
+    margin: 0;
+    max-width: 50%;
+  }
+}
+
+.about-opener {
+  .wrap {
     display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: -250px auto ($gutter * 1.5);
+    max-width: $mediumdevice;
   }
 }
 

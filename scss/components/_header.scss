@@ -3,9 +3,12 @@ header {
     $trans-speed: 0.4s
   );
   position: fixed;
+  display: flex;
+  align-items: center;
   top: -100%;
   left: 0;
-  padding: ($gutter / 2);
+  padding: 0 ($gutter / 2);
+  height: 210px;
   width: 100%;
   z-index: 99999;
 

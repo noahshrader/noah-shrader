@@ -23,6 +23,11 @@ body {
 	font-family: $mainfont;
 	font-size: $basefontsize;
   font-weight: 500;
+  padding-top: ($headerheight + $gutter);
+
+  &.home {
+    padding-top: 0;
+  }
 }
 
 .section {

@@ -1,6 +1,7 @@
 // Social media
 footer {
   @include trans;
+  padding: $gutter;
 
   // When book library modal is open
   &.open {
@@ -9,57 +10,18 @@ footer {
   }
 
   .wrap {
-    display: flex;
     justify-content: space-between;
-    max-width: 100%;
+  }
 
-    .contact-link {
-      flex: 1;
-      text-align: center;
-      padding: $vertical-padding $horizontal-padding;
+  ul {
+    @include clean-ul;
+  }
 
-      &:hover {
-        background: $primary;
+  .footer-nav {
+    display: flex;
 
-        h4 {
-          color: $white;
-        }
-      }
-
-      h4,
-      h5 {
-        margin-bottom: 0;
-        line-height: 0;
-      }
-
-      svg {
-        --size: 32px;
-        position: relative;
-        top: -2px;
-        height: var(--size);
-        width: var(--size);
-        margin-right: 12px;
-
-        @media screen and (max-width: $mediumdevice) {
-          --size: 24px;
-          top: -3px;
-        }
-      }
-
-      h4 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      @media screen and (max-width: $mediumdevice) {
-        padding: ($vertical-padding / 2) ($gutter / 2);
-      }
-
-      @media screen and (max-width: $smalldevice) {
-        padding-top: ($vertical-padding / 4);
-        padding-bottom: ($vertical-padding / 4);
-      }
+    ul {
+      padding-left: ($gutter * 2);
     }
   }
 
