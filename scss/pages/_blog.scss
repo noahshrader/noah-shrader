@@ -68,16 +68,16 @@
     .post-image {
       position: relative;;
       flex: 3;
-      margin-right: -8vw;
-      margin-left: -25vw;
+      margin-right: $offset-right;
+      margin-left: $offset-left;
       min-width: 50vw;
       z-index: 1;
-    }
 
-    img {
-      object-fit: fill;
-      height: 70vh;
-      width: 100%;
+      img {
+        object-fit: fill;
+        height: $intro-height;
+        width: 100%;
+      }
     }
   }
 }

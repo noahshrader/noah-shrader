@@ -1,6 +1,28 @@
 .study {
 
-  .intro {
-    height: 60vh;
+  .study-intro {
+    padding-bottom: 0;
+
+    .wrap {
+      flex-direction: column;
+    }
+  }
+
+  .study-intro-image {
+    min-width: 50vw;
+    margin-right: $offset-right;
+
+    img {
+      object-fit: fill;
+      height: $intro-height;
+      width: 100%;
+    }
+  }
+
+  .study-details {
+
+    .overview {
+      padding-right: $gutter;
+    }
   }
 }

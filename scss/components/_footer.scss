@@ -16,6 +16,10 @@ footer {
 
   ul {
     @include clean-ul;
+
+    li {
+      font-size: 0.9em;
+    }
   }
 
   a {
