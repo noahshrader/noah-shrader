@@ -230,6 +230,10 @@ section {
   margin: 0 auto;
   padding: $vertical-padding ($gutter / 2);
 
+  &:first-child {
+    padding-top: 0;
+  }
+
   &.large {
     max-width: $largedevice;
   }

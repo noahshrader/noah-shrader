@@ -1,0 +1,22 @@
+.case-study {
+  padding-bottom: $gutter;
+
+  .case-study-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .case-study-image {
+    flex: 3;
+    padding-left: ($gutter * 2);
+
+    img {
+      object-fit: fill;
+      height: 700px;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

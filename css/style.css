@@ -580,6 +580,9 @@ section {
   margin: 0 auto;
   padding: 140px 30px;
 }
+section:first-child {
+  padding-top: 0;
+}
 section.large {
   max-width: 1350px;
 }
@@ -1081,9 +1084,6 @@ header .social li svg:hover path {
   }
 }
 
-.portfolio {
-  padding-top: 0;
-}
 .portfolio .wrap {
   -webkit-flex-direction: column;
           flex-direction: column;
@@ -1093,7 +1093,7 @@ header .social li svg:hover path {
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  padding-top: 60px;
+  padding-top: 30px;
 }
 .portfolio-wrap > div {
   border-radius: 10px;
@@ -1304,7 +1304,7 @@ header .social li svg:hover path {
           flex-direction: column;
   -webkit-justify-content: center;
           justify-content: center;
-  padding-top: 700px;
+  padding-top: 600px !important;
   min-height: 75vh;
 }
 .intro .wrap {
@@ -1493,6 +1493,9 @@ header .social li svg:hover path {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.blog .entry:first-child {
+  padding-top: 0;
+}
 .blog .entry .thumbnail,
 .blog .entry .post-info {
   -webkit-flex: 1;
@@ -1563,4 +1566,30 @@ header .social li svg:hover path {
 
 .study .intro {
   height: 60vh;
+}
+
+.case-study {
+  padding-bottom: 60px;
+}
+.case-study .case-study-info {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 1;
+          flex: 1;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.case-study .case-study-image {
+  -webkit-flex: 3;
+          flex: 3;
+  padding-left: 120px;
+}
+.case-study .case-study-image img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 700px;
+  width: 100%;
+  margin: 0;
 }
