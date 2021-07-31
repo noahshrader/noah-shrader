@@ -65,7 +65,7 @@ a {
   p &,
   li & {
     &:hover {
-      box-shadow: 0px 3px 0px 0px $primary;
+      box-shadow: 0px 2px 0px 0px $primary;
     }
   }
 
@@ -223,6 +223,7 @@ main {
   padding: 0;
 	min-height: min-content;
   width: 100%;
+  overflow: hidden;
 }
 
 section {

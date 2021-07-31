@@ -2,6 +2,8 @@
 
   .entry {
     display: flex;
+    padding-top: ($gutter / 2);
+    padding-bottom: ($gutter / 2);
 
     .thumbnail,
     .post-info {
@@ -9,7 +11,9 @@
     }
 
     .post-info {
-      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding-left: ($gutter * 2);
 
       .date {
@@ -34,11 +38,42 @@
         }
       }
     }
+
+    img {
+      object-fit: fill;
+      height: 450px;
+      width: 100%;
+      margin: 0;
+    }
   }
 }
 
 .post {
   .post-header {
+    padding: 0;
 
+    .post-info {
+      position: relative;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      min-width: 50vw;
+      z-index: 10;
+    }
+
+    .post-image {
+      position: relative;;
+      flex: 3;
+      margin-right: -8vw;
+      margin-left: -25vw;
+      min-width: 50vw;
+      z-index: 1;
+    }
+
+    img {
+      object-fit: fill;
+      height: 70vh;
+      width: 100%;
+    }
   }
 }

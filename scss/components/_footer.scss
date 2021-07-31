@@ -18,6 +18,10 @@ footer {
     @include clean-ul;
   }
 
+  a {
+    color: $base;
+  }
+
   .footer-nav {
     display: flex;
 

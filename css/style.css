@@ -409,7 +409,7 @@ a {
   box-shadow: 0px 0px 0px 0px transparent;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, p a:hover, li a:hover {
-  box-shadow: 0px 3px 0px 0px #0432ff;
+  box-shadow: 0px 2px 0px 0px #0432ff;
 }
 a.main {
   display: -webkit-inline-flex;
@@ -573,6 +573,7 @@ main {
   min-height: -moz-min-content;
   min-height: min-content;
   width: 100%;
+  overflow: hidden;
 }
 
 section {
@@ -906,6 +907,9 @@ footer ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+footer a {
+  color: #141414;
 }
 footer .footer-nav {
   display: -webkit-flex;
@@ -1486,6 +1490,8 @@ header .social li svg:hover path {
 .blog .entry {
   display: -webkit-flex;
   display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .blog .entry .thumbnail,
 .blog .entry .post-info {
@@ -1493,8 +1499,12 @@ header .social li svg:hover path {
           flex: 1;
 }
 .blog .entry .post-info {
-  -webkit-align-items: center;
-          align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+          justify-content: center;
   padding-left: 120px;
 }
 .blog .entry .post-info .date {
@@ -1512,6 +1522,43 @@ header .social li svg:hover path {
   display: inline-block;
   font-size: 0.9em;
   padding-right: 30px;
+}
+.blog .entry img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 450px;
+  width: 100%;
+  margin: 0;
+}
+
+.post .post-header {
+  padding: 0;
+}
+.post .post-header .post-info {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 1;
+          flex: 1;
+  -webkit-align-items: center;
+          align-items: center;
+  min-width: 50vw;
+  z-index: 10;
+}
+.post .post-header .post-image {
+  position: relative;
+  -webkit-flex: 3;
+          flex: 3;
+  margin-right: -8vw;
+  margin-left: -25vw;
+  min-width: 50vw;
+  z-index: 1;
+}
+.post .post-header img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 70vh;
+  width: 100%;
 }
 
 .study .intro {
