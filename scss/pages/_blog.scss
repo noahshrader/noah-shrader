@@ -1,0 +1,44 @@
+.blog {
+
+  .entry {
+    display: flex;
+
+    .thumbnail,
+    .post-info {
+      flex: 1;
+    }
+
+    .post-info {
+      align-items: center;
+      padding-left: ($gutter * 2);
+
+      .date {
+        display: inline-block;
+        font-size: 0.8em;
+        margin-bottom: ($gutter / 2);
+      }
+
+      a {
+        color: $base;
+      }
+
+      p {
+        max-width: 650px;
+      }
+
+      .meta {
+        span {
+          display: inline-block;
+          font-size: 0.9em;
+          padding-right: ($gutter / 2);
+        }
+      }
+    }
+  }
+}
+
+.post {
+  .post-header {
+
+  }
+}

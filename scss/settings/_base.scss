@@ -274,6 +274,10 @@ section {
   width: 100%;
   max-width: $maxdesktop;
 
+  &.medium {
+    max-width: $mediumdevice;
+  }
+
   @media screen and (max-width: $mediumdevice) {
     flex-direction: column;
   }

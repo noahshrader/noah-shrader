@@ -2,6 +2,7 @@
 footer {
   @include trans;
   padding: $gutter;
+  margin-top: $gutter;
 
   // When book library modal is open
   &.open {
