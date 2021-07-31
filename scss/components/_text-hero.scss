@@ -12,68 +12,6 @@
     }
   }
 
-  // Writing
-  &.write {
-    background: $offwhite;
-
-    .wrap {
-      justify-content: space-between;
-    }
-
-    h4 {
-      margin-bottom: ($gutter / 4);
-    }
-
-    .date {
-      display: block;
-      color: $base;
-      font-size: 0.8em;
-      font-weight: 500;
-      line-height: 1;
-      margin-bottom: ($gutter / 3);
-
-      @media screen and (max-width: $mediumdevice) {
-        font-size: 0.65em;
-      }
-    }
-
-    .recent {
-      display: flex;
-      flex-direction: column;
-      padding-right: ($gutter * 2);
-
-      h2 {
-        position: relative;
-        margin-bottom: ($gutter / 4);
-      }
-
-      @media screen and (max-width: $mediumdevice) {
-        justify-content: center;
-        padding-right: 0;
-      }
-    }
-
-    .upcoming {
-      position: relative;
-      display: flex;
-      padding-top: $gutter;
-
-      // Additional stories
-      .story {
-        flex: 1;
-        padding-right: $gutter;
-
-        @media screen and (max-width: $mediumdevice) {
-          padding: 0 0 ($gutter / 2);
-        }
-      }
-
-      @media screen and (max-width: $mediumdevice) {
-        flex-direction: column;
-      }
-    }
-  }
-
   // Reading
   &.read {
     .wrap {

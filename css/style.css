@@ -1199,69 +1199,6 @@ header .social li svg:hover path {
   display: -webkit-flex;
   display: flex;
 }
-.text-hero.write {
-  background: #f6f6f6;
-}
-.text-hero.write .wrap {
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
-}
-.text-hero.write h4 {
-  margin-bottom: 15px;
-}
-.text-hero.write .date {
-  display: block;
-  color: #141414;
-  font-size: 0.8em;
-  font-weight: 500;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 820px) {
-  .text-hero.write .date {
-    font-size: 0.65em;
-  }
-}
-.text-hero.write .recent {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  padding-right: 120px;
-}
-.text-hero.write .recent h2 {
-  position: relative;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 820px) {
-  .text-hero.write .recent {
-    -webkit-justify-content: center;
-            justify-content: center;
-    padding-right: 0;
-  }
-}
-.text-hero.write .upcoming {
-  position: relative;
-  display: -webkit-flex;
-  display: flex;
-  padding-top: 60px;
-}
-.text-hero.write .upcoming .story {
-  -webkit-flex: 1;
-          flex: 1;
-  padding-right: 60px;
-}
-@media screen and (max-width: 820px) {
-  .text-hero.write .upcoming .story {
-    padding: 0 0 30px;
-  }
-}
-@media screen and (max-width: 820px) {
-  .text-hero.write .upcoming {
-    -webkit-flex-direction: column;
-            flex-direction: column;
-  }
-}
 .text-hero.read .wrap {
   transition: ease-in-out 0.2s;
 }
