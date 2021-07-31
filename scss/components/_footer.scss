@@ -19,11 +19,8 @@ footer {
 
     li {
       font-size: 0.9em;
+      margin-bottom: ($gutter / 5);
     }
-  }
-
-  a {
-    color: $base;
   }
 
   .footer-nav {

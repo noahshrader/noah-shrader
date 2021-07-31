@@ -20,3 +20,37 @@
     }
   }
 }
+
+.portfolio {
+
+  .wrap {
+    flex-direction: column;
+    max-width: $maxdesktop;
+  }
+
+  &-wrap {
+    display: grid;
+    grid-gap: ($gutter / 2);
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr) );
+    padding-top: ($gutter / 2);
+
+    > div {
+      @include border-radius;
+      @include trans;
+      position: relative;
+      border: solid 2px transparent;
+      overflow: hidden;
+
+      &:hover {
+        border-color: $primary;
+        box-shadow: 6px 6px 0px 0px $primary;
+      }
+
+      img {
+        @include trans;
+        float: left;
+        margin: 0;
+      }
+    }
+  }
+}
