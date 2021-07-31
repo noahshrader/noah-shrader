@@ -79,12 +79,14 @@ a {
 
   // Button links (with arrows)
   &.main {
+    --margin: 15px;
     display: inline-flex;
     flex: 0 0 auto;
     align-items: center;
     color: $primary;
     font-family: $mainfont;
     font-weight: 700;
+    margin-right: var(--margin);
     box-shadow: none;
 
     svg {
@@ -94,7 +96,7 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
-      left: 15px;
+      left: var(--margin);
       padding: 18px;
       height: var(--size);
       width: var(--size);
@@ -289,6 +291,12 @@ section {
 
   &.medium {
     max-width: $mediumdevice;
+  }
+
+  &.cta {
+    display: flex !important;
+    justify-content: flex-end;
+    padding-top: ($gutter / 2);
   }
 
   @media screen and (max-width: $mediumdevice) {

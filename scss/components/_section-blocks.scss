@@ -11,6 +11,20 @@
   }
 }
 
+// Block halfs
+.block-halfs {
+  .wrap {
+    display: grid;
+    grid-gap: ($gutter / 2);
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr) );
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: ($gutter / 2);
+  }
+}
+
 // Right aligned
 .block-right {
 
