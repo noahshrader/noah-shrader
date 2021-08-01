@@ -70,7 +70,7 @@ header {
       margin-bottom: ($gutter / 5);
 
       &:hover {
-        color: rgba($base, 0.5);
+        color: $base;
       }
 
       &::before {
