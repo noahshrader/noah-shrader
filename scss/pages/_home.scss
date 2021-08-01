@@ -17,109 +17,39 @@
 }
 
 // Featured projects
-.current-projects {
-  overflow: hidden;
+.featured-projects {
+  .project {
 
-  .wrap {
-    max-width: $maxdesktop;
-  }
+    &.left {
+      flex-direction: row-reverse;
 
-  .projects {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-
-    .projects-row {
-      display: flex;
-      margin-bottom: ($gutter * 2.5);
-
-      // When you want to flip display of image/copy
-      &.reverse {
-        flex-direction: row-reverse;
-
-        .project {
-          margin-right: -6vw;
-        }
-
-        .project-info {
-          padding-right: $gutter;
-          padding-left: 0;
-
-
-          @media screen and (max-width: $largedevice) {
-            padding-right: 0;
-          }
-        }
-
-        @media screen and (max-width: $largedevice) {
-          flex-direction: column;
-        }
+      .project-image {
+        margin-left: $offset-right;
+        margin-right: 0;
       }
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      @media screen and (max-width: $largedevice) {
-        flex-direction: column;
-        margin-bottom: ($gutter / 2);
+      .project-info {
+        padding-left: $gutter;
+        padding-right: 0;
       }
     }
 
-    // Invdividual project listing
     .project-image {
-      @include border-radius;
-      position: relative;
-      overflow: hidden;
-      flex: 2.8;
-      margin-left: -6vw;
+      flex: 3;
+      margin-right: $offset-right;
 
       img {
-        float: left;
         width: 100%;
-      }
-
-      @media screen and (max-width: $largedevice) {
-        max-width: 100%;
-        margin-bottom: ($gutter / 1.5);
       }
     }
 
-    // Project info
     .project-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      position: relative;
       flex: 1;
-      padding-left: $gutter;
-      z-index: 9990;
-
-      h2 {
-        margin-bottom: ($gutter / 2);
-      }
-
-      p {
-        margin-bottom: ($gutter / 1.5);
-        max-width: 95%;
-
-        @media screen and (max-width: $largedevice) {
-          margin: 0 auto ($gutter / 4);
-        }
-      }
-
-      @media screen and (max-width: $largedevice) {
-        align-items: center;
-        text-align: center;
-        padding: 0;
-        padding-bottom: ($gutter / 2);
-      }
+      padding-right: $gutter;
     }
-  }
-
-  @media screen and (max-width: $largedevice) {
-    padding-bottom: ($gutter / 2);
   }
 }
 

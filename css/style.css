@@ -1122,38 +1122,11 @@ header .social li svg:hover path {
   margin-bottom: 30px;
 }
 
-.block-right .block-image {
-  position: relative;
-  -webkit-flex: 3;
-          flex: 3;
-  margin-right: -8vw;
-  margin-left: -25vw;
-  min-width: 50vw;
-  z-index: 1;
-}
-.block-right .block-image img {
-  -o-object-fit: fill;
-     object-fit: fill;
-  height: 70vh;
-  width: 100%;
-}
-.block-right .block-info {
-  position: relative;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex: 1;
-          flex: 1;
-  -webkit-align-items: center;
-          align-items: center;
-  min-width: 50vw;
-  z-index: 10;
-}
-
-.block-left .wrap {
+.block-split.left .wrap {
   -webkit-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.block-left .block-image {
+.block-split .block-image {
   position: relative;
   -webkit-flex: 3;
           flex: 3;
@@ -1162,13 +1135,13 @@ header .social li svg:hover path {
   min-width: 50vw;
   z-index: 1;
 }
-.block-left .block-image img {
+.block-split .block-image img {
   -o-object-fit: fill;
      object-fit: fill;
   height: 70vh;
   width: 100%;
 }
-.block-left .block-info {
+.block-split .block-info {
   position: relative;
   display: -webkit-flex;
   display: flex;
@@ -1416,113 +1389,36 @@ header .social li svg:hover path {
   }
 }
 
-.current-projects {
-  overflow: hidden;
-}
-.current-projects .wrap {
-  max-width: 1700px;
-}
-.current-projects .projects {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
-}
-.current-projects .projects .projects-row {
-  display: -webkit-flex;
-  display: flex;
-  margin-bottom: 150px;
-}
-.current-projects .projects .projects-row.reverse {
+.featured-projects .project.left {
   -webkit-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.current-projects .projects .projects-row.reverse .project {
-  margin-right: -6vw;
+.featured-projects .project.left .project-image {
+  margin-left: -8vw;
+  margin-right: 0;
 }
-.current-projects .projects .projects-row.reverse .project-info {
-  padding-right: 60px;
-  padding-left: 0;
+.featured-projects .project.left .project-info {
+  padding-left: 60px;
+  padding-right: 0;
 }
-@media screen and (max-width: 1350px) {
-  .current-projects .projects .projects-row.reverse .project-info {
-    padding-right: 0;
-  }
+.featured-projects .project .project-image {
+  -webkit-flex: 3;
+          flex: 3;
+  margin-right: -8vw;
 }
-@media screen and (max-width: 1350px) {
-  .current-projects .projects .projects-row.reverse {
-    -webkit-flex-direction: column;
-            flex-direction: column;
-  }
-}
-.current-projects .projects .projects-row:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 1350px) {
-  .current-projects .projects .projects-row {
-    -webkit-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 30px;
-  }
-}
-.current-projects .projects .project-image {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  -webkit-flex: 2.8;
-          flex: 2.8;
-  margin-left: -6vw;
-}
-.current-projects .projects .project-image img {
-  float: left;
+.featured-projects .project .project-image img {
   width: 100%;
 }
-@media screen and (max-width: 1350px) {
-  .current-projects .projects .project-image {
-    max-width: 100%;
-    margin-bottom: 40px;
-  }
-}
-.current-projects .projects .project-info {
+.featured-projects .project .project-info {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
           flex-direction: column;
   -webkit-justify-content: center;
           justify-content: center;
-  position: relative;
   -webkit-flex: 1;
           flex: 1;
-  padding-left: 60px;
-  z-index: 9990;
-}
-.current-projects .projects .project-info h2 {
-  margin-bottom: 30px;
-}
-.current-projects .projects .project-info p {
-  margin-bottom: 40px;
-  max-width: 95%;
-}
-@media screen and (max-width: 1350px) {
-  .current-projects .projects .project-info p {
-    margin: 0 auto 15px;
-  }
-}
-@media screen and (max-width: 1350px) {
-  .current-projects .projects .project-info {
-    -webkit-align-items: center;
-            align-items: center;
-    text-align: center;
-    padding: 0;
-    padding-bottom: 30px;
-  }
-}
-@media screen and (max-width: 1350px) {
-  .current-projects {
-    padding-bottom: 30px;
-  }
+  padding-right: 60px;
 }
 
 .home-blog .home-blog-intro {

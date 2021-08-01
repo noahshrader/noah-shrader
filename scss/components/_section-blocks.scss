@@ -26,38 +26,12 @@
 }
 
 // Right aligned
-.block-right {
+.block-split {
 
-  .block-image {
-    position: relative;;
-    flex: 3;
-    margin-right: $offset-right;
-    margin-left: $offset-left;
-    min-width: 50vw;
-    z-index: 1;
-
-    img {
-      object-fit: fill;
-      height: $intro-height;
-      width: 100%;
+  &.left {
+    .wrap {
+      flex-direction: row-reverse;
     }
-  }
-
-  .block-info {
-    position: relative;
-    display: flex;
-    flex: 1;
-    align-items: center;
-    min-width: 50vw;
-    z-index: 10;
-  }
-}
-
-// Block left
-.block-left {
-
-  .wrap {
-    flex-direction: row-reverse;
   }
 
   .block-image {
