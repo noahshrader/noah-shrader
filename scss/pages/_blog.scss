@@ -103,5 +103,6 @@
 .content {
   .wrap {
     flex-direction: column;
+    max-width: $smalldevice;
   }
 }

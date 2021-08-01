@@ -454,7 +454,7 @@ a.main svg::before {
   left: 1px;
   top: 1px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   a.main svg {
     --size: 40px;
     padding: 6px;
@@ -470,7 +470,7 @@ a.main:hover svg {
   background: #0432ff;
   left: 20px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   a.main {
     font-size: 0.9em;
     -webkit-justify-content: center;
@@ -538,13 +538,13 @@ blockquote::after,
 q::after {
   bottom: 0;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   blockquote,
 q {
     font-size: 1.4em;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   blockquote,
 q {
     font-size: 1.2em;
@@ -594,7 +594,7 @@ section.large {
   max-width: 1350px;
 }
 section.medium {
-  max-width: 800px;
+  max-width: 860px;
 }
 section .section-header {
   font-size: max(16px, 0.8vw);
@@ -607,12 +607,12 @@ section .section-header {
   width: 100%;
   max-width: 1700px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   section .section-header {
     font-size: 0.6em;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   section .section-header {
     text-align: center;
     padding: 0 30px;
@@ -627,7 +627,7 @@ section img {
     padding-left: 130px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   section {
     padding: 93.3333333333px 30px;
   }
@@ -642,7 +642,7 @@ section img {
   max-width: 1700px;
 }
 .wrap.medium {
-  max-width: 800px;
+  max-width: 860px;
 }
 .wrap.cta {
   display: -webkit-flex !important;
@@ -651,7 +651,7 @@ section img {
           justify-content: flex-end;
   padding-top: 30px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .wrap {
     -webkit-flex-direction: column;
             flex-direction: column;
@@ -732,7 +732,7 @@ section img {
   -webkit-transform: translate(-50%, -50%) scale(1.1);
           transform: translate(-50%, -50%) scale(1.1);
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .repo span {
     margin: 0;
   }
@@ -745,14 +745,14 @@ section img {
   margin: 0;
   margin-right: 30px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .repo h4,
 .repo p {
     margin-right: 0;
     margin-top: 15px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .repo {
     -webkit-flex-direction: column;
             flex-direction: column;
@@ -760,7 +760,7 @@ section img {
     padding: 30px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .repo:last-child {
     margin-bottom: 0;
   }
@@ -865,7 +865,7 @@ p {
   width: 40px;
   background: rgba(255, 255, 255, 0.5);
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .book-list ul li {
     font-size: 0.85em;
   }
@@ -939,7 +939,7 @@ footer .footer-nav {
 footer .footer-nav ul {
   padding-left: 120px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   footer {
     margin-top: 0;
     padding-bottom: 60px;
@@ -1067,7 +1067,7 @@ header .social li svg path {
 header .social li svg:hover path {
   fill: #0432ff;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   header .social li {
     -webkit-flex: 1;
             flex: 1;
@@ -1075,7 +1075,7 @@ header .social li svg:hover path {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   header .social {
     bottom: -100%;
     right: 0;
@@ -1093,7 +1093,7 @@ header .social li svg:hover path {
     bottom: 0;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   header {
     padding: 15px;
   }
@@ -1179,7 +1179,7 @@ header .social li svg:hover path {
   -webkit-justify-content: space-between;
           justify-content: space-between;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .text-hero.read .wrap {
     text-align: center;
     -webkit-align-items: center;
@@ -1195,7 +1195,7 @@ header .social li svg:hover path {
   -webkit-flex: 0 0 auto;
           flex: 0 0 auto;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .text-hero.read .book-library {
     -webkit-justify-content: center;
             justify-content: center;
@@ -1223,7 +1223,7 @@ header .social li svg:hover path {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
   .text-hero.read.open {
     padding-left: 30px;
     padding-right: 30px;
@@ -1260,7 +1260,7 @@ header .social li svg:hover path {
 
 .about-opener .wrap {
   display: block;
-  max-width: 800px;
+  max-width: 860px;
 }
 
 .about-process {
@@ -1388,6 +1388,7 @@ header .social li svg:hover path {
 .content .wrap {
   -webkit-flex-direction: column;
           flex-direction: column;
+  max-width: 650px;
 }
 
 .intro {
@@ -1404,13 +1405,20 @@ header .social li svg:hover path {
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .intro {
     height: auto;
     min-height: 70vh;
   }
 }
 
+.featured-projects {
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+.featured-projects .project {
+  padding: 60px 0;
+}
 .featured-projects .project.left {
   -webkit-flex-direction: row-reverse;
           flex-direction: row-reverse;

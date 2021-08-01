@@ -18,7 +18,11 @@
 
 // Featured projects
 .featured-projects {
+  padding-top: $gutter;
+  padding-bottom: 0;
+
   .project {
+    padding: $gutter 0;
 
     &.left {
       flex-direction: row-reverse;
