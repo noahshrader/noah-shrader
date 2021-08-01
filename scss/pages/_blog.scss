@@ -1,5 +1,21 @@
 .blog {
 
+  .progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    z-index: 1000;
+
+    .progress-bar {
+      background-color: $base;
+      width: 0%;
+      display: block;
+      height: inherit;
+    }
+  }
+
   .entry {
     display: flex;
     padding-top: ($gutter / 2);
@@ -79,5 +95,11 @@
         width: 100%;
       }
     }
+  }
+}
+
+.content {
+  .wrap {
+    flex-direction: column;
   }
 }

@@ -173,10 +173,9 @@ blockquote,
 q {
 	position: relative;
 	color: $base;
-	font-size: 1.6em;
-	font-weight: 400;
-	line-height: 1.8em;
+  font-size: max(24px, 1.4vw);
   text-align: center;
+  line-height: 1.6em;
   padding: 1.6em ($gutter / 2);
   margin: 2em 0;
 
@@ -186,7 +185,7 @@ q {
   	position: absolute;
   	left: 50%;
   	margin-left: -40px;
-  	height: 2px;
+  	height: 1.5px;
   	width: 60px;
   	background: $gray;
   }
