@@ -23,6 +23,12 @@ footer {
     }
   }
 
+  .personal-nav {
+    li:last-child {
+      color: $gray;
+    }
+  }
+
   .footer-nav {
     display: flex;
 

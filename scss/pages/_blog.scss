@@ -1,5 +1,6 @@
 .blog {
 
+  // Scrolling progress meter
   .progress-container {
     position: fixed;
     top: 0;
@@ -53,7 +54,8 @@
       .meta {
         span {
           display: inline-block;
-          font-size: 0.9em;
+          color: $gray;
+          font-size: 0.8em;
           padding-right: ($gutter / 2);
         }
       }

@@ -801,7 +801,7 @@ h3 {
 
 h4 {
   font-size: max(24px, 1.4vw);
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 h5 {
@@ -928,6 +928,9 @@ footer ul {
 footer ul li {
   font-size: 0.9em;
   margin-bottom: 12px;
+}
+footer .personal-nav li:last-child {
+  color: #949494;
 }
 footer .footer-nav {
   display: -webkit-flex;
@@ -1340,7 +1343,8 @@ header .social li svg:hover path {
 }
 .blog .entry .post-info .meta span {
   display: inline-block;
-  font-size: 0.9em;
+  color: #949494;
+  font-size: 0.8em;
   padding-right: 30px;
 }
 .blog .entry img {
