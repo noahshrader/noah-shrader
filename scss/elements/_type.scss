@@ -16,8 +16,8 @@ h1 {
   font-weight: 400;
 
   &.jumbo {
-    font-size: max(32px, 8.6vw);
-    font-weight: 500;
+    font-size: max(32px, 8.2vw);
+    line-height: 1.1em;
     letter-spacing: -1px;
   }
 }
@@ -34,12 +34,12 @@ h2 {
 
 h3 {
   font-size: max(24px, 2vw);
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 h4 {
   font-size: max(24px, 1.4vw);
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 h5 {
