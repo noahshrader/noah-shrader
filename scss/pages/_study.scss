@@ -6,6 +6,10 @@
     .wrap {
       flex-direction: column;
     }
+
+    h1 {
+      margin-bottom: $gutter;
+    }
   }
 
   .study-intro-image {

@@ -514,6 +514,7 @@ q {
   position: relative;
   color: #141414;
   font-size: max(24px, 1.4vw);
+  font-weight: 400;
   text-align: center;
   line-height: 1.6em;
   padding: 1.6em 30px;
@@ -526,7 +527,7 @@ q::after {
   position: absolute;
   left: 50%;
   margin-left: -40px;
-  height: 1.5px;
+  height: 1px;
   width: 60px;
   background: #949494;
 }
@@ -569,7 +570,7 @@ pre {
   line-height: 1.4em;
   padding: 1.6em;
   margin-bottom: 32px;
-  background: #d6d6d6;
+  background: lightgray;
   border-left: solid 5px #0432ff;
 }
 
@@ -772,7 +773,7 @@ h3,
 h4,
 h5 {
   font-family: "Manrope", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0;
   margin: 0;
   margin-bottom: 30px;
@@ -780,13 +781,12 @@ h5 {
 
 h1, h2.large {
   font-size: max(32px, 6vw);
+  font-weight: 500;
   line-height: 1.15em;
-  font-weight: 400;
 }
 h1.jumbo, h2.jumbo.large {
   font-size: max(32px, 8.2vw);
-  line-height: 1.1em;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
 }
 
 h2 {
@@ -811,6 +811,7 @@ h5 {
 p {
   color: #141414;
   font-size: max(16px, 1vw);
+  font-weight: 400;
   line-height: 1.8em;
   margin: 0;
   margin-bottom: 40px;
@@ -989,16 +990,23 @@ header .logo {
   -webkit-align-items: center;
           align-items: center;
 }
-header .logo:hover svg {
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-}
-header .logo:hover svg #Group-2,
-header .logo:hover svg path {
-  stroke: #141414;
-}
 header .logo .name {
-  margin-right: 6px;
+  margin-right: 12px;
+}
+header .logo span {
+  position: relative;
+  padding-left: 12px;
+}
+header .logo span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 30px;
+  width: 1px;
+  background: #949494;
+  -webkit-transform: translateY(-50%) rotate(25deg);
+          transform: translateY(-50%) rotate(25deg);
 }
 header nav a {
   color: #949494;
@@ -1033,73 +1041,6 @@ header .wrap {
   -webkit-justify-content: space-between;
           justify-content: space-between;
   max-width: 1700px;
-}
-header .social {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: -webkit-flex;
-  display: flex;
-  z-index: 9998;
-}
-header .social li {
-  margin: 0;
-  margin-left: 30px;
-}
-header .social li a {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-          justify-content: center;
-  color: #000;
-}
-header .social li a::before {
-  box-shadow: 0 !important;
-}
-header .social li svg {
-  --size: 22px;
-  height: var(--size);
-  width: var(--size);
-}
-header .social li svg path {
-  transition: ease-in-out 0.2s;
-}
-header .social li svg:hover path {
-  fill: #0432ff;
-}
-@media screen and (max-width: 860px) {
-  header .social li {
-    -webkit-flex: 1;
-            flex: 1;
-    margin-bottom: 0;
-    margin-right: 0;
-  }
-}
-@media screen and (max-width: 860px) {
-  header .social {
-    bottom: -100%;
-    right: 0;
-    width: 100%;
-    max-width: 100%;
-    -webkit-flex-direction: row;
-            flex-direction: row;
-    -webkit-align-items: center;
-            align-items: center;
-    padding: 0 5%;
-    height: 60px;
-    background: #fff;
-  }
-  .active header .social {
-    bottom: 0;
-  }
-}
-@media screen and (max-width: 860px) {
-  header {
-    padding: 15px;
-  }
-  .active header {
-    top: 0;
-  }
 }
 
 .block-full-width {
@@ -1239,6 +1180,9 @@ header .social li svg:hover path {
 }
 .about-intro .wrap {
   max-width: 1350px;
+}
+.about-intro h1, .about-intro h2.large {
+  margin: 0;
 }
 .about-intro .content {
   display: -webkit-flex;
@@ -1419,6 +1363,9 @@ header .social li svg:hover path {
 .featured-projects .project {
   padding: 60px 0;
 }
+.featured-projects .project:last-child {
+  padding-bottom: 0;
+}
 .featured-projects .project.left {
   -webkit-flex-direction: row-reverse;
           flex-direction: row-reverse;
@@ -1470,6 +1417,9 @@ header .social li svg:hover path {
 .study .study-intro .wrap {
   -webkit-flex-direction: column;
           flex-direction: column;
+}
+.study .study-intro h1, .study .study-intro h2.large {
+  margin-bottom: 60px;
 }
 .study .study-intro-image {
   min-width: 50vw;

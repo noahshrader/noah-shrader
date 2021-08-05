@@ -43,20 +43,24 @@ header {
     font-weight: 500;
     align-items: center;
 
-    &:hover {
-
-      svg {
-        transform: rotate(-15deg);
-
-        #Group-2,
-        path {
-          stroke: $base;
-        }
-      }
+    .name {
+      margin-right: 12px;
     }
 
-    .name {
-      margin-right: 6px;
+    span {
+      position: relative;
+      padding-left: 12px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 30px;
+        width: 1px;
+        background: $gray;
+        transform: translateY(-50%) rotate(25deg);
+      }
     }
   }
 
@@ -101,72 +105,5 @@ header {
     align-items: center;
     justify-content: space-between;
     max-width: $maxdesktop;
-  }
-
-  .social {
-    @include clean-ul;
-    display: flex;
-    z-index: 9998;
-
-    li {
-      margin: 0;
-      margin-left: ($gutter / 2);
-
-      a {
-        display: flex;
-        justify-content: center;
-        color: $black;
-
-        &::before {
-          box-shadow: 0 !important;
-        }
-      }
-
-      svg {
-        --size: 22px;
-        height: var(--size);
-        width: var(--size);
-
-        path {
-          @include trans;
-        }
-
-        &:hover {
-          path {
-            fill: $primary;
-          }
-        }
-      }
-
-      @media screen and (max-width: $mediumdevice) {
-        flex: 1;
-        margin-bottom: 0;
-        margin-right: 0;
-      }
-    }
-
-    @media screen and (max-width: $mediumdevice) {
-      bottom: -100%;
-      right: 0;
-      width: 100%;
-      max-width: 100%;
-      flex-direction: row;
-      align-items: center;
-      padding: 0 5%;
-      height: $socialmenumobile;
-      background: $white;
-
-      .active & {
-        bottom: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width: $mediumdevice) {
-    padding: ($gutter / 4);
-
-    .active & {
-      top: 0;
-    }
   }
 }
