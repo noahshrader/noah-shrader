@@ -1,6 +1,6 @@
 header {
   @include trans(
-    $trans-speed: 0.4s
+    $trans-speed: 1s
   );
   position: fixed;
   display: flex;
