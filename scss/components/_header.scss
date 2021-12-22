@@ -7,10 +7,10 @@ header {
   align-items: center;
   top: -100%;
   left: 0;
-  padding: 0 ($gutter / 2);
-  height: 210px;
+  padding: $gutter;
   width: 100%;
   z-index: 99999;
+  pointer-events: none;
 
   // When the page is loaded
   .active & {
@@ -25,11 +25,8 @@ header {
   }
 
   a {
-    color: $gray;
-
-    .home & {
-      color: $base;
-    }
+    font-weight: 600;
+    color: rgba($base, 0.5);
 
     &:hover {
       color: $primary;
@@ -42,37 +39,21 @@ header {
     display: flex;
     font-weight: 500;
     align-items: center;
-
-    .name {
-      margin-right: 12px;
-    }
-
-    span {
-      position: relative;
-      padding-left: 12px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        height: 30px;
-        width: 1px;
-        background: $gray;
-        transform: translateY(-50%) rotate(25deg);
-      }
-    }
+    pointer-events: all;
   }
 
   nav {
+    pointer-events: all;
+
     a {
-      color: $gray;
+      color: rgba($base, 0.5);
       font-size: 0.9em;
       position: relative;
       display: block;
       text-align: right;
       margin-bottom: ($gutter / 5);
 
+      &.selected,
       &:hover {
         color: $base;
       }
@@ -86,17 +67,6 @@ header {
         height: 1px;
         width: 100%;
         background: $base;
-      }
-
-      &.active {
-        &::before {
-          display: block;
-        }
-      }
-
-      .home &,
-      &.selected {
-        color: $base;
       }
     }
   }

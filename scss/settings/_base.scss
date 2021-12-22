@@ -238,7 +238,7 @@ main {
 
 section {
   margin: 0 auto;
-  padding: $vertical-padding ($gutter / 2);
+  padding: $vertical-padding $gutter;
 
   &:first-child {
     padding-top: 0;

@@ -559,7 +559,7 @@ main {
 
 section {
   margin: 0 auto;
-  padding: 140px 30px;
+  padding: 140px 60px;
 }
 section:first-child {
   padding-top: 0;
@@ -727,51 +727,53 @@ h3,
 h4,
 h5 {
   font-family: "Inter", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 h1, h2.large {
   font-size: max(32px, 6vw);
-  line-height: 1.1em;
+  line-height: 110%;
   letter-spacing: -1px;
 }
 h1.jumbo, h2.jumbo.large {
   font-size: max(32px, 8vw);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -3px;
-  line-height: 1.15em;
 }
 
 h2 {
   font-size: max(32px, 3.6vw);
-  line-height: 1.2em;
+  line-height: 120%;
   letter-spacing: -0.5px;
 }
 h3 {
   font-size: max(24px, 2vw);
-  line-height: 1.5em;
+  line-height: 120%;
+}
+.wrap h3 {
+  padding-top: 30px;
 }
 
 h4 {
   font-size: max(24px, 1.4vw);
-  line-height: 1.6em;
+  line-height: 150%;
 }
 
 h5 {
-  font-size: max(24px, 1.2vw);
+  font-size: max(24px, 1.3vw);
 }
 
 p {
   color: #141414;
-  font-size: max(16px, 1.1vw);
+  font-size: max(16px, 1.2vw);
   letter-spacing: -0.2px;
   font-weight: 400;
-  line-height: 1.8em;
+  line-height: 160%;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   padding: 0;
 }
 
@@ -904,10 +906,10 @@ header {
   align-items: center;
   top: -100%;
   left: 0;
-  padding: 0 30px;
-  height: 210px;
+  padding: 60px;
   width: 100%;
   z-index: 99999;
+  pointer-events: none;
 }
 .active header {
   top: 0;
@@ -919,10 +921,8 @@ header .wrap {
   width: 100%;
 }
 header a {
-  color: #949494;
-}
-.home header a {
-  color: #141414;
+  font-weight: 600;
+  color: rgba(20, 20, 20, 0.5);
 }
 header a:hover {
   color: #0432ff;
@@ -932,33 +932,20 @@ header .logo {
   display: flex;
   font-weight: 500;
   align-items: center;
+  pointer-events: all;
 }
-header .logo .name {
-  margin-right: 12px;
-}
-header .logo span {
-  position: relative;
-  padding-left: 12px;
-}
-header .logo span::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 30px;
-  width: 1px;
-  background: #949494;
-  transform: translateY(-50%) rotate(25deg);
+header nav {
+  pointer-events: all;
 }
 header nav a {
-  color: #949494;
+  color: rgba(20, 20, 20, 0.5);
   font-size: 0.9em;
   position: relative;
   display: block;
   text-align: right;
   margin-bottom: 12px;
 }
-header nav a:hover {
+header nav a.selected, header nav a:hover {
   color: #141414;
 }
 header nav a::before {
@@ -970,12 +957,6 @@ header nav a::before {
   height: 1px;
   width: 100%;
   background: #141414;
-}
-header nav a.active::before {
-  display: block;
-}
-.home header nav a, header nav a.selected {
-  color: #141414;
 }
 header .wrap {
   align-items: center;
