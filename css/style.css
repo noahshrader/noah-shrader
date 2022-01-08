@@ -921,7 +921,6 @@ header .wrap {
   width: 100%;
 }
 header a {
-  font-weight: 600;
   color: rgba(20, 20, 20, 0.5);
 }
 header a:hover {
