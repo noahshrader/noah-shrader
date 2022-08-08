@@ -362,7 +362,7 @@ body {
 
 body {
   transition: ease-in-out 0.2s;
-  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-family: "Satoshi-Medium", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
   padding-top: 260px;
@@ -410,7 +410,7 @@ a.main {
   flex: 0 0 auto;
   align-items: center;
   color: #0432ff;
-  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-family: "Satoshi-Medium", Helvetica, Arial, sans-serif;
   font-weight: 700;
   margin-right: var(--margin);
   box-shadow: none;
@@ -721,12 +721,26 @@ section img {
   }
 }
 
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("../fonts/Satoshi-Bold.woff2") format("woff2"), url("../fonts/Satoshi-Bold.woff") format("woff"), url("../fonts/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("../fonts/Satoshi-Medium.woff2") format("woff2"), url("../fonts/Satoshi-Medium.woff") format("woff"), url("../fonts/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 h1, h2.large,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Inter", Helvetica, Arial, sans-serif;
+  font-family: "Satoshi-Bold", Helvetica, Arial, sans-serif;
   font-weight: 800;
   padding: 0;
   margin: 0;
@@ -735,19 +749,17 @@ h5 {
 
 h1, h2.large {
   font-size: max(32px, 6vw);
-  line-height: 110%;
-  letter-spacing: -1px;
+  line-height: 108%;
 }
 h1.jumbo, h2.jumbo.large {
   font-size: max(32px, 8vw);
   font-weight: 700;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
 }
 
 h2 {
   font-size: max(32px, 3.6vw);
   line-height: 120%;
-  letter-spacing: -0.5px;
 }
 h3 {
   font-size: max(24px, 2vw);
