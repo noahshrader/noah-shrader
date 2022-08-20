@@ -19,8 +19,8 @@
 
   .entry {
     display: flex;
-    padding-top: ($gutter / 2);
-    padding-bottom: ($gutter / 2);
+    padding-top: calc($gutter / 2);
+    padding-bottom: calc($gutter / 2);
 
     &:first-child {
       padding-top: 0;
@@ -35,12 +35,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: ($gutter * 2);
+      padding-left: calc($gutter * 2);
 
       .date {
         display: inline-block;
         font-size: 0.8em;
-        margin-bottom: ($gutter / 2);
+        margin-bottom: calc($gutter / 2);
       }
 
       a {
@@ -56,7 +56,7 @@
           display: inline-block;
           color: $gray;
           font-size: 0.8em;
-          padding-right: ($gutter / 2);
+          padding-right: calc($gutter / 2);
         }
       }
     }
@@ -79,6 +79,7 @@
       display: flex;
       flex: 1;
       align-items: center;
+      padding-left: $gutter;
       min-width: 50vw;
       z-index: 10;
     }

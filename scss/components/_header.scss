@@ -50,7 +50,7 @@ header {
       position: relative;
       display: block;
       text-align: right;
-      margin-bottom: ($gutter / 5);
+      margin-bottom: calc($gutter / 5);
 
       &.selected,
       &:hover {

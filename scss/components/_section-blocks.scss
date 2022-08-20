@@ -4,9 +4,9 @@
 
   img {
     object-fit: cover;
-    height: ($intro-height / 1.5);
-    margin-top: ($gutter / 4);
-    margin-left: -($gutter / 2);
+    height: calc($intro-height / 1.5);
+    margin-top: calc($gutter / 4);
+    margin-left: - calc($gutter / 2);
     min-width: 100vw;
   }
 }
@@ -15,13 +15,13 @@
 .block-halfs {
   .wrap {
     display: grid;
-    grid-gap: ($gutter / 2);
+    grid-gap: calc($gutter / 2);
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr) );
   }
 
   img {
     width: 100%;
-    margin-bottom: ($gutter / 2);
+    margin-bottom: calc($gutter / 2);
   }
 }
 

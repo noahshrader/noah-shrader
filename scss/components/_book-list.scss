@@ -31,7 +31,7 @@
       position: relative;
       font-size: 1em;
       line-height: 1.6em;
-      margin-bottom: ($gutter / 2);
+      margin-bottom: calc($gutter / 2);
 
       &:last-child {
         margin-bottom: 0;
@@ -65,8 +65,8 @@
   --size: 50px;
   @include trans;
   position: absolute;
-  top: ($gutter / 2);
-  right: ($gutter / 2);
+  top: calc($gutter / 2);
+  right: calc($gutter / 2);
   display: flex;
   align-items: center;
   justify-content: center;

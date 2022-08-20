@@ -19,7 +19,7 @@ footer {
 
     li {
       font-size: 0.9em;
-      margin-bottom: ($gutter / 5);
+      margin-bottom: calc($gutter / 5);
     }
   }
 
@@ -33,7 +33,7 @@ footer {
     display: flex;
 
     ul {
-      padding-left: ($gutter * 2);
+      padding-left: calc($gutter * 2);
     }
   }
 
