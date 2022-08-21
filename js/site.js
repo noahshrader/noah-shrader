@@ -39,6 +39,10 @@ $(function () {
     $(this).removeClass('open')
     $('.read').removeClass('open')
   })
+
+  $('.post-info h2').hover(function () {
+    $(this).parent().siblings().toggleClass('active')
+  })
 })
 
 $(window).load(function () {

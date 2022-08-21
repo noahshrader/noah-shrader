@@ -45,11 +45,6 @@ body {
   }
 }
 
-.blue-highlight {
-  color: $white;
-  background: $primary;
-}
-
 // Links
 a {
   @include trans;

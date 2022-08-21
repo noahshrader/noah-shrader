@@ -31,6 +31,16 @@
       flex: 1;
     }
 
+    .thumbnail {
+      @include trans;
+      border: solid 2px transparent;
+
+      &.active {
+        border-color: $primary;
+        box-shadow: 7px 7px 0px 0px $primary;
+      }
+    }
+
     .post-info {
       display: flex;
       flex-direction: column;
@@ -45,10 +55,22 @@
 
       h2 {
         margin-bottom: calc($gutter / 2);
+
+        &~img {
+          opacity: 0.2;
+        }
       }
 
       a {
         color: $base;
+
+        &~img {
+          opacity: 0.2;
+        }
+
+        &:hover {
+          color: $primary;
+        }
       }
 
       p {
@@ -66,6 +88,7 @@
     }
 
     img {
+      float: left;
       object-fit: cover;
       height: 450px;
       width: 100%;
