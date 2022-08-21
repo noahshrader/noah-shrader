@@ -3,7 +3,7 @@
   src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
        url('../fonts/Satoshi-Bold.woff') format('woff'),
        url('../fonts/Satoshi-Bold.ttf') format('truetype');
-       font-weight: 700;
+       font-weight: 600;
        font-display: swap;
        font-style: normal;
 }
@@ -24,24 +24,24 @@ h3,
 h4,
 h5 {
   font-family: $headingfont;
-  font-weight: 800;
+  font-weight: 600;
 	padding: 0;
 	margin: 0;
   margin-bottom: calc($gutter / 1.2);
 }
 
 h1 {
-	font-size: max(32px, 6vw);
-	line-height: 108%;
+	font-size: max(32px, 6.2vw);
+	line-height: 110%;
 
   &.jumbo {
-    font-size: max(32px, 7.8vw);
-    font-weight: 700;
+    font-size: max(32px, 8.2vw);
+    letter-spacing: -1px;
   }
 }
 
 h2 {
-  font-size: max(32px, 3.4vw);
+  font-size: max(32px, 3.6vw);
   line-height: 120%;
 
   &.large {
@@ -50,16 +50,12 @@ h2 {
 }
 
 h3 {
-  font-size: max(24px, 2vw);
+  font-size: max(24px, 2.1vw);
   line-height: 120%;
-
-  .wrap & {
-    padding-top: calc($gutter / 2);
-  }
 }
 
 h4 {
-  font-size: max(24px, 1.4vw);
+  font-size: max(24px, 1.5vw);
   line-height: 150%;
 }
 
@@ -68,8 +64,8 @@ h5 {
 }
 
 p {
-  color: $base;
-  font-size: max(16px, 1.2vw);
+  color: $dgray;
+  font-size: max(16px, 1.1vw);
   letter-spacing: -0.2px;
   font-weight: 400;
   line-height: 160%;

@@ -354,6 +354,11 @@ body.home {
   color: #fff;
 }
 
+.blue-highlight {
+  color: #fff;
+  background: #0432ff;
+}
+
 a {
   transition: ease-in-out 0.2s;
   position: relative;
@@ -366,13 +371,14 @@ a {
   box-shadow: 0px 0px 0px 0px transparent;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, p a:hover, li a:hover {
-  box-shadow: 0px 1.5px 0px 0px #141414;
+  color: rgba(20, 20, 20, 0.5);
 }
 a.blue {
   color: #0432ff;
 }
 a.blue:hover {
-  box-shadow: 0px 1.5px 0px 0px #0432ff;
+  color: #fff;
+  background: #0432ff;
 }
 a.main {
   --margin: 15px;
@@ -694,7 +700,7 @@ section img {
 @font-face {
   font-family: "Satoshi-Bold";
   src: url("../fonts/Satoshi-Bold.woff2") format("woff2"), url("../fonts/Satoshi-Bold.woff") format("woff"), url("../fonts/Satoshi-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
@@ -711,35 +717,32 @@ h3,
 h4,
 h5 {
   font-family: "Satoshi-Bold", Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   padding: 0;
   margin: 0;
   margin-bottom: 50px;
 }
 
 h1, h2.large {
-  font-size: max(32px, 6vw);
-  line-height: 108%;
+  font-size: max(32px, 6.2vw);
+  line-height: 110%;
 }
 h1.jumbo, h2.jumbo.large {
-  font-size: max(32px, 7.8vw);
-  font-weight: 700;
+  font-size: max(32px, 8.2vw);
+  letter-spacing: -1px;
 }
 
 h2 {
-  font-size: max(32px, 3.4vw);
+  font-size: max(32px, 3.6vw);
   line-height: 120%;
 }
 h3 {
-  font-size: max(24px, 2vw);
+  font-size: max(24px, 2.1vw);
   line-height: 120%;
-}
-.wrap h3 {
-  padding-top: 30px;
 }
 
 h4 {
-  font-size: max(24px, 1.4vw);
+  font-size: max(24px, 1.5vw);
   line-height: 150%;
 }
 
@@ -748,8 +751,8 @@ h5 {
 }
 
 p {
-  color: #141414;
-  font-size: max(16px, 1.2vw);
+  color: #545454;
+  font-size: max(16px, 1.1vw);
   letter-spacing: -0.2px;
   font-weight: 400;
   line-height: 160%;
@@ -895,7 +898,7 @@ header:hover a {
   color: #141414;
 }
 header:hover a:hover {
-  color: rgba(20, 20, 20, 0.5);
+  color: #949494;
 }
 .active header {
   top: 0;
@@ -907,7 +910,7 @@ header .wrap {
   width: 100%;
 }
 header a {
-  color: rgba(20, 20, 20, 0.5);
+  color: #949494;
 }
 header .logo {
   position: relative;
@@ -1123,11 +1126,11 @@ header .wrap {
   top: 0;
   left: 0;
   right: 0;
-  height: 1.5px;
+  height: 4px;
   z-index: 1000;
 }
 .blog .progress-container .progress-bar {
-  background-color: #141414;
+  background-color: #0432ff;
   width: 0%;
   display: block;
   height: inherit;
@@ -1212,7 +1215,7 @@ header .wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 600px !important;
+  padding-top: 680px !important;
   min-height: 75vh;
 }
 .intro .wrap {

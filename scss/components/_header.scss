@@ -17,7 +17,7 @@ header {
       color: $base;
 
       &:hover {
-        color: rgba($base, 0.5);
+        color: $gray;
       }
     }
   }
@@ -35,7 +35,7 @@ header {
   }
 
   a {
-    color: rgba($base, 0.5);
+    color: $gray;
   }
 
   // Noah Shrader icon

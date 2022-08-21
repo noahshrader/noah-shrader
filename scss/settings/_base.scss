@@ -45,6 +45,11 @@ body {
   }
 }
 
+.blue-highlight {
+  color: $white;
+  background: $primary;
+}
+
 // Links
 a {
   @include trans;
@@ -65,7 +70,7 @@ a {
   p &,
   li & {
     &:hover {
-      box-shadow: 0px 1.5px 0px 0px $base;
+      color: rgba($base, 0.5);
     }
   }
 
@@ -73,7 +78,8 @@ a {
     color: $primary;
 
     &:hover {
-      box-shadow: 0px 1.5px 0px 0px $primary;
+      color: $white;
+      background: $primary;
     }
   }
 
