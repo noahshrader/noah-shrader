@@ -386,14 +386,14 @@ a.main {
   box-shadow: none;
 }
 a.main svg {
-  --size: 70px;
+  --size: 60px;
   transition: ease-in-out 0.2s;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   left: var(--margin);
-  padding: 18px;
+  padding: 14px;
   height: var(--size);
   width: var(--size);
   border: solid 2px #0432ff;
@@ -719,7 +719,7 @@ h5 {
 
 h1, h2.large {
   font-size: max(32px, 6vw);
-  line-height: 110%;
+  line-height: 108%;
 }
 h1.jumbo, h2.jumbo.large {
   font-size: max(32px, 7.8vw);
@@ -890,7 +890,12 @@ header {
   padding: 60px;
   width: 100%;
   z-index: 99999;
-  pointer-events: none;
+}
+header:hover a {
+  color: #141414;
+}
+header:hover a:hover {
+  color: rgba(20, 20, 20, 0.5);
 }
 .active header {
   top: 0;
@@ -903,9 +908,6 @@ header .wrap {
 }
 header a {
   color: rgba(20, 20, 20, 0.5);
-}
-header a:hover {
-  color: #0432ff;
 }
 header .logo {
   position: relative;
@@ -1153,6 +1155,9 @@ header .wrap {
   font-size: 0.8em;
   margin-bottom: 30px;
 }
+.blog .entry .post-info h2 {
+  margin-bottom: 30px;
+}
 .blog .entry .post-info a {
   color: #141414;
 }
@@ -1263,8 +1268,20 @@ header .wrap {
   flex: 2;
   padding-left: 30px;
 }
-.home-blog .home-blog-entry img {
+.home-blog .home-blog-entry h4 {
   margin-bottom: 30px;
+}
+.home-blog .home-blog-entry img {
+  transition: ease-in-out 0.2s;
+  margin-bottom: 30px;
+  border: solid 2px transparent;
+}
+.home-blog .home-blog-entry:hover img {
+  border-color: #0432ff;
+  box-shadow: 6px 6px 0px 0px #0432ff;
+}
+.home-blog .home-blog-entry:hover a {
+  color: #0432ff;
 }
 
 .study .study-intro {
@@ -1323,12 +1340,7 @@ header .wrap {
   border-radius: 10px;
   transition: ease-in-out 0.2s;
   position: relative;
-  border: solid 2px transparent;
   overflow: hidden;
-}
-.portfolio-wrap > div:hover {
-  border-color: #0432ff;
-  box-shadow: 6px 6px 0px 0px #0432ff;
 }
 .portfolio-wrap > div img {
   transition: ease-in-out 0.2s;

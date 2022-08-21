@@ -70,9 +70,26 @@
   .home-blog-entry {
     flex: 2;
     padding-left: calc($gutter / 2);
+    
+    h4 {
+      margin-bottom: calc($gutter / 2);
+    }
 
     img {
+      @include trans;
       margin-bottom: calc($gutter / 2);
+      border: solid 2px transparent;
+    }
+
+    &:hover {
+      img {
+        border-color: $primary;
+        box-shadow: 6px 6px 0px 0px $primary;
+      }
+
+      a {
+        color: $primary;
+      }
     }
   }
 }

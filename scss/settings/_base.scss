@@ -90,14 +90,14 @@ a {
     box-shadow: none;
 
     svg {
-      --size: 70px;
+      --size: 60px;
       @include trans;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       left: var(--margin);
-      padding: 18px;
+      padding: 14px;
       height: var(--size);
       width: var(--size);
       border: solid 2px $primary;

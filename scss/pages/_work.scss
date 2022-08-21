@@ -38,13 +38,7 @@
       @include border-radius;
       @include trans;
       position: relative;
-      border: solid 2px transparent;
       overflow: hidden;
-
-      &:hover {
-        border-color: $primary;
-        box-shadow: 6px 6px 0px 0px $primary;
-      }
 
       img {
         @include trans;

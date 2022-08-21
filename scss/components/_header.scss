@@ -10,7 +10,17 @@ header {
   padding: $gutter;
   width: 100%;
   z-index: 99999;
-  pointer-events: none;
+
+  // Bring links to full opacity when hovering the header 
+  &:hover {
+    a {
+      color: $base;
+
+      &:hover {
+        color: rgba($base, 0.5);
+      }
+    }
+  }
 
   // When the page is loaded
   .active & {
@@ -26,10 +36,6 @@ header {
 
   a {
     color: rgba($base, 0.5);
-
-    &:hover {
-      color: $primary;
-    }
   }
 
   // Noah Shrader icon
