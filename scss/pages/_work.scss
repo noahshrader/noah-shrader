@@ -6,11 +6,25 @@
     flex: 1;
     flex-direction: column;
     justify-content: center;
+    padding-right: calc($gutter * 2);
+
+    a {
+      &:hover {
+        color: $primary;
+      }
+    }
   }
 
   .case-study-image {
+    @include trans;
     flex: 3;
-    padding-left: calc($gutter * 2);
+    border: solid 2px transparent;
+    border-radius: 3px;
+
+    &.active {
+      border-color: $primary;
+      box-shadow: 7px 7px 0px 0px $primary;
+    }
 
     img {
       object-fit: fill;

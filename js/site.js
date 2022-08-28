@@ -40,7 +40,7 @@ $(function () {
     $('.read').removeClass('open')
   })
 
-  $('.post-info h2').hover(function () {
+  $('.post-info h2, .case-study-info h2').hover(function () {
     $(this).parent().siblings().toggleClass('active')
   })
 })

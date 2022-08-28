@@ -335,7 +335,7 @@ body {
   font-family: "Satoshi-Medium", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  padding-top: 260px;
+  padding-top: 248px;
 }
 body.home {
   padding-top: 0;
@@ -723,8 +723,8 @@ h1, h2.large {
   line-height: 110%;
 }
 h1.jumbo, h2.jumbo.large {
-  font-size: max(32px, 8.2vw);
-  letter-spacing: -1px;
+  font-size: max(32px, 8.4vw);
+  letter-spacing: -1.5px;
 }
 
 h2 {
@@ -883,9 +883,9 @@ header {
   position: fixed;
   display: flex;
   align-items: center;
-  top: -220px;
+  top: -188px;
   left: 0;
-  padding: 60px;
+  padding: 30px 60px 60px;
   width: 100%;
   z-index: 99999;
 }
@@ -1228,7 +1228,7 @@ header .wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 680px !important;
+  padding-top: 80vh !important;
   min-height: 75vh;
 }
 .intro .wrap {
@@ -1330,10 +1330,20 @@ header .wrap {
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  padding-right: 120px;
+}
+.case-study .case-study-info a:hover {
+  color: #0432ff;
 }
 .case-study .case-study-image {
+  transition: ease-in-out 0.2s;
   flex: 3;
-  padding-left: 120px;
+  border: solid 2px transparent;
+  border-radius: 3px;
+}
+.case-study .case-study-image.active {
+  border-color: #0432ff;
+  box-shadow: 7px 7px 0px 0px #0432ff;
 }
 .case-study .case-study-image img {
   object-fit: fill;

@@ -5,9 +5,9 @@ header {
   position: fixed;
   display: flex;
   align-items: center;
-  top: -220px;
+  top: -$headerheight;
   left: 0;
-  padding: $gutter;
+  padding: calc($gutter / 2) $gutter $gutter;
   width: 100%;
   z-index: 99999;
 
